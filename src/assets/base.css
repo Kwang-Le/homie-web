@@ -19,11 +19,39 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --main-primary: #457B9D;
+  --main-alternative: #E63946;
+  --main-secondary: #1D3557;
+  --background-screen: #A8DADC;
+  --background-field: #C0C0C0;
+  --background-panel: #FFFFFF;
+  --text-content: #000000;
+  --text-alternative: #FFFFFF;
+  --text-link: #457B9D;
+  --text-header: #1D3557;
+  --btn-screen: #457B9D;
+  --btn-negative: #E63946;
+  --btn-navigation: #1D3557;
+  --btn-alternative: #F1FAEE;
+  --fields-text-field: #000000;
+  --fields-fields: #FFFFFF;
+  --fields-field-title: #777777;
+  --fields-placeholders: #adaaaa;
+  --fields-fields-error: #E51A3C;
+  --fields-field-focus : #0088FF;
+  --selections-disabled1: #E1E1E1;
+  --selections-disabled2: #B5B5B5;
+  --notifications-success: #007B40;
+  --notifications-error: #E63946;
+  --notifications-notification: #1D3557;
+
+
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
+  --color-background: var(--background-screen);
   --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -38,7 +66,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
+    --color-background: var(--background-screen);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
 
