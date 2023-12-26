@@ -1,0 +1,628 @@
+{
+"accounts":[
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "name": "Ngo Minh Tu",
+      "createDate": "10/12/2023",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 2,
+      "username": "resident1",
+      "password": "res1234",
+      "name": "Tran Vinh Khanh",
+      "createDate": "10/12/2023",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 3,
+      "username": "quanly1",
+      "password": "qly1234",
+      "name": "Nguyen Duc Minh",
+      "createDate": "10/12/2023",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 4,
+      "username": "quantri1",
+      "password": "qtr1234",
+      "name": "Le Ngoc Dang Khoa",
+      "createDate": "10/12/2023",
+      "status": "ACTIVE"
+    },
+    {
+      "id": 5,
+      "username": "other1",
+      "password": "other1",
+      "name": "Nguyen Ngoc Anh",
+      "createDate": "10/12/2023",
+      "status": "ACTIVE"
+    }
+  ],
+  "residents":
+  [
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    },
+    {
+      "id": 1,
+      "cccd": "547823619034",
+      "name": ,
+      "dob": ,
+      "sex": ,
+      "status": ,
+      "email": ,
+      "phone": ,
+      "apartment": 
+    }
+  ],
+  "building":{
+    "apartments": 
+    [
+      {
+        "id": 1,
+        "floor": 2,
+        "number": 201,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      },
+    ]
+  },
+  "charges":{
+    "fees":{
+      "const":{
+
+      },
+      "list":[
+        {
+          "id": 1,
+          "code": "TT2023",
+          ""
+        }
+      ]
+    },
+    "contributes":{
+
+    }
+  }
+
+}
