@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashboardView from '../views/dashboard/DashboardView.vue'
+import DashboardView from '../views/dashboard/AdminDashboardView.vue'
 import AdminNotificationView from '@/views/dashboard/AdminNotificationView.vue'
 
 const router = createRouter({
