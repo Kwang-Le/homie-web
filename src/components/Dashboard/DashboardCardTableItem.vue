@@ -30,5 +30,7 @@ export default {
     width: auto;
     border: 1px solid black;
 }
-.fee-box
+.fee-box {
+    
+}
 </style>
