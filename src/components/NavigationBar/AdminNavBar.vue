@@ -7,13 +7,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="px-5 collapse navbar-collapse justify-content-between" id="navbarNav">
-                        <router-link class="nav-link active" aria-current="page" to="/admin-dashboard">Trang chủ</router-link>
+              <router-link class="nav-link active" aria-current="page" to="/admin-dashboard">Trang chủ</router-link>
+              <a class="nav-link" href="#">Tài khoản</a>
                         <a class="nav-link" href="#">Căn hộ</a>
                         <a class="nav-link" href="#">Cư dân</a>
                         <a class="nav-link" href="#">Khoản thu</a>
                         <a class="nav-link" href="#">Thống kê</a>
-                        <router-link class="nav-link" to="/admin-notification">Thông báo</router-link>
-                        <a class="nav-link" href="#">Cài đặt</a>
+              <router-link class="nav-link" to="/admin-notification">Thông báo</router-link>
+              <router-link class="nav-link" to="/admin-setting">Cài đặt</router-link>
             </div>
         </div>
     </nav>
@@ -22,8 +23,16 @@
 <style scoped>
 .navbar {
     background: #F1FAEE;
+    border-radius: 15px;
 }
-
+.nav-link {
+  padding: 10px;
+  color: #1D3557;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
 </style>
 <script setup>
 </script>
