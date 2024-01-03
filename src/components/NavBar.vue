@@ -1,5 +1,5 @@
 <template>
-    <nav class="rounded navbar navbar-expand-lg bg-body-tertiary p-1 my-2 mx-">
+    <nav class="rounded navbar navbar-expand-lg bg-body-tertiary p-1 my-2">
         <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

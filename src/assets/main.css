@@ -6,6 +6,9 @@
   font-weight:1000;
 }
 
+h1, h2, h3, h4, h5, p, a {
+  color:var(--main-secondary);
+}
 /* #app {
   max-width: 1280px;
   margin: 0 auto;

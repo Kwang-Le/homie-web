@@ -4,9 +4,11 @@ import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue';
 </script>
 
+
 <template>
+  <div class="container-fluid">
   <header>
-    <div class="wrapper p-4">
+    <div class="wrapper">
       <NavBar />
 
         <!-- <RouterLink to="/">Home</RouterLink> -->
@@ -15,7 +17,10 @@ import NavBar from './components/NavBar.vue';
   </header>
 
   <RouterView />
+</div>
+
 </template>
 
-<style scoped>
+<style>
+@import './assets/base.css';
 </style>
