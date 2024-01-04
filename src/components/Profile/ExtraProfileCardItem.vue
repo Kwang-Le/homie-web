@@ -1,12 +1,14 @@
 <template>
     <div class="div">
-        <img loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1eae4206efa060ae34a242fd6297038959696b6ce61e53bd34ff4c95ea7ee1ae?"
-            class="img" />
-        <div class="div-2">
-            <div class="div-3">Nguyễn Hàn My</div>
-            <div class="div-4">Trạng thái: Tạm vắng</div>
-            <div class="div-5">Ngày sinh: 05/03/2002</div>
+        <div class="avt-container">
+            <img loading="lazy"
+                src="../../assets/img/ExtraProfileAvatar.jpeg"
+                class="img" />
+        </div>
+        <div class="extra-info">
+            <div class="extra-info-name">Nguyễn Hàn My</div>
+            <div class="extra-info-status">Trạng thái: Tạm vắng</div>
+            <div class="extra-info-birthdate">Ngày sinh: 05/03/2002</div>
         </div>
     </div>
 </template>
@@ -32,11 +34,17 @@
     }
 }
 
+.avt-container {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
 .img {
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 92px;
     overflow: hidden;
     max-width: 100%;
 }
@@ -52,7 +60,6 @@
 
 .div-3 {
     color: #1e1e1e;
-    text-align: center;
     letter-spacing: -0.48px;
     white-space: nowrap;
     font: 700 22px/150% Raleway, sans-serif;
