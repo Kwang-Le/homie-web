@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 250px;
-  //margin: 10px;
+  margin: 10px;
 }
 
 .nav-link {
