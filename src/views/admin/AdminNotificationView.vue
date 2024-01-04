@@ -16,7 +16,7 @@ import AdminNotiNavBar from '@/components/NavigationBar/AdminNotiNavBar.vue'
 
           <AdminNotiNavBar></AdminNotiNavBar>
 
-
+        
       </div>
     </main>
   </template>

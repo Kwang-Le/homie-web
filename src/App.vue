@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from './components/NavigationBar/AdminNavBar.vue';
-
+import LogoAcount from './components/LogoAccount.vue';
 </script>
 
 
@@ -9,6 +9,7 @@ import NavBar from './components/NavigationBar/AdminNavBar.vue';
   <div class="container-fluid">
   <header>
     <div class="wrapper">
+      <LogoAcount />
       <NavBar />
 
         <!-- <RouterLink to="/">Home</RouterLink> -->
