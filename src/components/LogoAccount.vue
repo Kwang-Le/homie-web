@@ -5,7 +5,7 @@
           <div class="rectangle"></div>
           <div class="ellipse"></div>
           <div class="homie">N.M.Tú</div>
-          <img class="image" alt="Image" src="https://www.pngkit.com/png/detail/379-3794147_homie-logo-homie-b-v.png" />
+          <img class="image" alt="Image" src="../assets/img/logo.png" />
         </div>
       </div>
     </div>
