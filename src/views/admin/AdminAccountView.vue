@@ -1,6 +1,6 @@
 <script setup>
 // import Card from '@/components/Card.vue';
-import ExtraProfileCardItem from '@/components/ExtraProfile/ExtraProfileCardItem.vue';
+import ExtraProfileCardItem from '@/components/Profile/ExtraProfileCardItem.vue';
 import MainProfile from '@/components/Profile/MainProfile.vue';
 </script>
 
@@ -11,7 +11,7 @@ import MainProfile from '@/components/Profile/MainProfile.vue';
         <MainProfile></MainProfile>
       </div>
       <div class="col-4">
-          <h5 class="card-title font-weight-bold">Người sống cùng</h5>
+          <h4 class="card-title font-weight-bold">Người sống cùng</h4>
           <ExtraProfileCardItem />
       </div>
     </div>
@@ -19,7 +19,8 @@ import MainProfile from '@/components/Profile/MainProfile.vue';
 </template>
 
 <style scoped>
-  .h5 {
+  .card-title {
     text-align: center;
+
   }
 </style>
