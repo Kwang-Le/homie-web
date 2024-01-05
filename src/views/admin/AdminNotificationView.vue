@@ -1,11 +1,4 @@
 <script setup>
-import Card from '@/components/Card.vue';
-import PieChart from '@/components/charts/PieChart.vue'
-import DoughChart from '@/components/charts/DoughChart.vue';
-import BarChart from '@/components/charts/BarChart.vue';
-import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
-import DashboardCardTableItem from '@/components/Dashboard/DashboardCardTableItem.vue';
-import LineChart from '@/components/charts/LineChart.vue';
 import AdminNotiNavBar from '@/components/NavigationBar/AdminNotiNavBar.vue'
 import AdminNotiSearchFilter from '@/components/SearchFilter/AdminNotiSearchFilter.vue'
 import CardBox from '@/components/List/CardBox.vue'
@@ -13,6 +6,7 @@ import CardBox from '@/components/List/CardBox.vue'
 
 <template>
   <main>
+
     <div class="d-flex">
       <div class="noti-nav-bar-container">
         <AdminNotiNavBar />

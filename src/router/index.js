@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashboardView from '@/views/admin/AdminDashboardView.vue'
+
 import AdminNotificationView from '@/views/admin/AdminNotificationView.vue'
 import AdminDashboardView from '@/views/admin/AdminDashboardView.vue'
 import AdminSettingView from '@/views/admin/AdminSettingView.vue'
@@ -8,6 +8,7 @@ import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
 import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
