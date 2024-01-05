@@ -94,5 +94,5 @@ span.span-label {
     font: 400 16px/130% Raleway, sans-serif;
 }
 
-span.span-content {}
+
 </style>
