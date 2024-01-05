@@ -3,7 +3,9 @@
         <a class="nav-link" :class="{ active: activeLink === 'general' }" href="#" @click="setActiveLink('general')">Thông báo chung</a>
         <a class="nav-link" :class="{ active: activeLink === 'resident' }" href="#" @click="setActiveLink('resident')">Thông báo cư dân</a>
         <a class="nav-link" :class="{ active: activeLink === 'complaint' }" href="#" @click="setActiveLink('complaint')">Khiếu nại</a>
+        
     </div>
+    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button">Tạo mới</button>
 </template>
 
 <script>
@@ -26,8 +28,9 @@ export default {
 .vertical-nav {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    //margin: 10px;
+    width: 290px;
+    margin: 10px;
+    
 }
 
 .nav-link {
@@ -39,7 +42,7 @@ export default {
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     border-radius: 15px;
     margin: 10px;
 }
@@ -51,5 +54,27 @@ export default {
     background-color: #457B9D;
     color: #F1FAEE;
     outline: none;
+}
+.vertical-nav {
+    border-bottom: 2px solid #000; /* Đường kẻ ngang */
+    color: #457B9D;
+}
+.new-button {
+    display: block;
+    width: 200px;
+    padding: 0;
+    background-color: #457B9D;
+    color: #F1FAEE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 24px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.new-button:hover {
+    background-color: #457B9D;
 }
 </style>

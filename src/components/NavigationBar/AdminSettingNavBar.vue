@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 250px;
-  //margin: 10px;
+  margin: 10px;
 }
 
 .nav-link {
@@ -51,5 +51,9 @@ export default {
   background-color: #457B9D;
   color: #F1FAEE;
   outline: none;
+}
+.vertical-nav {
+    border-bottom: 2px solid #000; /* Đường kẻ ngang */
+    color: #457B9D;
 }
 </style>
