@@ -94,7 +94,7 @@ export default {
   <div class="card-list" style="overflow-y: auto; height: 100%;width: 100%">
     <div class="card" v-for="(card, index) in filteredCards" :key="index">
       <div class="overlap-group">
-        <img class="image" alt="Image" src="F:\homie-web\src\assets\logo.png" />
+        <img class="image" alt="Image" src="../../assets/logo.png"/>
         <div class="overlap">
           <h1 class="card-title">{{ card.title }}</h1>
           <p class="text-wrapper">{{ card.text }}</p>
