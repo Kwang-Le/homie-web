@@ -1,14 +1,18 @@
 <template>
     <div class="div">
         <div class="avt-container">
-            <img loading="lazy"
-                src="../../assets/img/ExtraProfileAvatar.jpeg"
-                class="img" />
+            <img src="../../assets/img/ExtraProfileAvatar.jpeg" class="img" />
         </div>
         <div class="extra-info">
-            <div class="extra-info-name">Nguyễn Hàn My</div>
-            <div class="extra-info-status">Trạng thái: Tạm vắng</div>
-            <div class="extra-info-birthdate">Ngày sinh: 05/03/2002</div>
+            <div class="extra-info-title">Nguyễn Hàn My</div>
+            <div class="extra-info-content">
+                <span class="span-label">Trạng thái: </span>
+                <span class="span-content">Tạm vắng</span>
+            </div>
+            <div class="extra-info-content">
+                <span class="span-label">Ngày sinh: </span>
+                <span class="span-content">05/03/2002 </span>
+            </div>
         </div>
     </div>
 </template>
@@ -49,7 +53,7 @@
     max-width: 100%;
 }
 
-.div-2 {
+.extra-info {
     align-self: center;
     display: flex;
     flex-grow: 1;
@@ -58,43 +62,37 @@
     margin: auto 0;
 }
 
-.div-3 {
-    color: #1e1e1e;
+.extra-info-title {
+    color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
     font: 700 22px/150% Raleway, sans-serif;
 }
 
+/* 
 @media (max-width: 991px) {
-    .div-3 {
+    .extra-info-title {
         white-space: initial;
     }
-}
+} */
 
-.div-4 {
+.extra-info-content {
     color: var(--Primary-Base-Black, var(--Primary-Base-Black, #000));
     letter-spacing: -0.32px;
     margin-top: 9px;
     white-space: nowrap;
-    font: 400 16px/130% Raleway, sans-serif;
+
 }
 
 @media (max-width: 991px) {
-    .div-4 {
+    .extra-info-content {
         white-space: initial;
     }
 }
 
-.div-5 {
-    color: var(--Primary-Base-Black, var(--Primary-Base-Black, #000));
-    letter-spacing: -0.32px;
-    margin-top: 5px;
-    white-space: nowrap;
+span.span-label {
     font: 400 16px/130% Raleway, sans-serif;
 }
 
-@media (max-width: 991px) {
-    .div-5 {
-        white-space: initial;
-    }
-}</style>
+span.span-content {}
+</style>
