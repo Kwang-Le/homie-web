@@ -27,7 +27,7 @@
   .box .app-ava {
     height: 52px;
     left: 8;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 236px;
     top: 4px;

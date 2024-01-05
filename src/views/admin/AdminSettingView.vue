@@ -5,12 +5,10 @@ import AdminSettingNavBar from '@/components/NavigationBar/AdminSettingNavBar.vu
 <template>
   <main>
 
-    <div class="col-4">
-
+    <div class="col">
       <AdminSettingNavBar></AdminSettingNavBar>
-
-
     </div>
+
   </main>
 </template>
 
