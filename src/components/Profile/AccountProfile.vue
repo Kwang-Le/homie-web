@@ -1,16 +1,25 @@
 <script setup>
 import Card from '@/components/Card.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goBack = () => {
+    router.push({ name: 'admin-dashboard'})
+}
 </script>
 
 <template>
     <main>
         <Card>
-            <div class="row">
+            <div class="row back-button" @click="goBack">
+                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back"/>
+            </div>
+            <div class="row main-content">
                 <div class="col-4 avatar">
-                    <div class="back-button">
-                        <!-- fa arrow left -->
-                    </div>
-                    <div class="avt-container">
+                    <div class="row avt-container">
                         <div class="img">
                             <img src="../../assets/img/MainProfileAvatar.jpg" class="img" alt="avatar" />
                         </div>
@@ -88,16 +97,28 @@ import Card from '@/components/Card.vue';
 </template>
 
 <style scoped>
-.row {
-    margin-top: 16px;
-    /* needs review */
-}
 
 .col-4.avatar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.row.back-button {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.btn-back {
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    color: #555;
 }
 
 .avt-container {
@@ -168,8 +189,9 @@ import Card from '@/components/Card.vue';
     /* margin-top: 64px; */
     letter-spacing: -1.9%;
     padding: 12px;
-    margin: 20px 12px 30px 12px;
+    margin: 12px 12px 24px 12px;
 }
+
 .btn-edit {
     background-color: var(--main-primary);
 }
@@ -177,5 +199,4 @@ import Card from '@/components/Card.vue';
 .btn-delete {
     background-color: var(--btn-negative);
 }
-
 </style>

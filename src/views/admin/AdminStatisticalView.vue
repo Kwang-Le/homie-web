@@ -1,14 +1,15 @@
 <script setup>
 // import Card from '@/components/Card.vue';
+import ResidentProfile from '@/components/Profile/ResidentProfile.vue';
 import ExtraProfileCardItem from '@/components/Profile/ExtraProfileCardItem.vue';
-import MainProfile from '@/components/Profile/MainProfile.vue';
+import AccountProfile from '@/components/Profile/AccountProfile.vue';
 </script>
 
 <template>
   <main>
     <div class="row">
       <div class="col-8">
-        <MainProfile></MainProfile>
+        <AccountProfile></AccountProfile>
       </div>
       <div class="col-4">
           <h4 class="card-title">Người sống cùng</h4>
