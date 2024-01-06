@@ -1,7 +1,7 @@
 <template>
     <div class="div">
         <div class="avt-container">
-            <img src="../../assets/img/ExtraProfileAvatar.jpeg" class="img" />
+            <img src="../../assets/img/ExtraAccountProfileAvatar.jpeg" class="img" />
         </div>
         <div class="extra-info">
             <div class="extra-info-title">Nguyễn Hàn My</div>

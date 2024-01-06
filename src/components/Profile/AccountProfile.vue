@@ -21,7 +21,7 @@ const goBack = () => {
                 <div class="col-4 avatar">
                     <div class="row avt-container">
                         <div class="img">
-                            <img src="../../assets/img/MainProfileAvatar.jpg" class="img" alt="avatar" />
+                            <img src="../../assets/img/AccountProfileAvatar.jpg" class="img" alt="avatar" />
                         </div>
                     </div>
                     <div class="main-avt-name">Lê Thanh Quang</div>
