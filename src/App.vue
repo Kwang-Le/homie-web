@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import NavBar from './components/NavigationBar/AdminNavBar.vue';
 import LogoAcount from './components/LogoAccount.vue';
 </script>
