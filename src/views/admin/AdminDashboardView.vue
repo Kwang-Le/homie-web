@@ -27,8 +27,8 @@ import LineChart from '@/components/charts/LineChart.vue';
         </Card>
       </div>
     </div>
-    <div class="row">
-      <div class="col-8">
+    <div class="row ">
+      <div class="col-8 ">
         <Card>
           <h5 class="card-title font-weight-bold">Biến động dân cư</h5>
           <LineChart></LineChart>
@@ -36,9 +36,11 @@ import LineChart from '@/components/charts/LineChart.vue';
       </div>
       <div class="col-4">
         <Card>
-          <DashboardCardTableItem></DashboardCardTableItem>
+          <DashboardCardTableItem :tableData="tableDataFee" title="Các khoản thu mới cập nhật"></DashboardCardTableItem>
         </Card>
-        <Card />
+        <Card>
+          <DashboardCardTableItem :tableData="tableDataResident" title="Biến động hộ dân"></DashboardCardTableItem>
+        </Card>
       </div>
     </div>
   </main>
@@ -69,7 +71,7 @@ export default {
     }
   },
   onMounted(){
-    getData()
+    // getData()
   }
 }
 </script>

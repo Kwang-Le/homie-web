@@ -52,4 +52,8 @@ export default {
   color: #F1FAEE;
   outline: none;
 }
+.vertical-nav {
+    border-bottom: 2px solid #000; /* Đường kẻ ngang */
+    color: #457B9D;
+}
 </style>

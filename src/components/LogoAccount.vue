@@ -2,10 +2,10 @@
     <div class="box">
       <div class="app-ava">
         <div class="overlap-group">
-          <div class="rectangle" />
-          <div class="ellipse" />
+          <div class="rectangle"></div>
+          <div class="ellipse"></div>
           <div class="homie">N.M.Tú</div>
-          <img class="image" alt="Image" src="https://www.pngkit.com/png/detail/379-3794147_homie-logo-homie-b-v.png" />
+          <img class="image" alt="Image" src="../assets/img/logo.png" />
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
   
   <script>
   export default {
-    name: "Box",
+    name: "LogoAccount",
   };
   </script>
   
@@ -27,7 +27,7 @@
   .box .app-ava {
     height: 52px;
     left: 8;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     width: 236px;
     top: 4px;
