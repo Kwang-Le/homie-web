@@ -1,0 +1,191 @@
+<script setup>
+import Card from '@/components/Card.vue';
+</script>
+
+<template>
+    <main>
+        <Card>
+            <div class="row main-content">
+                <div class="col-4 avatar">
+                    <div class="row avt-container">
+                        <div class="img">
+                            <img src="../../assets/img/apartment.png" class="img" alt="avatar" />
+                        </div>
+                    </div>
+                    <div class="main-avt-name">Căn hộ</div>
+                    <div class="main-avt-number">P2011</div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">Trạng thái</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>Sử dụng</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">Tầng</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">Số dân</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">Tạm trú</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>Lê Thanh Quang<br>(Từ: 24/12/2022)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">Tạm vắng</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>Nguyễn Hàn My<br>(Từ: 16/11/2023)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="info-label">
+                            <h5 class="info-title font-weight-bold">SĐT đại diện</h5>
+                            <div class="info-content d-flex flex-column card-text">
+                                <p>0852589862</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-button">
+                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-delete">Xóa</button>
+            </div>
+        </Card>
+    </main>
+</template>
+
+<style scoped>
+.col-4.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row.back-button {
+    display: flex;
+    justify-content: flex-start;
+    color: black;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.btn-back {
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    color: #555;
+}
+
+.avt-container {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.main-avt-name {
+    color: var(--main-secondary);
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+    font: 30px/150% Raleway, sans-serif;
+    text-align: center;
+}
+
+.main-avt-number {
+    color: var(--main-secondary);
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.info-label {
+    /* font: 18px/150% Raleway, sans-serif; */
+    margin-bottom: 36px;
+}
+
+.info-title {
+    font: bold 24px/150% Raleway, sans-serif;
+}
+
+.info-content {
+    font-family: "Inter", sans-serif;
+    /* font-size: 18px; */
+    /* font-weight: normal; */
+    color: var(--main-secondary);
+    margin-top: 8px;
+
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.row-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 64px; */
+}
+
+.btn {
+    border-radius: 10;
+    box-shadow: 0px 4px 4px #00000040;
+    border-radius: 10;
+    width: 280px;
+    color: var(--text-alternative);
+    font-family: "Raleway-SemiBold", sans-serif;
+    /* font: 600 18px/150%, sans-serif; */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    /* margin-top: 64px; */
+    letter-spacing: -1.9%;
+    padding: 12px;
+    margin: 12px 12px 24px 12px;
+}
+
+.btn-edit {
+    background-color: var(--main-primary);
+}
+
+.btn-delete {
+    background-color: var(--btn-negative);
+}
+</style>
