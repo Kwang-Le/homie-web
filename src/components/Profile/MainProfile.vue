@@ -78,13 +78,18 @@ import Card from '@/components/Card.vue';
                     </div>
                 </div>
             </div>
+
+            <div class="row-button">
+                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-delete">Xóa</button>
+            </div>
         </Card>
     </main>
 </template>
 
 <style scoped>
 .row {
-    margin-top: 10px;
+    margin-top: 16px;
     /* needs review */
 }
 
@@ -123,19 +128,54 @@ import Card from '@/components/Card.vue';
 
 .info-label {
     /* font: 18px/150% Raleway, sans-serif; */
+    margin-bottom: 36px;
 }
 
 .info-title {
     font: bold 24px/150% Raleway, sans-serif;
-    font-size: 24px;
-    line-height: 150%;
-    /* font-weight: bold; */
 }
 
 .info-content {
-    font: normal 18px/150% Raleway, sans-serif;
+    font-family: "Inter", sans-serif;
     /* font-size: 18px; */
-    font-weight: normal;
+    /* font-weight: normal; */
     color: var(--main-secondary);
+    margin-top: 8px;
+
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 150%;
 }
+
+.row-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 64px; */
+}
+
+.btn {
+    border-radius: 10;
+    box-shadow: 0px 4px 4px #00000040;
+    border-radius: 10;
+    width: 280px;
+    color: var(--text-alternative);
+    font-family: "Raleway-SemiBold", sans-serif;
+    /* font: 600 18px/150%, sans-serif; */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    /* margin-top: 64px; */
+    letter-spacing: -1.9%;
+    padding: 12px;
+    margin: 20px 12px 30px 12px;
+}
+.btn-edit {
+    background-color: var(--main-primary);
+}
+
+.btn-delete {
+    background-color: var(--btn-negative);
+}
+
 </style>

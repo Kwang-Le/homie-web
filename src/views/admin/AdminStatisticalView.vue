@@ -11,7 +11,7 @@ import MainProfile from '@/components/Profile/MainProfile.vue';
         <MainProfile></MainProfile>
       </div>
       <div class="col-4">
-          <h4 class="card-title font-weight-bold">Người sống cùng</h4>
+          <h4 class="card-title">Người sống cùng</h4>
           <ExtraProfileCardItem />
       </div>
     </div>
@@ -21,6 +21,6 @@ import MainProfile from '@/components/Profile/MainProfile.vue';
 <style scoped>
   .card-title {
     text-align: center;
-    
+    font: 30px/150% Raleway, sans-serif;
   }
 </style>
