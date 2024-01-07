@@ -12,11 +12,9 @@
               <router-link class="nav-link" :class="{ active: activeLink === 'apartment' }" to="/admin-apartment" @click="setActiveLink('general')">Căn hộ </router-link>
               <router-link class="nav-link" :class="{ active: activeLink === 'resident' }" to="/admin-resident" @click="setActiveLink('general')">Cư dân </router-link>
               <router-link class="nav-link" :class="{ active: activeLink === 'revenue' }" to="/admin-revenue" @click="setActiveLink('general')">Khoản thu </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'statistical' }" to="/admin-statistical-" @click="setActiveLink('general')">Thống kê </router-link>
+              <router-link class="nav-link" :class="{ active: activeLink === 'statistic' }" to="/admin-statistic" @click="setActiveLink('general')">Thống kê </router-link>
               <router-link class="nav-link" :class="{ active: activeLink === 'notification' }" to="/admin-notification" @click="setActiveLink('general')">Thông báo</router-link>
               <router-link class="nav-link" to="/admin-setting">Cài đặt</router-link>
-
-
             </div>
         </div>
     </nav>

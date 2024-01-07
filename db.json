@@ -605,6 +605,46 @@
         "owner": null,
         "members":[]
       },
+      {
+        "id": 2,
+        "floor": 2,
+        "number": 202,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      },
+      {
+        "id": 3,
+        "floor": 2,
+        "number": 203,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      },
+      {
+        "id": 4,
+        "floor": 2,
+        "number": 204,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      },
+      {
+        "id": 5,
+        "floor": 2,
+        "number": 204,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      },
+      {
+        "id": 6,
+        "floor": 2,
+        "number": 206,
+        "status": "AVAIL",
+        "owner": null,
+        "members":[]
+      }
     ]
   },
   "charges":{
