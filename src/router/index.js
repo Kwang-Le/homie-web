@@ -11,7 +11,7 @@ import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 import AdminResetPasswordFormView from '@/views/admin/form/AdminResetPasswordFormView.vue'
 import AdminCodeConfirmFormView from '@/views/admin/form/AdminCodeConfirmFormView.vue'
-import AdminNewPasswordFormView from '@/views/admin/form/AdminNewPassWordFormView.vue'
+import AdminNewPasswordFormView from '@/views/admin/form/AdminNewPasswordFormView.vue'
 import AdminRegisterFormView from '@/views/admin/form/AdminRegisterFormView.vue'
 import AdminNewApartmentFormView from '@/views/admin/form/AdminNewApartmentFormView.vue'
 import AdminCreateAccountFormView from "@/views/admin/form/AdminCreateAccountFormView.vue";
