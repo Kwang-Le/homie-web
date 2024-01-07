@@ -8,7 +8,7 @@ export default {
         'khoan-thu': ['Đóng góp', 'Thu phí'],
         'can-ho': ['Trống', 'Cho thuê', 'Bán'],
         'cu-dan': ['Tạm trú', 'Tạm vắng', 'Ở lâu dài'],
-        tang: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+        'tang': ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
       },
       khoanThuList: [
         {
@@ -113,7 +113,7 @@ export default {
       ],
       selectedKhoanThuFrame: 1,
       selectedKhoanThuRow: null,
-      khoanThuFilterSelection: {
+      khoanThuFilterSelection:{
         tenKhoanThu: null,
         loaiKhoanThu: null,
         trangThai: null
@@ -219,7 +219,7 @@ export default {
       ],
       selectedCanHoFrame: 1,
       selectedCanHoRow: null,
-      canHoFilterSelection: {
+      canHoFilterSelection:{
         tenCanHo: null,
         tang: null,
         trangThai: null // TRỐNG, CHO THUÊ, BÁN
@@ -328,7 +328,7 @@ export default {
       ],
       selectedCuDanFrame: 1,
       selectedCuDanRow: null,
-      cuDanFilterSelection: {
+      cuDanFilterSelection:{
         hoTen: null,
         gioiTinh: null, // Nam, Nữ
         trangThai: null // Tạm trú, tạm vắng
@@ -345,12 +345,8 @@ export default {
         this.selectedKhoanThuFrame * 10
       )
     },
-    isKhoanThuFiltered() {
-      return (
-        this.khoanThuFilterSelection.tenKhoanThu !== null ||
-        this.khoanThuFilterSelection.loaiKhoanThu !== null ||
-        this.khoanThuFilterSelection.trangThai !== null
-      )
+    isKhoanThuFiltered(){
+      return this.khoanThuFilterSelection.tenKhoanThu !== null || this.khoanThuFilterSelection.loaiKhoanThu !== null || this.khoanThuFilterSelection.trangThai !== null
     },
 
     totalPagesCanHo() {
@@ -359,12 +355,8 @@ export default {
     selectedCanHoList() {
       return this.canHoList.slice((this.selectedCanHoFrame - 1) * 10, this.selectedCanHoFrame * 10)
     },
-    isCanHoFiltered() {
-      return (
-        this.canHoFilterSelection.tenCanHo !== null ||
-        this.canHoFilterSelection.tang !== null ||
-        this.canHoFilterSelection.trangThai !== null
-      )
+    isCanHoFiltered(){
+      return this.canHoFilterSelection.tenCanHo !== null || this.canHoFilterSelection.tang !== null || this.canHoFilterSelection.trangThai !== null
     },
 
     totalPagesCuDan() {
@@ -373,12 +365,8 @@ export default {
     selectedCuDanList() {
       return this.cuDanList.slice((this.selectedCuDanFrame - 1) * 10, this.selectedCuDanFrame * 10)
     },
-    isCuDanFiltered() {
-      return (
-        this.cuDanFilterSelection.hoTen !== null ||
-        this.cuDanFilterSelection.gioiTinh !== null ||
-        this.cuDanFilterSelection.trangThai !== null
-      )
+    isCuDanFiltered(){
+      return this.cuDanFilterSelection.hoTen !== null || this.cuDanFilterSelection.gioiTinh !== null || this.cuDanFilterSelection.trangThai !== null
     }
   },
   methods: {
@@ -389,7 +377,7 @@ export default {
     loadAllData() {
       // do smthing
     },
-    clearFilter() {
+    clearFilter(){
       // do smthing
     }
   }
@@ -446,12 +434,7 @@ export default {
   <div class="table-display">
     <div class="tab-content" id="myTabContent">
       <!-- Pane Khoan thu -->
-      <div
-        class="tab-pane fade show active"
-        id="khoan-thu-pane"
-        role="tabpanel"
-        aria-labelledby="khoan-thu-tab"
-      >
+      <div class="tab-pane fade show active" id="khoan-thu-pane" role="tabpanel" aria-labelledby="khoan-thu-tab">
         <div class="container-fluid">
           <div class="row align-items-start">
             <div class="col">
@@ -490,7 +473,7 @@ export default {
                   </tbody>
                 </table>
               </div>
-
+              
               <!-- Pagination -->
               <div id="khoanThuPagination" class="row justify-content-end">
                 <div class="col"></div>
@@ -525,11 +508,10 @@ export default {
                 </div>
               </div>
 
+
               <div id="khoanThuActionBtnGroup" class="row justify-content-evenly">
                 <div class="col">
-                  <button id="KhoanThuExportBtn" type="button" class="btn btn-action btn-primary">
-                    Xuất báo cáo
-                  </button>
+                  <button id="KhoanThuExportBtn" type="button" class="btn btn-action btn-primary">Xuất báo cáo</button>
                 </div>
                 <div class="col">
                   <button
@@ -554,6 +536,7 @@ export default {
               </div>
             </div>
             <div class="col-md-auto">
+
               <!-- Filter table -->
               <div class="filter-div container">
                 <!-- Search ten khoan thu -->
@@ -592,8 +575,7 @@ export default {
                 </div>
                 <!-- Filter trang thai khoan thu -->
                 <div class="filterField">
-                  <label
-                    for="KhoanThuStatusRadioGroup"
+                  <label for="KhoanThuStatusRadioGroup"
                     style="font-size: medium; font-weight: bold; color: black"
                     >Trạng thái khoản thu</label
                   >
@@ -633,27 +615,22 @@ export default {
               </div>
               <!-- Handle bằng việc truyền param vào loadData(), nhấn xóa -> loadAllData() -->
               <div class="row filter-btn-group justify-content-evenly">
-                <div class="col-2">
-                  <button
-                    type="button"
-                    class="btn btn-md btn-danger"
-                    @click="loadAllData"
-                    :disabled="!isKhoanThuFiltered"
-                  >
-                    Xóa
-                  </button>
-                </div>
-                <div class="col-2">
-                  <button type="button" class="btn btn-md btn-primary" @click="loadData">
-                    Lọc
-                  </button>
-                </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-danger" @click="loadAllData" :disabled="!isKhoanThuFiltered">
+                      Xóa
+                    </button>
+                  </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-primary" @click="loadData" >
+                      Lọc
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      
       <!-- Pane Can ho -->
       <div class="tab-pane fade" id="can-ho-pane" role="tabpanel" aria-labelledby="can-ho-tab">
         <div class="container-fluid">
@@ -677,8 +654,7 @@ export default {
                       v-for="CanHo in selectedCanHoList"
                       :key="CanHo.id"
                       @click="selectedCanHoRow = selectedCanHoRow === CanHo.id ? null : CanHo.id"
-                      :class="{ 'table-secondary': selectedCanHoRow === CanHo.id }"
-                    >
+                      :class="{ 'table-secondary': selectedCanHoRow === CanHo.id }" >
                       <th scope="row">{{ CanHo.id }}</th>
                       <td>{{ CanHo.maCanHo }}</td>
                       <td>{{ CanHo.tang }}</td>
@@ -726,9 +702,7 @@ export default {
 
               <div id="CanHoActionBtnGroup" class="row justify-content-evenly">
                 <div class="col">
-                  <button id="CanHoExportBtn" type="button" class="btn btn-action btn-primary">
-                    Xuất báo cáo
-                  </button>
+                  <button id="CanHoExportBtn" type="button" class="btn btn-action btn-primary">Xuất báo cáo</button>
                 </div>
                 <div class="col">
                   <button
@@ -809,21 +783,16 @@ export default {
                 </div>
               </div>
               <div class="row filter-btn-group justify-content-evenly">
-                <div class="col-2">
-                  <button
-                    type="button"
-                    class="btn btn-md btn-danger"
-                    @click="loadAllData"
-                    :disabled="!isCanHoFiltered"
-                  >
-                    Xóa
-                  </button>
-                </div>
-                <div class="col-2">
-                  <button type="button" class="btn btn-md btn-primary" @click="loadData">
-                    Lọc
-                  </button>
-                </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-danger" @click="loadAllData" :disabled="!isCanHoFiltered">
+                      Xóa
+                    </button>
+                  </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-primary" @click="loadData">
+                      Lọc
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
@@ -849,12 +818,10 @@ export default {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr
-                      v-for="CuDan in selectedCuDanList"
-                      :key="CuDan.id"
-                      @click="selectedCuDanRow = selectedCuDanRow === CuDan.id ? null : CuDan.id"
-                      :class="{ 'table-secondary': selectedCuDanRow === CuDan.id }"
-                    >
+                    <tr v-for="CuDan in selectedCuDanList" 
+                    :key="CuDan.id"
+                    @click="selectedCuDanRow = selectedCuDanRow === CuDan.id ? null : CuDan.id"
+                    :class="{ 'table-secondary': selectedCuDanRow === CuDan.id}">
                       <th scope="row">{{ CuDan.id }}</th>
                       <td>{{ CuDan.hoTen }}</td>
                       <td>{{ CuDan.gioiTinh }}</td>
@@ -903,9 +870,7 @@ export default {
 
               <div id="CuDanActionBtnGroup" class="row justify-content-evenly">
                 <div class="col">
-                  <button id="CuDanExportBtn" type="button" class="btn btn-action btn-primary">
-                    Xuất báo cáo
-                  </button>
+                  <button id="CuDanExportBtn" type="button" class="btn btn-action btn-primary">Xuất báo cáo</button>
                 </div>
                 <div class="col">
                   <button
@@ -928,10 +893,12 @@ export default {
                   </button>
                 </div>
               </div>
+
             </div>
             <div class="col-md-auto">
+
               <!-- Filter table -->
-              <div class="filter-div container">
+                <div class="filter-div container">
                 <!-- Search ten cu dan -->
                 <div class="filterField">
                   <label
@@ -948,8 +915,7 @@ export default {
                 </div>
                 <!-- Filter gioi tinh cu dan -->
                 <div class="filterField">
-                  <label
-                    for="CuDanSexRadioGroup"
+                  <label for="CuDanSexRadioGroup"
                     style="font-size: medium; font-weight: bold; color: black"
                     >Giới tính</label
                   >
@@ -1010,21 +976,16 @@ export default {
               </div>
               <!-- Handle bằng việc truyền param vào loadData(), nhấn xóa -> loadAllData() -->
               <div class="row filter-btn-group justify-content-evenly">
-                <div class="col-2">
-                  <button
-                    type="button"
-                    class="btn btn-md btn-danger"
-                    @click="loadAllData"
-                    :disabled="!isKhoanThuFiltered"
-                  >
-                    Xóa
-                  </button>
-                </div>
-                <div class="col-2">
-                  <button type="button" class="btn btn-md btn-primary" @click="loadData">
-                    Lọc
-                  </button>
-                </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-danger" @click="loadAllData" :disabled="!isKhoanThuFiltered">
+                      Xóa
+                    </button>
+                  </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-md btn-primary" @click="loadData" >
+                      Lọc
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
