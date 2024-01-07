@@ -30,7 +30,6 @@ import AdminNewFeePopUpFormView from "@/views/admin/form/AdminNewFeePopUpFormVie
 import AdminNewNotiFormView from "@/views/admin/form/AdminNewNotiFormView.vue";
 import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
-import AdminApartmentDetailsView from '@/views/admin/AdminApartmentDetailsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
