@@ -1,8 +1,8 @@
 <script>
 import AdminSettingNavBar from '@/components/NavigationBar/AdminSettingNavBar.vue'
-import SettingAccount from '@/components/Setting/SettingAccount.vue'
-import SettingDisplay from '@/components/Setting/SettingDisplay.vue'
-import SettingLogOut from '@/components/Setting/SettingLogOut.vue'
+import SettingAccount from '@/components/setting/SettingAccount.vue'
+import SettingDisplay from '@/components/setting/SettingDisplay.vue'
+import SettingLogOut from '@/components/setting/SettingLogOut.vue'
 
 export default {
   components: {
