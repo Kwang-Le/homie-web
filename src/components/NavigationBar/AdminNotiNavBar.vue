@@ -19,6 +19,7 @@ export default {
     methods: {
         setActiveLink(link) {
             this.activeLink = link; // Thay đổi nav-link được chọn khi người dùng click vào một nav-link khác
+            this.$emit('set-active-link', link)
         }
     }
 }

@@ -17,6 +17,7 @@ export default {
   methods: {
     setActiveLink(link) {
       this.activeLink = link; // Thay đổi nav-link được chọn khi người dùng click vào một nav-link khác
+      this.$emit('set-active-link', link)
     }
   }
 }
@@ -24,36 +25,55 @@ export default {
 
 <style scoped>
 .vertical-nav {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin: 10px;
+    
 }
 
 .nav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  color: #1D3557;
-  text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 15px;
-  margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #1D3557;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 15px;
+    margin: 10px;
 }
 .nav-link.active {
-  background-color: #457B9D;
-  color: #F1FAEE;
+    background-color: #457B9D;
+    color: #F1FAEE;
 }
 .nav-link:active, .nav-link:focus {
-  background-color: #457B9D;
-  color: #F1FAEE;
-  outline: none;
+    background-color: #457B9D;
+    color: #F1FAEE;
+    outline: none;
 }
 .vertical-nav {
     border-bottom: 2px solid #000; /* Đường kẻ ngang */
     color: #457B9D;
+}
+.new-button {
+    display: block;
+    width: 200px;
+    padding: 0;
+    background-color: #457B9D;
+    color: #F1FAEE;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-size: 24px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.new-button:hover {
+    background-color: #457B9D;
 }
 </style>
