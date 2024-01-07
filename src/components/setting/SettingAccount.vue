@@ -1,17 +1,70 @@
-<script setup>
+<script>
 import { ref } from 'vue';
-const currentPassword = ref('');
-const newPassword = ref('');
-const newPasswordAgain = ref('');
+import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePasswordSuccess.vue';
+import AdminChangePasswordError1 from '@/components/Notification/AdminChangePasswordError1.vue';
+import AdminChangePasswordError2 from '@/components/Notification/AdminChangePasswordError2.vue';
 
-const resetFields = () => {
-  currentPassword.value = '';
-  newPassword.value = '';
-  newPasswordAgain.value = '';
-};
+export default {
+    name: 'ChangePasswordPage',
+    components: {
+        'admin-change-password-success': AdminChangePasswordSuccess,
+        'admin-change-password-error1': AdminChangePasswordError1,
+        'admin-change-password-error2': AdminChangePasswordError2
+    },
+    data() {
+        return {
+            newPassword: '',
+            newPasswordAgain: '',
+            showSuccess: false,
+            showError1: false,
+            showError2: false
+        }
+    },
+    methods: {
+        checkPassword() {
+            if (!this.currentPassword || !this.newPassword || !this.newPasswordAgain) {
+                this.showError2 = true;
+                this.showError1 = false;
+                this.showSuccess = false;
+                setTimeout(() => {
+                    this.showError2 = false;
+                }, 3000);
+            } else if (this.newPassword === this.newPasswordAgain) {
+                this.showSuccess = true;
+                this.showError1 = false;
+                this.showError2 = false;
+                setTimeout(() => {
+                    this.showSuccess = false;
+                }, 3000);
+            } else {
+                this.showError1 = true;
+                this.showSuccess = false;
+                this.showError2 = false;
+                setTimeout(() => {
+                    this.showError1 = false;
+                }, 3000);
+            }
+        },
+        resetFields() {
+            this.currentPassword = '';
+            this.newPassword = '';
+            this.newPasswordAgain = '';
+        }
+    }
+    // ...
+}
+
+
+
+
 </script>
 <template>
     <div class="change-password-page">
+        <div class="notification-container">
+        <admin-change-password-success v-if="showSuccess"></admin-change-password-success>
+        <admin-change-password-error1 v-if="showError1"></admin-change-password-error1>
+        <admin-change-password-error2 v-if="showError2"></admin-change-password-error2>
+        </div>
         <h1 class="title">Thay đổi mật khẩu</h1>
         <form>
             <div class="input-group">
@@ -32,19 +85,22 @@ const resetFields = () => {
             </div>
         </form>
     <div style="width: 100%;">
-        <button class="btn-accept">Xác nhận</button>
+        <button class="btn-accept" @click="checkPassword">Xác nhận</button>
         <button class="btn-cancel" @click="resetFields">Hủy</button>
+    
     </div>
     </div>
 </template>
   
-<script>
-export default {
-    name: 'ChangePasswordPage',
-}
-</script>
+
   
 <style scoped>
+.notification-container {
+    position: fixed;
+    top: 132px;
+    right: 50%;
+    transform: translateX(50%);
+}
 .change-password-page {
     display: flex;
     flex-direction: column;
