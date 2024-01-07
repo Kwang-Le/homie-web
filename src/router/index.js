@@ -11,6 +11,7 @@ import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
 // import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
 import AdminApartmentDetailsView from '@/views/admin/AdminApartmentDetailsView.vue'
 import AdminResidentDetailsView from '@/views/admin/AdminResidentDetailsView.vue'
+import AdminFeeDetailsView from '@/views/admin/AdminFeeDetailsView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 
 const router = createRouter({
@@ -66,6 +67,11 @@ const router = createRouter({
       path: '/admin-statistic/resident/:id',
       name: 'admin-statistic-resident',
       component: AdminResidentDetailsView,
+    },
+    {
+      path: '/admin-statistic/fee/:id',
+      name: 'admin-statistic-fee',
+      component: AdminFeeDetailsView,
     },
     {
       path: '/admin-notification',
