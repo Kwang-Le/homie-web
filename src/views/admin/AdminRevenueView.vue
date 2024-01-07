@@ -27,7 +27,9 @@ import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStat
         <Card>
           <h5 class="card-title font-weight-bold">Thống kê thu phí</h5>
           <div class="row">
-            <LineChart class="col-8"></LineChart>
+            <div class="col-8">
+              <LineChart ></LineChart>
+            </div>
             <div class="btn-group d-flex flex-column col-4 justify-content-end">
               <button class="new-button mb-2">
                 Tạo khoản phí

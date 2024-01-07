@@ -8,10 +8,10 @@
         <option value="unread">Chưa đọc</option>
       </select>
   
-      <select v-model="date" class = "date">
+      <select v-model="date" class = "date" @change="emitDate">
         <option default value="">Ngày</option>
-        <option>Cũ nhất</option>
-        <option>Mới nhất</option>
+        <option value="oldest">Cũ nhất</option>
+        <option value="newest">Mới nhất</option>
       </select>
     </div>
   </template>
@@ -33,6 +33,9 @@
     emitStatus() {
       this.$emit('filterStatus', this.status);
     },
+    emitDate() {
+      this.$emit('filterDate', this.date);
+    },
   },
   };
   </script>
@@ -45,7 +48,7 @@
     background: var(--Primary-Base-White, #FFF);
   }
   .status {
-    
+    width: 100px;
     margin-left: 50px;
     height: 40px;
     border-radius: 4px;
