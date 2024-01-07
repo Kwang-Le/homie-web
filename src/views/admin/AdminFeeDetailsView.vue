@@ -1,5 +1,6 @@
 <script setup>
-
+import FeeProfile from '@/components/Profile/FeeProfile.vue';
+import ExtraFeesList from '@/components/Profile/ExtraFeesList.vue';
 </script>
 
 <template>
@@ -10,7 +11,7 @@
             </div>
             <div class="col-4">
                 <h4 class="card-title">Các khoản khác</h4> 
-                <ExtraFeesList /> <!-- TODO -->
+                <ExtraFeesList />
             </div>
         </div>
     </main>
