@@ -10,6 +10,7 @@ import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
 // import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
 import AdminApartmentDetailsView from '@/views/admin/AdminApartmentDetailsView.vue'
+import AdminResidentDetailsView from '@/views/admin/AdminResidentDetailsView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 
 const router = createRouter({
@@ -51,11 +52,6 @@ const router = createRouter({
       component: AdminStatisticView
     },
     // {
-    //   path: '/admin-statistical',
-    //   name: 'admin-statistical',
-    //   component: AdminStatisticalView
-    // },
-    // {
     //   path: '/admin-statistical/apartment/:id',
     //   name: 'admin-statistical-apartment',
     //   component: AdminStatisticView
@@ -63,7 +59,13 @@ const router = createRouter({
     {
       path: '/admin-statistic/apartment/:id',
       name: 'admin-statistic-apartment',
-      component: AdminApartmentDetailsView
+      component: AdminApartmentDetailsView,
+      // props: true
+    },
+    {
+      path: '/admin-statistic/resident/:id',
+      name: 'admin-statistic-resident',
+      component: AdminResidentDetailsView,
     },
     {
       path: '/admin-notification',
