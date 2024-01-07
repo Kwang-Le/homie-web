@@ -1,10 +1,31 @@
 <script setup>
 import Card from '@/components/Card.vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { ref, onMounted } from 'vue';
+// import { useRoute } from 'vue-router';
+
+library.add(fas);
+
+// const route = useRoute();
+const mainAvtId = ref(''); // Initialize mainAvtId as an empty string
+
+onMounted(async () => {
+    const response = await fetch("../../db.json")
+    const data = await response.json()
+
+    // Assuming the id is stored in data.apartmentId
+    mainAvtId.value = data.building.apartments[0].number
+});
 </script>
 
 <template>
     <main>
         <Card>
+            <div class="row close-button" @click="$router.go(-1)">
+                <font-awesome-icon :icon="['fas', 'xmark']" size="2x" class="btn-close" />
+            </div>
             <div class="row main-content">
                 <div class="col-4 avatar">
                     <div class="row avt-container">
@@ -13,58 +34,80 @@ import Card from '@/components/Card.vue';
                         </div>
                     </div>
                     <div class="main-avt-name">Căn hộ</div>
-                    <div class="main-avt-number">P2011</div>
+                    <div class="main-avt-id">{{  mainAvtId }}</div>
                 </div>
-                <div class="col-4">
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">Trạng thái</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>Sử dụng</p>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">Trạng thái</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>Sử dụng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">Tạm trú</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>Lê Thanh Quang<br>(Từ: 24/12/2022)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">Tầng</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>2</p>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">Tầng</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">Tạm vắng</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>Nguyễn Hàn My<br>(Từ: 16/11/2023)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">Số dân</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>2</p>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">Số dân</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>2</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">Tạm trú</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>Lê Thanh Quang<br>(Từ: 24/12/2022)</p>
+
+                        <div class="col-6">
+                            <div class="d-flex justify-content-between">
+                                <div class="info-label">
+                                    <h5 class="info-title font-weight-bold">SĐT đại diện</h5>
+                                    <div class="info-content d-flex flex-column card-text">
+                                        <p>0852589862</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">Tạm vắng</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>Nguyễn Hàn My<br>(Từ: 16/11/2023)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="info-label">
-                            <h5 class="info-title font-weight-bold">SĐT đại diện</h5>
-                            <div class="info-content d-flex flex-column card-text">
-                                <p>0852589862</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -85,20 +128,24 @@ import Card from '@/components/Card.vue';
     flex-direction: column;
 }
 
-.row.back-button {
+.row.close-button {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     color: black;
     margin-top: 4px;
-    margin-left: 4px;
+    margin-right: 4px;
 }
 
-.btn-back {
+.btn-close {
     cursor: pointer;
 }
 
-.btn-back:hover {
+.btn-close:hover {
     color: #555;
+}
+
+.row.main-content {
+    margin-top: 16px;
 }
 
 .avt-container {
@@ -126,7 +173,7 @@ import Card from '@/components/Card.vue';
     text-align: center;
 }
 
-.main-avt-number {
+.main-avt-id {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
