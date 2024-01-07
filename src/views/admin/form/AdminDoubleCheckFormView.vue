@@ -115,8 +115,7 @@
     </svg>
 
     <div class="x-c-nh-n-x-a">
-      <div class="rectangle-31"></div>
-      <div class="section-name">Xóa</div>
+      <button class="section-name" type="submit" onclick="alert('Delete!')" >Xóa</button>
     </div>
   </div>
 </template>
@@ -180,8 +179,14 @@ export default {
   position: absolute;
   inset: 0;
 }
-.rectangle-31 {
-  background: var(--alternative, #e63946);
+.section-name {
+  background: #e63946;
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 30px;
+  line-height: 64px;
+  font-weight: 700;
   border-radius: 15px;
   position: absolute;
   right: 34.97%;
@@ -190,21 +195,6 @@ export default {
   bottom: 31.14%;
   top: 56.46%;
   height: 12.4%;
-}
-.section-name {
-  color: #f1faee;
-  text-align: center;
-  font-family: "Raleway-Bold", sans-serif;
-  font-size: 30px;
-  line-height: 64px;
-  font-weight: 700;
-  position: absolute;
-  right: 38.93%;
-  left: 38.11%;
-  width: 22.96%;
-  bottom: 31.29%;
-  top: 56.46%;
-  height: 12.25%;
   display: flex;
   align-items: center;
   justify-content: center;
