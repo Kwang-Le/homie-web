@@ -1,21 +1,21 @@
 <script setup>
 // import Card from '@/components/Card.vue';
-import ApartmentProfile from '@/components/Profile/ApartmentProfile.vue';
+// import ApartmentProfile from '@/components/Profile/ApartmentProfile.vue';
 // import ApartmentResidentItem from '@/components/Profile/ApartmentResidentItem.vue';
-// import ExtraProfileCardItem from '@/components/Profile/ExtraProfileCardItem.vue';
-import ResidentItemList from '@/components/Profile/ResidentItemList.vue';
-// import AccountProfile from '@/components/Profile/AccountProfile.vue';
+import ExtraProfileCardItem from '@/components/Profile/ExtraProfileCardItem.vue';
+import AccountProfile from '@/components/Profile/AccountProfile.vue';
+// import ResidentItemList from '@/components/Profile/ResidentItemList.vue';
 </script>
 
 <template>
     <main>
         <div class="row">
             <div class="col-8">
-                <ApartmentProfile></ApartmentProfile>
+                <AccountProfile></AccountProfile>
             </div>
             <div class="col-4">
-                <h4 class="card-title">Cư dân căn hộ</h4>
-                <ResidentItemList />
+                <h4 class="card-title">Nguời sống cùng</h4>
+                <ExtraProfileCardItem />
             </div>
         </div>
     </main>

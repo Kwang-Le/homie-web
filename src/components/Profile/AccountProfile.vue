@@ -101,13 +101,17 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 .row.back-button {
     display: flex;
     justify-content: flex-start;
-    color: black;
+    /* color: black;
     margin-top: 4px;
-    margin-left: 4px;
+    margin-left: 4px; */
 }
 
 .btn-back {
+    align-self: flex-start;
     cursor: pointer;
+    color: black;
+    margin-top: 4px;
+    margin-left: 4px;
 }
 
 .btn-back:hover {
