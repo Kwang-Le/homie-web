@@ -1019,6 +1019,21 @@ export default {
   font-size: 16px;
   font-weight: bold;
 }
+.btn.btn-primary {
+  background: #457b9d;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn.btn-info {
+  background: #1d3557;
+  border: none;
+  color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn.btn-danger {
+  background: #e63946;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .row.filter-btn-group {
   padding-top: 40px;
   padding-bottom: 20px;
