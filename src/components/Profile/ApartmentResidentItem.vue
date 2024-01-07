@@ -1,17 +1,17 @@
 <template>
     <div class="div">
         <div class="avt-container">
-            <img src="../../assets/img/ExtraAccountProfileAvatar.jpeg" class="img" />
+            <img src="../../assets/img/AccountProfileAvatar.jpg" class="img" />
         </div>
         <div class="extra-info">
-            <div class="extra-info-title">Nguyễn Hàn My</div>
+            <div class="extra-info-title">Lê Thanh Quang</div>
             <div class="extra-info-content">
                 <span class="span-label">Trạng thái: </span>
-                <span class="span-content">Tạm vắng</span>
+                <span class="span-content">Tạm trú</span>
             </div>
             <div class="extra-info-content">
                 <span class="span-label">Ngày sinh: </span>
-                <span class="span-content">05/03/2002 </span>
+                <span class="span-content">28/03/2002 </span>
             </div>
         </div>
     </div>
