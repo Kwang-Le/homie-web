@@ -36,7 +36,7 @@ import fetchDataAndStore from '@/services/api'
     <div class="row ">
       <div class="col-8 ">
         <Card>
-          <h5 class="card-title font-weight-bold">Biến động dân cư {{ this.$data.store.getCount }}</h5>
+          <h5 class="card-title font-weight-bold">Biến động dân cư {{ store.getCount }}</h5>
           <LineChart></LineChart>
         </Card>
       </div>
