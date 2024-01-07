@@ -60,21 +60,9 @@ export default {
     color: #457B9D;
 }
 .new-button {
-    display: block;
-    width: 200px;
-    padding: 0;
-    background-color: #457B9D;
-    color: #F1FAEE;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Raleway';
-    font-weight: normal;
-    font-size: 24px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.new-button:hover {
-    background-color: #457B9D;
+  width: 200px;
+  padding: 0;
+  font-size: 24px;
+  margin: 20px auto;
 }
 </style>
