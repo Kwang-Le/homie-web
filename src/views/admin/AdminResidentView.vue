@@ -5,7 +5,7 @@ import DoughChart from '@/components/charts/DoughChart.vue';
 import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import LineChart from '@/components/charts/LineChart.vue';
-import AdminResidentStatisticItem from '@/components/Resident/AdminResidentStatisticItem.vue'
+import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStatisticItem.vue'
 </script>
 
 <template>
@@ -13,17 +13,17 @@ import AdminResidentStatisticItem from '@/components/Resident/AdminResidentStati
     <div class="row">
       <div class="col">
         <Card>
-          <AdminResidentStatisticItem title="Tổng số dân" content="200 người" />
+          <DashboardCardStatisticItem title="Tổng số dân" content="200 người" />
         </Card>
       </div>
       <div class="col">
         <Card>
-          <AdminResidentStatisticItem title="Số dân tạm trú" content="18" />
+          <DashboardCardStatisticItem title="Số dân tạm trú" content="18" />
         </Card>
       </div>
       <div class="col">
         <Card>
-          <AdminResidentStatisticItem title="Số dân tạm vắng" content="10" />
+          <DashboardCardStatisticItem title="Số dân tạm vắng" content="10" />
         </Card>
       </div>
     </div>
