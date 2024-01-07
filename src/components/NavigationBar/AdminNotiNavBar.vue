@@ -5,9 +5,9 @@
         <a class="nav-link" :class="{ active: activeLink === 'complaint' }" href="#" @click="setActiveLink('complaint')">Khiếu nại</a>
         
     </div>
-    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button">Tạo mới</button>
-</template>
-
+    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button" @click="emitNewNotificationEvent">Tạo mới</button>
+    </template>
+ 
 <script>
 export default {
     name: 'AdminNotiNavBar',
@@ -20,7 +20,10 @@ export default {
         setActiveLink(link) {
             this.activeLink = link; // Thay đổi nav-link được chọn khi người dùng click vào một nav-link khác
             this.$emit('set-active-link', link)
-        }
+        },
+        emitNewNotificationEvent() {
+        this.$emit('new-notification');
+    }
     }
 }
 </script>
