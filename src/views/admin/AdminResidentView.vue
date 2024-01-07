@@ -6,6 +6,10 @@ import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import LineChart from '@/components/charts/LineChart.vue';
 import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStatisticItem.vue'
+
+import { useResidentStore } from '@/stores/resident'
+import { computed } from "vue";
+import fetchDataAndStore from '@/services/api'
 </script>
 
 <template>
@@ -55,17 +59,20 @@ import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStat
 export default {
   data() {
     return {
+      residentStore: useResidentStore(),
+      totalResident: 0,
+      temporaryStay: 0,
+      temporaryLeave: 0
     }
   },
   methods: {
-    async getData() {
-      const response = await fetch("http://example.com/movies.json");
-      const movies = await response.json();
-      console.log(movies);
+    setData() {
+      this.$data.totalResident = this.$data.store.getCount
     }
   },
   onMounted() {
-    getData()
+    console.log("mounted")
+    this.setData()
   }
 }
 </script>
