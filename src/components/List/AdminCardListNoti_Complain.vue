@@ -33,7 +33,7 @@ export default {
     };
   },
   computed: {
-    
+
     filteredCards() {
       let filtered = this.cards;
       //if (!this.searchTerm) {return this.cards;}
@@ -45,17 +45,17 @@ export default {
         filtered = filtered.filter(card => !card.isChecked);
       }
       filtered.sort((a, b) => {
-      if (this.date === 'newest') {
-        return new Date(b.date) - new Date(a.date);
-      } else if (this.date === 'oldest') {
-        return new Date(a.date) - new Date(b.date);
-      }
-    });
+        if (this.date === 'newest') {
+          return new Date(b.date) - new Date(a.date);
+        } else if (this.date === 'oldest') {
+          return new Date(a.date) - new Date(b.date);
+        }
+      });
       return filtered;
     },
-    
+
   },
-  
+
   methods: {
     toggleButton() {
       this.isSelected = !this.isSelected;
@@ -116,12 +116,7 @@ export default {
         <div class="d-flex flex-column">
           <div class="btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary" v-bind:class="{ active: card.isChecked }">
-              <input type="checkbox" v-model="card.isChecked" @change="onCheckboxChange($event, card)"
-                autocomplete="false">
-              <!-- <label class="checkbox-container">
-    <input type="checkbox" v-model="card.isChecked" @change="onCheckboxChange" />
-    <span class="checkmark" :class="{ checked: card.isChecked }"></span>
-  </label> -->
+              <input type="checkbox" v-model="card.isChecked" autocomplete="false" class="checkbox-hidden">
               <font-awesome-icon icon="check" size="2xl" class="icon-padding" />
             </label>
           </div>
@@ -136,6 +131,13 @@ export default {
   </div>
 </template>
 <style scoped>
+.checkbox-hidden {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
 .card-list {
   width: 100%;
   height: 100%;
