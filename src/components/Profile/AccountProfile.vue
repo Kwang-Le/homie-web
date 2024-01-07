@@ -2,19 +2,12 @@
 import Card from '@/components/Card.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-const goBack = () => {
-    router.push({ name: 'admin-dashboard'})
-}
 </script>
 
 <template>
     <main>
         <Card>
-            <div class="row back-button" @click="goBack">
+            <div class="row back-button" @click="$router.go(-1)">
                 <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back"/>
             </div>
             <div class="row main-content">
