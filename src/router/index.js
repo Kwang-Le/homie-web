@@ -9,7 +9,6 @@ import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
 
-import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 import AdminResetPasswordFormView from '@/views/admin/form/AdminResetPasswordFormView.vue'
 import AdminCodeConfirmFormView from '@/views/admin/form/AdminCodeConfirmFormView.vue'
