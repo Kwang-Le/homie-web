@@ -8,7 +8,7 @@ import AdminStatisticView from '@/views/admin/AdminStatisticView.vue'
 import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
-import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
+// import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
 import AdminApartmentDetailsView from '@/views/admin/AdminApartmentDetailsView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 
@@ -55,14 +55,14 @@ const router = createRouter({
     //   name: 'admin-statistical',
     //   component: AdminStatisticalView
     // },
+    // {
+    //   path: '/admin-statistical/apartment/:id',
+    //   name: 'admin-statistical-apartment',
+    //   component: AdminStatisticView
+    // },
     {
-      path: '/admin-statistical/apartment/:id',
-      name: 'admin-statistical-apartment',
-      component: AdminStatisticalView
-    },
-    {
-      path: '/admin-statistical/apartment:id',
-      name: 'admin-statistical/apartment:id',
+      path: '/admin-statistic/apartment/:id',
+      name: 'admin-statistic-apartment',
       component: AdminApartmentDetailsView
     },
     {
