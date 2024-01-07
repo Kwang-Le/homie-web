@@ -46,7 +46,7 @@
       </div>
       <div class="rectangle-24"></div>
       <div class="rectangle-25"></div>
-      <div class="useremail-123-gmail-com">useremail123@gmail.com</div>
+      <input class="useremail-123-gmail-com" type="text" placeholder="useremail123@gmail.com">
       <div class="group-2282">
         <div class="ellipse-16"></div>
         <div class="ellipse-17"></div>
@@ -65,20 +65,10 @@
         <div class="frame">
           <div class="frame2"></div>
           <div class="frame3">
-            <div class="role">Quản trị</div>
-            <svg
-              class="arrow-drop-down"
-              width="28"
-              height="27"
-              viewBox="0 0 28 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.24121 10.856L13.7889 16.4036L19.3366 10.856H8.24121Z"
-                fill="#666666"
-              />
-            </svg>
+            <select id="role" class="role">
+            <option value="cudan">cu dan</option>
+            <option value="quantri">quan tri</option>
+            </select>
           </div>
         </div>
       </div>
