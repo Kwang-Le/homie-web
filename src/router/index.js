@@ -4,6 +4,7 @@ import AdminNotificationView from '@/views/admin/AdminNotificationView.vue'
 import AdminDashboardView from '@/views/admin/AdminDashboardView.vue'
 import AdminSettingView from '@/views/admin/AdminSettingView.vue'
 import AdminAccountView from '@/views/admin/AdminAccountView.vue'
+import AdminStatisticView from '@/views/admin/AdminStatisticView.vue'
 import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
@@ -44,10 +45,15 @@ const router = createRouter({
       component: AdminRevenueView
     },
     {
-      path: '/admin-statistical',
-      name: 'admin-statistical',
-      component: AdminStatisticalView
+      path: '/admin-statistic',
+      name: 'admin-statistic',
+      component: AdminStatisticView
     },
+    // {
+    //   path: '/admin-statistical',
+    //   name: 'admin-statistical',
+    //   component: AdminStatisticalView
+    // },
     {
       path: '/admin-statistical/apartment/:id',
       name: 'admin-statistical-apartment',
