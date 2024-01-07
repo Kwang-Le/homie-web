@@ -41,6 +41,8 @@ export default {
 }
 .nav-link {
   display: flex;
+    justify-content: center;
+    align-items: center;
   padding: 10px;
   color: #1D3557;
   text-decoration: none;
@@ -52,6 +54,7 @@ export default {
 .nav-link.active {
   background-color: #457B9D;
   color: #F1FAEE;
+  width: 125px;
 }
 .nav-link:active, .nav-link:focus {
   background-color: #457B9D;
