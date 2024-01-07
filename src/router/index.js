@@ -8,11 +8,16 @@ import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
 import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
-
+import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/login',
+      name: 'login',
+      component: AdminLoginFormView
+    },
     {
       path: '/admin-dashboard',
       name: 'admin-dashboard',
@@ -41,6 +46,11 @@ const router = createRouter({
     {
       path: '/admin-statistical',
       name: 'admin-statistical',
+      component: AdminStatisticalView
+    },
+    {
+      path: '/admin-statistical/apartment/:id',
+      name: 'admin-statistical-apartment',
       component: AdminStatisticalView
     },
     {

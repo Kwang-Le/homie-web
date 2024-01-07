@@ -6,6 +6,7 @@ import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import DashboardCardTableItem from '@/components/Dashboard/DashboardCardTableItem.vue';
 import LineChart from '@/components/charts/LineChart.vue';
+
 </script>
 
 <template>
