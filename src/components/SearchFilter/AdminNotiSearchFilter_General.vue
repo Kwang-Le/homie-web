@@ -3,7 +3,7 @@
       <input type="text" @keyup.enter="emitSearchTerm" class= "search-term" v-model="searchTerm" placeholder=" Nhập tiêu đề..."/>
       <button class="btn btn-primary" @click="emitSearchTerm" type="submit" style="margin-left: 10px; background-color: #457B9D; color: #F1FAEE;">Tìm kiếm</button>
       <select v-model="status" class = "status" @change="emitStatus">
-        <option default value="">Trạng thái</option>
+        <option default value="">Tất cả</option>
         <option value="read">Đã đọc</option>
         <option value="unread">Chưa đọc</option>
       </select>
