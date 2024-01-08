@@ -90,7 +90,7 @@ onMounted(async () => {
                                 <div class="info-label">
                                     <h5 class="info-title font-weight-bold">Loại phí</h5>
                                     <div class="info-content d-flex flex-column card-text">
-                                        <p>Tự nguyện</p>
+                                        <p>Đóng góp</p>
                                     </div>
                                 </div>
                             </div>
