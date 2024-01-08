@@ -41,7 +41,7 @@
       <div class="nh-p-email-g-i-m-x-c-nh-n">Điền mã xác  gửi đến email đặt lại mật khẩu </div>
       <div class="group-n-btn">
         <div class="rectangle-23"></div>
-        <button class="g-i">xác nhân</button>
+        <button class="g-i" onclick="location.href='admin-new-password-form'">xác nhân</button>
       </div>
       <div class="rectangle-24"></div>
       <input class="useremail-123-gmail-com" placeholder="123456">

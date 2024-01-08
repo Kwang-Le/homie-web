@@ -42,7 +42,7 @@
       <div class="password">Password</div>
       <div class="group-n-btn">
         <div></div>
-        <button class="ng-nh-p2">Đăng nhập</button>
+        <button class="ng-nh-p2" onclick="location.href='admin-dashboard'">Đăng nhập</button>
       </div>
       <div class="rectangle-24"></div>
       <div class="rectangle-25"></div>

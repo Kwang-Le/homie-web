@@ -89,11 +89,11 @@ const router = createRouter({
         name: 'admin-new-password-form',
         component: AdminNewPasswordFormView
     },
-    {
-        path: '/admin-register-form',
-        name: 'admin-register-form',
-        component: AdminRegisterFormView
-    },
+    // {
+    //     path: '/admin-register-form',
+    //     name: 'admin-register-form',
+    //     component: AdminRegisterFormView
+    // },
     {
         path: '/admin-new-apartment-form',
         name: 'admin-new-apartment-form',
