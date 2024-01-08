@@ -41,21 +41,14 @@
       <div class="ng-nh-p-v-i-vai-tr">Đăng nhập với vai trò</div>
       <div class="password">Password</div>
       <div class="group-n-btn">
-        <div class="rectangle-23"></div>
-        <div class="ng-nh-p2">Đăng nhập</div>
+        <div></div>
+        <button class="ng-nh-p2">Đăng nhập</button>
       </div>
       <div class="rectangle-24"></div>
       <div class="rectangle-25"></div>
       <input class="useremail-123-gmail-com" type="text" placeholder="useremail123@gmail.com">
       <div class="group-2282">
-        <div class="ellipse-16"></div>
-        <div class="ellipse-17"></div>
-        <div class="ellipse-18"></div>
-        <div class="ellipse-19"></div>
-        <div class="ellipse-21"></div>
-        <div class="ellipse-22"></div>
-        <div class="ellipse-20"></div>
-        <div class="ellipse-23"></div>
+        <input type="password" id="password" name="password" class="password1">
       </div>
       <div class="app-ava">
         <div class="ellipse-24"></div>
@@ -72,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="qu-n-m-t-kh-u">Quên mật khẩu</div>
+      <div class="qu-n-m-t-kh-u"><a href="admin-reset-password-form">Quên mật khẩu</a></div>
     </div>
   </div>
 </template>
@@ -176,28 +169,20 @@ export default {
   height: 90px;
   position: static;
 }
-.rectangle-23 {
-  background: #457b9d;
-  border-radius: 10px;
-  width: 515.8px;
-  height: 68.93px;
-  position: absolute;
-  left: 885px;
-  top: 733px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
 .ng-nh-p2 {
   color: #ffffff;
   text-align: center;
   font-family: "Raleway-SemiBold", sans-serif;
+  border-radius: 10px;
   font-size: 28px;
   line-height: 150%;
   font-weight: 600;
   position: absolute;
-  left: calc(50% - -75px);
-  top: calc(50% - -206px);
-  width: 216px;
-  height: 77px;
+  left: 885px;
+  top: 733px;
+  width: 515.8px;
+  height: 68.93px;
+  background: #457b9d;
 }
 .rectangle-24 {
   background: #ffffff;
@@ -229,87 +214,29 @@ export default {
   line-height: 150%;
   font-weight: 400;
   position: absolute;
-  left: 901.32px;
-  top: 529.58px;
-  width: 388.04px;
-  height: 32.65px;
+  border-radius: 10px;
+  left: 885.23px;
+  top: 512.35px;
+  width: 515.8px;
+  height: 68.93px;
+}
+.password1{
+  border-radius:10px;
+  color: #000000;
+  text-align: left;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
+  position: absolute;
+  left: 885.23px;
+  top: 640.23px;
+  width: 515.8px;
+  height: 68.93px;
 }
 .group-2282 {
   width: 167.52px;
   height: 16.33px;
   position: static;
-}
-.ellipse-16 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 913.62px;
-  top: 666.53px;
-}
-.ellipse-17 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 935.39px;
-  top: 666.53px;
-}
-.ellipse-18 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 956.21px;
-  top: 666.53px;
-}
-.ellipse-19 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 977.98px;
-  top: 666.53px;
-}
-.ellipse-21 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 1021.52px;
-  top: 666.53px;
-}
-.ellipse-22 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 1042.34px;
-  top: 666.53px;
-}
-.ellipse-20 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 999.75px;
-  top: 666.53px;
-}
-.ellipse-23 {
-  background: #1e1e1e;
-  border-radius: 50%;
-  width: 17.04px;
-  height: 16.33px;
-  position: absolute;
-  left: 1064.11px;
-  top: 666.53px;
 }
 .app-ava {
   width: 300px;
@@ -395,13 +322,6 @@ export default {
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
   flex: 1;
-}
-.arrow-drop-down {
-  flex-shrink: 0;
-  width: 26.63px;
-  height: 26.63px;
-  position: relative;
-  overflow: visible;
 }
 .qu-n-m-t-kh-u {
   color: #1d3557;
