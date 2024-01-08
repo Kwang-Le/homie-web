@@ -219,7 +219,7 @@ export default {
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 50px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway:wght300', sans-serif;
   font-weight: regular;
   font-size: 16px;
   color: #1D3557;

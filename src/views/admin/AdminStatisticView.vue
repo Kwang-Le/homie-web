@@ -1,5 +1,13 @@
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+library.add(faAngleRight); library.add(faAngleLeft);
 export default {
+  components: {
+    'font-awesome-icon': FontAwesomeIcon,
+  },
   name: 'AdminNavBar',
   data() {
     return {
@@ -387,7 +395,7 @@ export default {
 <template>
   <!-- table selections -->
   <ul class="nav nav-tabs" id="tableSelection" role="tablist">
-    <li class="nav-item" role="presentation">
+    <li class="nav-item table-selection" role="presentation">
       <button
         class="nav-link active"
         id="khoan-thu-tab"
@@ -398,10 +406,10 @@ export default {
         aria-controls="khoan-thu-pane"
         aria-selected="true"
       >
-        Khoản thu
+        Thống kê Khoản thu
       </button>
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item table-selection" role="presentation">
       <button
         class="nav-link"
         id="can-ho-tab"
@@ -412,10 +420,10 @@ export default {
         aria-controls="can-ho-pane"
         aria-selected="false"
       >
-        Căn hộ
+        Thống kê Căn hộ
       </button>
     </li>
-    <li class="nav-item" role="presentation">
+    <li class="nav-item table-selection" role="presentation">
       <button
         class="nav-link"
         id="cu-dan-tab"
@@ -426,7 +434,7 @@ export default {
         aria-controls="cu-dan-pane"
         aria-selected="false"
       >
-        Cư dân
+        Thống kê Cư dân
       </button>
     </li>
   </ul>
@@ -482,7 +490,7 @@ export default {
                     <ul class="pagination">
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
+                          <font-awesome-icon icon="angle-left" size="l" />
                         </a>
                       </li>
                       <li
@@ -500,7 +508,7 @@ export default {
                       </li>
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
+                          <font-awesome-icon icon="angle-right" size="l" />
                         </a>
                       </li>
                     </ul>
@@ -638,7 +646,7 @@ export default {
             <div class="col">
               <div class="row">
                 <table id="CanHoTable" class="table table-hover">
-                  <thead>
+                  <thead class="table-light">
                     <tr>
                       <th scope="col">id</th>
                       <th scope="col">Tên căn hộ</th>
@@ -674,7 +682,7 @@ export default {
                     <ul class="pagination">
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
+                          <font-awesome-icon icon="angle-left" size="l" />
                         </a>
                       </li>
                       <li
@@ -692,7 +700,7 @@ export default {
                       </li>
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
+                          <font-awesome-icon icon="angle-right" size="l" />
                         </a>
                       </li>
                     </ul>
@@ -806,7 +814,7 @@ export default {
             <div class="col">
               <div class="row">
                 <table id="CuDanTable" class="table table-hover">
-                  <thead>
+                  <thead class="table-light">
                     <tr>
                       <th scope="col">id</th>
                       <th scope="col">Họ và tên</th>
@@ -842,7 +850,7 @@ export default {
                     <ul class="pagination">
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
+                          <font-awesome-icon icon="angle-left" size="l" />
                         </a>
                       </li>
                       <li
@@ -860,7 +868,7 @@ export default {
                       </li>
                       <li class="page-item">
                         <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
+                          <font-awesome-icon icon="angle-right" size="l" />
                         </a>
                       </li>
                     </ul>
@@ -1038,4 +1046,18 @@ export default {
   padding-top: 40px;
   padding-bottom: 20px;
 }
+.nav-tabs .nav-link{
+  background: rgba(128, 128, 128, 0.50);
+}
+.table{
+  font-family: 'Raleway:wght@300', sans-serif;
+  font-size: 16px;
+}
+.page-item{
+  background-color: none;
+}
+.page-link{
+  color: black;
+}
+
 </style>
