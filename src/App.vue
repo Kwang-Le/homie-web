@@ -5,6 +5,7 @@ import LogoAcount from './components/LogoAccount.vue';
 
 import { useResidentStore } from '@/stores/resident'
 import fetchDataAndStore from '@/services/api'
+import FootNote from './components/FootNote.vue';
 </script>
 
 
@@ -17,10 +18,12 @@ import fetchDataAndStore from '@/services/api'
 
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
+        
       </div>
     </header>
 
     <RouterView />
+    <FootNote class="footer" />
   </div>
 </template>
 
@@ -50,5 +53,6 @@ export default {
 </script>
 
 <style>
+
 @import './assets/base.css';
 </style>

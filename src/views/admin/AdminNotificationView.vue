@@ -82,7 +82,7 @@ export default {
 
 .list-card-container {
   width: 100%;
-  height: 700px; 
+  height: 800px; 
   position: relative;
   margin-left: 1%;
   margin-top: 30px;
