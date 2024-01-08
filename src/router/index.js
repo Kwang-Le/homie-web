@@ -31,13 +31,15 @@ import AdminNewNotiFormView from "@/views/admin/form/AdminNewNotiFormView.vue";
 import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
 
+import LoginViewVue from '@/views/LoginView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/login',
       name: 'login',
-      component: AdminLoginFormView
+      component: LoginViewVue
     },
     {
       path: '/admin-dashboard',

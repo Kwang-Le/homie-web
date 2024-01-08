@@ -11,7 +11,7 @@ import fetchDataAndStore from '@/services/api'
 <template>
   <div class="container-fluid" v-if="isGetData">
     <header>
-      <div class="wrapper">
+      <div class="wrapper" v-if="currentPage !== 'login'">
         <LogoAcount />
         <NavBar />
 
@@ -28,7 +28,9 @@ import fetchDataAndStore from '@/services/api'
 export default {
   data() {
     return {
-      isGetData: false
+      isGetData: false,
+      isLogIn: null,
+      currentRoute: null
     }
   },
   methods: {
@@ -41,11 +43,29 @@ export default {
         this.isGetData = true
       })
       return this.isGetData
+    },
+    checkLogIn(){
+      if (this.currentRoute == '/login'){
+        this.isLogIn = true
+      } else {
+        this.isLogIn = false
+      }
     }
   },
+  beforeMount() {
+    this.checkLogIn()
+  },
   mounted() {
+    
     this.isGetData = this.getData()
-  }
+    
+  },
+  computed: {
+    currentPage() {
+      // Assuming you have a route object provided by Vue Router
+      return this.$route.name || ''; // Update this based on your route naming
+    },
+  },
 }
 </script>
 
