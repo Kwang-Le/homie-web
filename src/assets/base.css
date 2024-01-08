@@ -39,7 +39,7 @@
   --fields-field-title: #777777;
   --fields-placeholders: #adaaaa;
   --fields-fields-error: #E51A3C;
-  --fields-field-focus : #0088FF;
+  --fields-field-focus: #0088FF;
   --selections-disabled1: #E1E1E1;
   --selections-disabled2: #B5B5B5;
   --notifications-success: #007B40;
@@ -96,6 +96,7 @@ body {
   line-height: 1.6;
   font-family:
     Inter,
+    Raleway,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
