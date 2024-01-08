@@ -1,24 +1,30 @@
 <template>
-    <div class="login-view">
-        <h1 class="login-title my-4">Đăng nhập</h1>
-        <div>
-            <div class="align-items-center role-selector input-field">
-                <label for="role" style="width: 100%;">Đăng nhập với vai trò:</label>
-                <select id="role" class="form-select" aria-label="Default select example">
-                    <option value="1">Cư dân</option>
-                    <option value="2">Admin</option>
-                </select>
+    <div class="login-view d-flex align-items-center justify-content-around">
+        <!-- <div class="image" style="background-image: ;"></div> -->
+        <img src="../assets/img/logo.png" alt="" style="height: 250px;margin-right: 20px;border-radius: 50%;">
+        <div class="input-container flex-fill">
+            <h1 class="login-title my-4">Đăng nhập</h1>
+            <div>
+                <div class="d-flex align-items-center role-selector input-field">
+                    <label for="role" style="width: 100%;">Đăng nhập với vai trò:</label>
+                    <select id="role" class="form-select" aria-label="Default select example">
+                        <option value="1">Cư dân</option>
+                        <option value="2">Admin</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <div for="username ">Email:</div>
+                    <input type="email" id="username" class="form-control" v-model="username" required>
+                </div>
+                <div class="input-field">
+                    <div for="password">Password:</div>
+                    <input type="password" class="form-control" id="password" v-model="password" required>
+                </div>
+                <button class="new-button">Đăng nhập</button>
+                <router-link to="">Quên mật khẩu</router-link>
             </div>
-            <div class="input-field">
-                <div for="username ">Email:</div>
-                <input type="email" id="username" v-model="username" required>
-            </div>
-            <div class="input-field">
-                <div for="password">Password:</div>
-                <input type="password" id="password" v-model="password" required>
-            </div>
-            <button type="submit">Đăng nhập</button>
         </div>
+
     </div>
 </template>
 
@@ -40,9 +46,16 @@ export default {
 </script>
 
 <style scoped>
+.new-button {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
 .input-field {
     margin-bottom: 20px;
 }
+
 .login-title {
     font-family: Raleway, sans-serif;
 
@@ -50,10 +63,11 @@ export default {
 
 .login-view {
     color: var(--text-content);
-    max-width: 400px;
-    margin:  auto;
-    padding: 20px;
+    max-width: 650px;
+    margin: auto;
+    padding-top: 10%;
     /* border: 1px solid #ccc; */
     border-radius: 4px;
 }
+
 </style>
