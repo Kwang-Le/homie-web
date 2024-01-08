@@ -41,7 +41,7 @@
       <div class="nh-p-email-g-i-m-x-c-nh-n">Nhập email để gửi mã xác nhận</div>
       <div class="group-n-btn">
         <div class="rectangle-23"></div>
-        <button class="g-i">Gửi</button>
+        <button class="g-i" onclick="location.href='admin-code-confirm-form'">Gửi</button>
       </div>
       <div class="rectangle-24"></div>
       <input class="useremail-123-gmail-com" placeholder="useremail123@gmail.com">
