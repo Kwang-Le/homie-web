@@ -57,6 +57,11 @@ export default {
   },
 
   methods: {
+    created() {
+  this.$on('new-card', function(card) {
+    this.cards.push(card);
+  });
+},
     toggleButton() {
       this.isSelected = !this.isSelected;
     },
@@ -104,7 +109,7 @@ export default {
 
 <template>
   <AdminNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
-  <div class="card-list" style="overflow-y: auto; height: 100%;width: 100%">
+  <div class="card-list" style="overflow-y: auto; height: 90%;width: 100%">
     <div class="card" v-for="(card, index) in filteredCards" :key="index">
       <div class="overlap-group">
         <img class="image" alt="Image" v-bind:src="card.image" />
@@ -140,7 +145,7 @@ export default {
 
 .card-list {
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow-y: auto;
   margin-top: 10px;
   /* Cho phép cuộn theo chiều dọc */

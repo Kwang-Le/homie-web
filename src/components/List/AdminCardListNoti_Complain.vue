@@ -54,7 +54,7 @@ export default {
       return filtered;
     },
 
-  },
+  }, 
 
   methods: {
     toggleButton() {

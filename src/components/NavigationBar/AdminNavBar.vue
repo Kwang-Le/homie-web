@@ -36,8 +36,8 @@ export default {
 </script>
 <style scoped>
 .navbar {
-    background: #F1FAEE;
-    border-radius: 15px;
+    background: #F1FAEE !important;
+    border-radius: 15px !important;
 }
 .nav-link {
   display: flex;
