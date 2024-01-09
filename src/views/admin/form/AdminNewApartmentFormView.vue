@@ -1,4 +1,4 @@
-<template>
+<template><form>
   <div class="c-n-h-form-ghi-nh-n-s-d-ng-c-n-h-m-i">
     <div class="rectangle-30"></div>
     <div class="frame">
@@ -14,7 +14,7 @@
     <div class="ghi-nh-n-c-n-h-m-i">Ghi nhận căn hộ mới</div>
     <div class="group-n-btn">
       <div>
-        <button class="rectangle-23" @click="handleClick">Tạo mới</button>
+        <button class="rectangle-23" >Tạo mới</button>
       </div>
     </div>
     <div class="t-ng">Tầng</div>
@@ -118,7 +118,7 @@
         </select>
       </div>
     </div>
-  </div>
+  </div></form>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
