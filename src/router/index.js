@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AdminNotificationView from '@/views/admin/AdminNotificationView.vue'
+import ResNotificationView from '@/views/resident/ResNotificationView.vue'
 import AdminDashboardView from '@/views/admin/AdminDashboardView.vue'
 import AdminSettingView from '@/views/admin/AdminSettingView.vue'
 import AdminAccountView from '@/views/admin/AdminAccountView.vue'
@@ -32,7 +32,7 @@ import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
 import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
-
+import AdminNotificationView from "@/views/admin/AdminNotificationView.vue";
 import LoginViewVue from '@/views/LoginView.vue'
 import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
@@ -121,6 +121,11 @@ const router = createRouter({
       path: '/admin-notification',
       name: 'admin-notification',
       component: AdminNotificationView
+    },
+    {
+      path: '/res-notification',
+      name: 'res-notification',
+      component: ResNotificationView
     },
     {
       path: '/admin-setting',

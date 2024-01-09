@@ -70,7 +70,7 @@ export default {
       setTimeout(() => {
         this.isVisible = false;
       }, 2000);
-    }, 6000);
+    }, 120000);
   },
   computed: {
     currentPage() {

@@ -2,17 +2,16 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-library.add(faCheck); library.add(faTrash);
-import AdminNotiSearchFilter from '@/components/SearchFilter/AdminNotiSearchFilter_Complain.vue'
-import AdminResponseFormView from '@/views/admin/form/AdminResponseFormView.vue';
+library.add(faCheck); library.add(faTrash); library.add(faEye)
+import ResNotiSearchFilter from '@/components/SearchFilter/ResNotiSearchFilter.vue'
 export default {
   name: "CardBox",
   components: {
     'font-awesome-icon': FontAwesomeIcon,
-    AdminNotiSearchFilter,
-    AdminResponseFormView
-},
+    ResNotiSearchFilter,
+  },
   data() {
     return {
       cards: [
@@ -42,8 +41,7 @@ export default {
       searchTerm: '',
       status: '',
       date: '',
-      filterDate: 'newest',
-      isFormVisible: false,
+      filterDate: 'newest'
     };
   },
   computed: {
@@ -68,9 +66,14 @@ export default {
       return filtered;
     },
 
-  }, 
+  },
 
   methods: {
+    created() {
+  this.$on('new-card', function(card) {
+    this.cards.push(card);
+  });
+},
     toggleButton() {
       this.isSelected = !this.isSelected;
     },
@@ -117,12 +120,9 @@ export default {
 </script>
 
 <template>
-  <div style="position: relative;">
-    <AdminResponseFormView v-if="isFormVisible" class="overlay" />
-  </div>
-  <AdminNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
-  <div class="card-list" style="overflow-y: auto; height: 100%;width: 100%">
-    <div class="card" @click="isFormVisible = true" v-for="(card, index)  in filteredCards" :key="index">
+  <ResNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
+  <div class="card-list" style="overflow-y: auto; height: 90%;width: 100%">
+    <div class="card" v-for="(card, index) in filteredCards" :key="index">
       <div class="overlap-group">
         <img class="image" alt="Image" v-bind:src="card.image" />
         <div class="overlap">
@@ -134,7 +134,7 @@ export default {
           <div class="btn-group-toggle" data-toggle="buttons">
             <label class="btn btn-secondary" v-bind:class="{ active: card.isChecked }">
               <input type="checkbox" v-model="card.isChecked" autocomplete="false" class="checkbox-hidden">
-              <font-awesome-icon icon="check" size="2xl" class="icon-padding" />
+              <font-awesome-icon icon="eye" size="xl" class="icon-padding" />
             </label>
           </div>
           <button class="btn btn-danger trash-button" @click="deleteCard(index)">
@@ -157,22 +157,14 @@ export default {
 
 .card-list {
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow-y: auto;
   margin-top: 10px;
   /* Cho phép cuộn theo chiều dọc */
   /* flex: row; */
 
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000; /* Adjust this value as needed */
-  margin-left: 20%;
-}
+
 .btn {
   padding-top: 8px;
 }
@@ -195,7 +187,7 @@ export default {
 }
 
 .btn.active {
-  background-color: #007B40 !important;
+  background-color: #457B9D !important;
 }
 
 .card {
