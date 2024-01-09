@@ -2,17 +2,18 @@
 import Card from '@/components/Card.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import EditResidentView from '@/views/admin/form/EditResidentView.vue';
 </script>
 
 <template>
     <main>
         <Card>
             <div class="back-button justify-content-start" @click="$router.go(-1)">
-                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back"/>
+                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back" />
             </div>
             <div class="row main-content">
                 <div class="col-4 avatar">
-                    <div class="row avt-container">    
+                    <div class="row avt-container">
                         <img src="../../assets/img/AccountProfileAvatar.jpg" class="avatar" alt="avatar" />
                     </div>
                     <div class="main-avt-name">Lê Thanh Quang</div>
@@ -80,7 +81,26 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
             </div>
 
             <div class="row-button">
-                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editResidentModal">Chỉnh
+                    sửa</button>
+                <div class="modal fade" id="editResidentModal" tabindex="-1" aria-labelledby="editResidentModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editResidentModalLabel">Edit Resident</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <EditResidentView />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <button type="button" class="btn btn-delete">Xóa</button>
             </div>
         </Card>
