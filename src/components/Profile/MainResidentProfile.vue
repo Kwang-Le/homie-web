@@ -2,7 +2,8 @@
 import Card from '@/components/Card.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-import EditResidentView from '@/views/admin/form/EditResidentView.vue';
+// import EditResidentView from '@/views/admin/form/EditResidentView.vue';
+import EditResidentModal from '@/components/modals/EditResidentModal.vue';
 </script>
 
 <template>
@@ -83,24 +84,7 @@ import EditResidentView from '@/views/admin/form/EditResidentView.vue';
             <div class="row-button">
                 <button type="button" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editResidentModal">Chỉnh
                     sửa</button>
-                <div class="modal fade" id="editResidentModal" tabindex="-1" aria-labelledby="editResidentModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="editResidentModalLabel">Edit Resident</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <EditResidentView />
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <EditResidentModal />
                 <button type="button" class="btn btn-delete">Xóa</button>
             </div>
         </Card>
