@@ -7,7 +7,7 @@
     </div>
     <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button" @click="emitNewNotificationEvent">Tạo mới</button>
     </template>
- 
+
 <script>
 export default {
     name: 'AdminNotiNavBar',
@@ -23,6 +23,7 @@ export default {
         },
         emitNewNotificationEvent() {
         this.$emit('new-notification');
+        this.$emit('new-button-clicked');
     }
     }
 }

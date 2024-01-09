@@ -20,7 +20,7 @@ export default {
             showError2: false
         }
     },
-    methods: {
+    methods: { 
         checkPassword() {
             if (!this.currentPassword || !this.newPassword || !this.newPasswordAgain) {
                 this.showError2 = true;

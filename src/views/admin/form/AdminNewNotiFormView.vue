@@ -8,9 +8,8 @@
         <div class="rectangle-23"></div>
         <button name="Tạo" class="t-o" @click="this.$emit('close-notification')">Tạo</button>
       </div>
-      <div class="ti-u">Tiêu đề</div>
-      <div class="ti-u2">Tiêu đề</div>
-      <div class="n-i-dung-th-ng-b-o">
+      <div class="tieu-de">Tiêu đề</div>
+            <div class="n-i-dung-th-ng-b-o">
         Nội dung thông
         <br/>
         báo
@@ -19,23 +18,17 @@
       <div class="text-field">
         <div class="frame">
           <div class="frame2">
-            <input type="text" placeholder="Nhập tiêu đề thông báo" class="nh-p-ti-u-th-ng-b-o"/>
+            <input type="text" placeholder="Nhập tiêu đề thông báo" class="title"/>
           </div>
         </div>
       </div>
-      <div class="text-field2">
-        <div class="frame3">
-          <div class="frame2">
-            <input type="text" placeholder="Nhập danh sách định danh" class="nh-p-danh-s-ch-nh-danh"/>
-          </div>
-        </div>
-      </div>
+      
       <div class="text-field3">
         <div class="text-field4">
           <div class="frame4">
             <div class="frame5">
                             <textarea name="textarea" placeholder="Nhập nội dung thông báo mới"
-                                      class="nh-p-n-i-dung-th-ng-b-o-m-i"></textarea>
+                                      class="text"></textarea>
             </div>
           </div>
         </div>
@@ -72,10 +65,10 @@
           <div class="frame8">
             <select class="t-nguy-n">
               <option>
-                Thông báo riêng
+                Thông báo chung
               </option>
               <option>
-                Thông báo chung
+                Thông báo cư dân
               </option>
             </select>
             <svg class="arrow-drop-down" width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -88,7 +81,7 @@
       <div class="dropdown2">
         <div class="frame6">
           <div class="frame8">
-            <input type="date" class="t-nguy-n-2">
+            <input type="date" class="date">
           </div>
         </div>
       </div>
@@ -135,12 +128,25 @@ export default {
   props: {},
   data() {
     // quickfix to have components available to pass as props
-    return {isVisible: true,};
+    return {
+      isVisible: true,
+      title: '',
+      text: '',
+      
+    };
   },
   methods: {
     closePopup() {
       this.isVisible = false;
-    }, },
+    },
+    createCard() {
+    this.$emit('new-card', {
+      title: this.title,
+      text: this.text,
+      date: this.date
+    });
+  },
+  },
 };
 </script>
 <style scoped>
@@ -245,7 +251,7 @@ export default {
   z-index: 1;
 }
 
-.ti-u {
+.tieu-de {
   color: #1d3557;
   text-align: left;
   font-family: "Raleway-SemiBold", sans-serif;
@@ -334,11 +340,11 @@ export default {
   position: relative;
 }
 
-.nh-p-ti-u-th-ng-b-o {
+.title {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: "Raleway-Regular", sans-serif;
-  font-size: 17.707317352294922px;
+  font-size: 20px;
   line-height: 26.56px;
   font-weight: 400;
   position: relative;
@@ -455,11 +461,11 @@ export default {
   position: relative;
 }
 
-.nh-p-n-i-dung-th-ng-b-o-m-i {
+.text {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: "Raleway-Regular", sans-serif;
-  font-size: 17.707317352294922px;
+  font-size: 20px;
   line-height: 26.56px;
   font-weight: 400;
   position: relative;
@@ -571,7 +577,7 @@ export default {
   font-family: var(--android-subtitle-1-font-family,
   "BalsamiqSans-Regular",
   sans-serif);
-  font-size: var(--android-subtitle-1-font-size, 16px);
+  font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
@@ -588,13 +594,13 @@ export default {
 }
 
 
-.t-nguy-n-2 {
+.date {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(--android-subtitle-1-font-family,
   "BalsamiqSans-Regular",
   sans-serif);
-  font-size: var(--android-subtitle-1-font-size, 16px);
+  font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;

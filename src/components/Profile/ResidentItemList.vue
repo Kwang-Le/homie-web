@@ -90,7 +90,7 @@ export default {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font: 700 22px/150% Raleway, sans-serif;
+    font: 800 22px/150% Inter, sans-serif;
 }
 
 .extra-info-content {
@@ -108,6 +108,6 @@ export default {
 }
 
 span.span-label {
-    font: 400 16px/130% Raleway, sans-serif;
+    font: 700 16px/130% Inter, sans-serif;
 }
 </style>

@@ -208,20 +208,19 @@ export default {
 .card-title {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 200%;
   color: #1D3557;
 }
 
 .text-wrapper {
-  height: 50px;
+  height: fit-content;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 50px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: regular;
-  font-size: 16px;
+  font-family: 'Raleway:wght300', sans-serif;
+  font-size: 110%;
   color: #1D3557;
 }
 

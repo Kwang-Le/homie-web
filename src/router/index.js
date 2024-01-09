@@ -30,6 +30,8 @@ import AdminNewFeePopUpFormView from "@/views/admin/form/AdminNewFeePopUpFormVie
 import AdminNewNotiFormView from "@/views/admin/form/AdminNewNotiFormView.vue";
 import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
+import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
+import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
 
 import LoginViewVue from '@/views/LoginView.vue'
 
@@ -195,7 +197,17 @@ const router = createRouter({
         path: '/admin-response-form',
         name: 'admin-response-form',
         component: AdminResponseFormView
-    }
+    },
+    {
+        path: '/admin-record-form',
+        name: 'admin-record-form',
+        component: AdminRecordFormView
+    },
+    {
+        path: '/admin-record-list',
+        name: 'admin-record-list',
+        component: AdminRecordListView
+    },
 
   ]
 })

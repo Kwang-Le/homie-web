@@ -43,7 +43,7 @@ export default {
   </main>
 </template>
 
-<style>
+<style scoped>
 .d-flex {
   display: flex;
   height: inherit;

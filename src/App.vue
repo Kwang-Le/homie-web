@@ -2,9 +2,10 @@
 import { RouterView } from 'vue-router'
 import NavBar from './components/NavigationBar/AdminNavBar.vue';
 import LogoAcount from './components/LogoAccount.vue';
-
+import AdminInfomation from './components/Notification/AdminInfomation.vue';
 import { useResidentStore } from '@/stores/resident'
 import fetchDataAndStore from '@/services/api'
+import FootNote from './components/FootNote.vue';
 </script>
 
 
@@ -14,23 +15,29 @@ import fetchDataAndStore from '@/services/api'
       <div class="wrapper" v-if="currentPage !== 'login'">
         <LogoAcount />
         <NavBar />
-
+        <AdminInfomation v-show="isVisible" class="noti"/>
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
+        
       </div>
     </header>
 
     <RouterView />
+    <FootNote class="footer" />
   </div>
 </template>
 
 <script>
 export default {
+  components: {
+    AdminInfomation
+  },
   data() {
     return {
       isGetData: false,
       isLogIn: null,
       currentRoute: null
+      isVisible: false
     }
   },
   methods: {
@@ -56,9 +63,7 @@ export default {
     this.checkLogIn()
   },
   mounted() {
-    
-    this.isGetData = this.getData()
-    
+    this.isGetData = this.getData()    
   },
   computed: {
     currentPage() {
@@ -66,9 +71,24 @@ export default {
       return this.$route.name || ''; // Update this based on your route naming
     },
   },
+    setInterval(() => {
+      this.isVisible = true;
+      setTimeout(() => {
+        this.isVisible = false;
+      }, 2000);
+    }, 6000);
+  },
 }
 </script>
 
-<style>
+<style >
+
 @import './assets/base.css';
+.noti {
+    position: fixed;
+    top: 8px;
+    right: 50%;
+    transform: translateX(50%);
+}
+body{font-size: 15px;}
 </style>

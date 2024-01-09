@@ -4,7 +4,7 @@
     <div class="t-o-kho-n-ph-m-i">Tạo khoản phí mới</div>
     <div class="group-n-btn">
       <div class="rectangle-23"></div>
-      <div class="t-o-m-i">Tạo mới</div>
+      <button class="t-o-m-i">Tạo mới</button>
     </div>
     <div class="m-kho-n-ph">Mã khoản phí</div>
     <div class="t-n-kho-n-ph">Tên khoản phí</div>
@@ -15,20 +15,17 @@
       <div class="frame">
         <div class="frame2"></div>
         <div class="frame3">
-          <div class="label">Lựa chọn loại phí</div>
-          <svg
-            class="arrow-drop-down"
-            width="27"
-            height="27"
-            viewBox="0 0 27 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
-              fill="#666666"
-            />
-          </svg>
+          <select class="t-nguy-n">
+            <option>
+              Thông báo riêng
+            </option>
+            <option>
+              Thông báo riêng
+            </option>
+            <option>
+              Thông báo riêng
+            </option>
+          </select>
         </div>
       </div>
     </div>
@@ -38,16 +35,16 @@
         <div class="frame3">
           <div class="label">20/01/2024</div>
           <svg
-            class="arrow-drop-down2"
-            width="27"
-            height="27"
-            viewBox="0 0 27 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+              class="arrow-drop-down2"
+              width="27"
+              height="27"
+              viewBox="0 0 27 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
-              fill="#666666"
+                d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
+                fill="#666666"
             />
           </svg>
         </div>
@@ -59,16 +56,16 @@
         <div class="frame3">
           <div class="label">31/01/2024</div>
           <svg
-            class="arrow-drop-down3"
-            width="27"
-            height="27"
-            viewBox="0 0 27 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+              class="arrow-drop-down3"
+              width="27"
+              height="27"
+              viewBox="0 0 27 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
-              fill="#666666"
+                d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
+                fill="#666666"
             />
           </svg>
         </div>
@@ -78,7 +75,7 @@
       <div class="frame4">
         <div class="frame2"></div>
         <div class="frame5">
-          <div class="label">Tiền nước tháng 12 2023</div>
+          <input class="label" placeholder="Tiền nước tháng 12 2023">
         </div>
       </div>
     </div>
@@ -86,58 +83,58 @@
       <div class="frame4">
         <div class="frame2"></div>
         <div class="frame5">
-          <div class="label">TN122023</div>
+          <input class="label" placeholder="TN122023">
         </div>
       </div>
     </div>
     <svg
-      class="icon-x-letter"
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+        class="icon-x-letter"
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_966_5589)">
         <path
-          d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
-          fill="black"
+            d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
+            fill="black"
         />
       </g>
       <defs>
         <filter
-          id="filter0_d_966_5589"
-          x="0"
-          y="0"
-          width="40"
-          height="40"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+            id="filter0_d_966_5589"
+            x="0"
+            y="0"
+            width="40"
+            height="40"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
           <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
           />
-          <feOffset dy="4" />
-          <feGaussianBlur stdDeviation="2" />
-          <feComposite in2="hardAlpha" operator="out" />
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
           <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
           <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_966_5589"
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_966_5589"
           />
           <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_966_5589"
-            result="shape"
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_966_5589"
+              result="shape"
           />
         </filter>
       </defs>
@@ -146,7 +143,7 @@
     <div class="sheet-selection">
       <div class="sheet-2">
         <div class="rectangle-31"></div>
-        <div class="sheet-name-2">Thủ công</div>
+        <button class="sheet-name-2" onclick="window.location.href='admin-new-fee-form3'">Thủ công</button>
       </div>
       <div class="sheet-1">
         <div class="selected"></div>
@@ -157,12 +154,11 @@
     </div>
     <div class="filter-radio-type">
       <div class="radio-button-select">
-        <div class="rectangle-3-1"></div>
-        <div class="rectangle-3-2"></div>
+        <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked/>
         <div class="m">Mở</div>
       </div>
       <div class="radio-button-not-select">
-        <div class="rectangle-3-12"></div>
+        <input type="radio" id="radio-2" name="radio" class="rectangle-3-12"/>
         <div class="ng">Đóng</div>
       </div>
     </div>
@@ -186,11 +182,13 @@ export default {
 .kho-n-thu-form-t-o-kho-n-thu-t-ng * {
   box-sizing: border-box;
 }
+
 .kho-n-thu-form-t-o-kho-n-thu-t-ng {
   width: 1120px;
   height: 800px;
   position: relative;
 }
+
 .rectangle-30 {
   background: #a8dadc;
   border-radius: 10px;
@@ -204,6 +202,7 @@ export default {
   top: 0px;
   box-shadow: 4px 4px 3px 1px rgba(0, 0, 0, 0.25);
 }
+
 .t-o-kho-n-ph-m-i {
   color: #1d3557;
   text-align: left;
@@ -217,10 +216,12 @@ export default {
   width: 544px;
   height: 60.47px;
 }
+
 .group-n-btn {
   position: absolute;
   inset: 0;
 }
+
 .rectangle-23 {
   background: #457b9d;
   border-radius: 10px;
@@ -231,6 +232,7 @@ export default {
   top: 657px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+
 .t-o-m-i {
   color: #ffffff;
   text-align: center;
@@ -246,7 +248,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  background: #457b9d;
+  border-radius: 10px;
+  width: 544px;
+  height: 76px;
+  position: absolute;
+  left: 288px;
+  top: 657px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
+
 .m-kho-n-ph {
   color: #1d3557;
   text-align: left;
@@ -258,6 +271,7 @@ export default {
   left: 150px;
   top: 265px;
 }
+
 .t-n-kho-n-ph {
   color: #1d3557;
   text-align: left;
@@ -269,6 +283,7 @@ export default {
   left: 150px;
   top: 330px;
 }
+
 .th-i-gian-m-ng {
   color: #1d3557;
   text-align: left;
@@ -280,6 +295,7 @@ export default {
   left: 150px;
   top: 467px;
 }
+
 .tr-ng-th-i {
   color: #1d3557;
   text-align: left;
@@ -291,6 +307,7 @@ export default {
   left: 150px;
   top: 529px;
 }
+
 .lo-i-ph-t-ng {
   color: #1d3557;
   text-align: left;
@@ -302,6 +319,7 @@ export default {
   left: 150px;
   top: 399px;
 }
+
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -314,6 +332,7 @@ export default {
   left: 423px;
   top: 391px;
 }
+
 .frame {
   background: var(--white, #ffffff);
   border-radius: 4.44px;
@@ -329,6 +348,7 @@ export default {
   flex-shrink: 0;
   position: relative;
 }
+
 .frame2 {
   background: var(--white, #ffffff);
   align-self: stretch;
@@ -336,6 +356,7 @@ export default {
   height: 0px;
   position: relative;
 }
+
 .frame3 {
   padding: 13.31px 13.31px 13.31px 17.75px;
   display: flex;
@@ -347,20 +368,24 @@ export default {
   flex-shrink: 0;
   position: relative;
 }
+
 .label {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(
-    --android-subtitle-1-font-family,
-    "BalsamiqSans-Regular",
-    sans-serif
+      --android-subtitle-1-font-family,
+      "BalsamiqSans-Regular",
+      sans-serif
   );
   font-size: var(--android-subtitle-1-font-size, 16px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
   flex: 1;
+  z-index: 1;
+  border: none;
 }
+
 .arrow-drop-down {
   flex-shrink: 0;
   width: 26.63px;
@@ -368,6 +393,7 @@ export default {
   position: relative;
   overflow: visible;
 }
+
 .dropdown2 {
   display: flex;
   flex-direction: column;
@@ -380,6 +406,7 @@ export default {
   left: 423px;
   top: 460px;
 }
+
 .arrow-drop-down2 {
   flex-shrink: 0;
   width: 26.63px;
@@ -387,6 +414,7 @@ export default {
   position: relative;
   overflow: visible;
 }
+
 .dropdown3 {
   display: flex;
   flex-direction: column;
@@ -399,6 +427,7 @@ export default {
   left: 717px;
   top: 460px;
 }
+
 .arrow-drop-down3 {
   flex-shrink: 0;
   width: 26.63px;
@@ -406,6 +435,7 @@ export default {
   position: relative;
   overflow: visible;
 }
+
 .text-field {
   display: flex;
   flex-direction: column;
@@ -418,6 +448,7 @@ export default {
   left: 423px;
   top: 322px;
 }
+
 .frame4 {
   background: var(--white, #ffffff);
   border-radius: 4.43px;
@@ -433,6 +464,7 @@ export default {
   flex-shrink: 0;
   position: relative;
 }
+
 .frame5 {
   padding: 13.28px 17.71px 13.28px 17.71px;
   display: flex;
@@ -444,6 +476,7 @@ export default {
   flex-shrink: 0;
   position: relative;
 }
+
 .text-field2 {
   display: flex;
   flex-direction: column;
@@ -456,6 +489,7 @@ export default {
   left: 423px;
   top: 257px;
 }
+
 .icon-x-letter {
   height: auto;
   position: absolute;
@@ -467,15 +501,18 @@ export default {
   height: 4%;
   overflow: visible;
 }
+
 .sheet-selection {
   position: absolute;
   inset: 0;
 }
+
 .sheet-2 {
   width: 180px;
   height: 58px;
   position: static;
 }
+
 .rectangle-31 {
   background: rgba(128, 128, 128, 0.5);
   border-radius: 15px;
@@ -487,6 +524,7 @@ export default {
   top: 13.12%;
   height: 7.2%;
 }
+
 .sheet-name-2 {
   color: #1d3557;
   text-align: center;
@@ -495,8 +533,8 @@ export default {
   line-height: 64px;
   font-weight: 700;
   position: absolute;
-  right: 63.48%;
-  left: 20.54%;
+  right: 63.21%;
+  left: 20.8%;
   width: 15.98%;
   bottom: 79.62%;
   top: 13.12%;
@@ -504,12 +542,24 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 15px;
+  position: absolute;
+  right: 63.12%;
+  left: 20.8%;
+  width: 16.07%;
+  bottom: 79.68%;
+  top: 13.12%;
+  height: 7.2%;
+  z-index: 1;
 }
+
 .sheet-1 {
   width: 180px;
   height: 65px;
   position: static;
 }
+
 .selected {
   border-style: solid;
   border-color: #000000;
@@ -524,6 +574,7 @@ export default {
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
 }
+
 .rectangle-312 {
   background: rgba(69, 123, 157, 0.5);
   border-radius: 15px;
@@ -535,6 +586,7 @@ export default {
   top: 13.12%;
   height: 6.92%;
 }
+
 .sheet-name-1 {
   color: #f1faee;
   text-align: center;
@@ -551,6 +603,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .divider {
   border-style: solid;
   border-color: #000000;
@@ -563,15 +616,18 @@ export default {
   top: 24%;
   height: 0%;
 }
+
 .filter-radio-type {
   position: absolute;
   inset: 0;
 }
+
 .radio-button-select {
   width: 137.24px;
   height: 29.25px;
   position: static;
 }
+
 .rectangle-3-1 {
   border-radius: 14px;
   border-style: solid;
@@ -583,6 +639,7 @@ export default {
   left: 423px;
   top: calc(50% - -130.04px);
 }
+
 .rectangle-3-2 {
   background: var(--primary, #457b9d);
   border-radius: 14px;
@@ -592,6 +649,7 @@ export default {
   left: 428.2px;
   top: calc(50% - -135.27px);
 }
+
 .m {
   color: var(--primary-base-black, #000000);
   text-align: left;
@@ -605,11 +663,13 @@ export default {
   width: 103.97px;
   height: 29.25px;
 }
+
 .radio-button-not-select {
   width: 140.36px;
   height: 29.25px;
   position: static;
 }
+
 .rectangle-3-12 {
   background: #ffffff;
   border-radius: 14px;
@@ -622,6 +682,7 @@ export default {
   left: 587.28px;
   top: calc(50% - -129px);
 }
+
 .ng {
   color: var(--primary-base-black, #000000);
   text-align: left;
@@ -634,5 +695,27 @@ export default {
   top: 529px;
   width: 103.97px;
   height: 29.25px;
+}
+
+.t-nguy-n {
+  color: var(--gray-100, #666666);
+  text-align: left;
+  font-family: var(
+      --android-subtitle-1-font-family,
+      "BalsamiqSans-Regular",
+      sans-serif
+  );
+  font-size: var(--android-subtitle-1-font-size, 16px);
+  line-height: var(--android-subtitle-1-line-height, 24px);
+  font-weight: var(--android-subtitle-1-font-weight, 400);
+  position: relative;
+  flex: 1;
+  border: none;
+  z-index: 1;
+}
+
+.label,
+.t-nguy-n :focus {
+  outline: none;
 }
 </style>

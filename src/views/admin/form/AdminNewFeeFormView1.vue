@@ -4,7 +4,7 @@
     <div class="t-o-kho-n-ng-g-p-m-i">Tạo khoản đóng góp mới</div>
     <div class="group-n-btn">
       <div class="rectangle-23"></div>
-      <div class="t-o-m-i">Tạo mới</div>
+      <button class="t-o-m-i">Tạo mới</button>
     </div>
     <div class="m-kho-n-thu">Mã khoản thu</div>
     <div class="t-n-kho-n-thu">Tên khoản thu</div>
@@ -13,9 +13,7 @@
       <div class="frame">
         <div class="frame2"></div>
         <div class="frame3">
-          <div class="label">
-            Đóng góp hỗ trợ ban quản quản lý chung cư trong việc tổ chức..
-          </div>
+          <input class="label" placeholder="Đóng góp hỗ trợ ban quản quản lý chung cư trong việc tổ chức..">
         </div>
       </div>
     </div>
@@ -23,7 +21,7 @@
       <div class="frame">
         <div class="frame2"></div>
         <div class="frame3">
-          <div class="label">Hỗ trợ tổ chức Trung thu 2023</div>
+          <input class="label" placeholder="Hỗ trợ tổ chức Trung thu 2023">
         </div>
       </div>
     </div>
@@ -31,7 +29,7 @@
       <div class="frame">
         <div class="frame2"></div>
         <div class="frame3">
-          <div class="label">TT2023</div>
+          <input class="label" placeholder="TT2023">
         </div>
       </div>
     </div>
@@ -134,12 +132,11 @@
     </div>
     <div class="filter-radio-type">
       <div class="radio-button-select">
-        <div class="rectangle-3-1"></div>
-        <div class="rectangle-3-2"></div>
+        <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked/>
         <div class="m">Mở</div>
       </div>
       <div class="radio-button-not-select">
-        <div class="rectangle-3-12"></div>
+        <input type="radio" id="radio-2" name="radio" class="rectangle-3-12"/>
         <div class="ng">Đóng</div>
       </div>
     </div>
@@ -226,6 +223,16 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  background: #457b9d;
+  border-radius: 10px;
+  width: 544px;
+  height: 76px;
+  position: absolute;
+  left: 288px;
+  top: 530px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 .m-kho-n-thu {
   color: #1d3557;
@@ -318,6 +325,8 @@ export default {
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
   flex: 1;
+  border: none;
+  z-index:1;
 }
 .text-field2 {
   display: flex;
