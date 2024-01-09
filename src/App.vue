@@ -12,18 +12,18 @@ import FootNote from './components/FootNote.vue';
 <template>
   <div class="container-fluid" v-if="isGetData">
     <header>
-      <div class="wrapper">
+      <div class="wrapper" v-if="currentPage !== 'login'">
         <LogoAcount />
         <NavBar />
-        <AdminInfomation v-show="isVisible" class="noti"/>
+        <AdminInfomation v-show="(isVisible && currentPage !== 'login')" class="noti" />
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
-        
+
       </div>
     </header>
 
     <RouterView />
-    <FootNote class="footer" />
+    <FootNote class="footer" v-if="currentPage !== 'login'" />
   </div>
 </template>
 
@@ -35,6 +35,8 @@ export default {
   data() {
     return {
       isGetData: false,
+      isLogIn: null,
+      currentRoute: null,
       isVisible: false
     }
   },
@@ -48,9 +50,20 @@ export default {
         this.isGetData = true
       })
       return this.isGetData
+    },
+    checkLogIn() {
+      if (this.currentRoute == '/login') {
+        this.isLogIn = true
+      } else {
+        this.isLogIn = false
+      }
     }
   },
+  beforeMount() {
+    this.checkLogIn()
+  },
   mounted() {
+
     this.isGetData = this.getData()
     setInterval(() => {
       this.isVisible = true;
@@ -59,18 +72,25 @@ export default {
       }, 2000);
     }, 6000);
   },
-  
+  computed: {
+    currentPage() {
+      // Assuming you have a route object provided by Vue Router
+      return this.$route.name || ''; // Update this based on your route naming
+    },
+  },
 }
 </script>
 
 <style >
-
 @import './assets/base.css';
+
 .noti {
-    position: fixed;
-    top: 8px;
-    right: 50%;
-    transform: translateX(50%);
+  position: fixed;
+  top: 8px;
+  right: 50%;
+  transform: translateX(50%);
 }
-body{font-size: 15px;}
-</style>
+
+body {
+  font-size: 15px;
+}</style>

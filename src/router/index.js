@@ -33,13 +33,19 @@ import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue"
 import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
 
+import LoginViewVue from '@/views/LoginView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      redirect: 'login',
+    },
+    {
       path: '/login',
       name: 'login',
-      component: AdminLoginFormView
+      component: LoginViewVue
     },
     {
       path: '/admin-dashboard',
