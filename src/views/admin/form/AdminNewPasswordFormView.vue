@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="group-n-btn">
-        <button class="rectangle-23">Xác nhận</button>
+        <button class="rectangle-23" onclick="location.href='admin-login-form'">Xác nhận</button>
       </div>
       <div class="app-ava">
         <div class="ellipse-24"></div>

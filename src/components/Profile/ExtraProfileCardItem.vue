@@ -1,7 +1,7 @@
 <template>
     <div class="div">
         <div class="avt-container">
-            <img src="../../assets/img/ExtraProfileAvatar.jpeg" class="img" />
+            <img src="../../assets/img/ExtraAccountProfileAvatar.jpeg" class="img" />
         </div>
         <div class="extra-info">
             <div class="extra-info-title">Nguyễn Hàn My</div>
@@ -66,15 +66,8 @@
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font: 700 22px/150% Raleway, sans-serif;
+    font: 800 22px/150% Inter, sans-serif;
 }
-
-/* 
-@media (max-width: 991px) {
-    .extra-info-title {
-        white-space: initial;
-    }
-} */
 
 .extra-info-content {
     color: var(--Primary-Base-Black, var(--Primary-Base-Black, #000));
@@ -91,8 +84,6 @@
 }
 
 span.span-label {
-    font: 400 16px/130% Raleway, sans-serif;
+    font: 700 16px/130% Inter, sans-serif;
 }
-
-
 </style>

@@ -5,8 +5,8 @@
         <a class="nav-link" :class="{ active: activeLink === 'complaint' }" href="#" @click="setActiveLink('complaint')">Khiếu nại</a>
         
     </div>
-    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button">Tạo mới</button>
-</template>
+    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button" @click="emitNewNotificationEvent">Tạo mới</button>
+    </template>
 
 <script>
 export default {
@@ -19,7 +19,12 @@ export default {
     methods: {
         setActiveLink(link) {
             this.activeLink = link; // Thay đổi nav-link được chọn khi người dùng click vào một nav-link khác
-        }
+            this.$emit('set-active-link', link)
+        },
+        emitNewNotificationEvent() {
+        this.$emit('new-notification');
+        this.$emit('new-button-clicked');
+    }
     }
 }
 </script>
@@ -60,21 +65,9 @@ export default {
     color: #457B9D;
 }
 .new-button {
-    display: block;
-    width: 200px;
-    padding: 0;
-    background-color: #457B9D;
-    color: #F1FAEE;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Raleway';
-    font-weight: normal;
-    font-size: 24px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.new-button:hover {
-    background-color: #457B9D;
+  width: 200px;
+  padding: 0;
+  font-size: 24px;
+  margin: 20px auto;
 }
 </style>

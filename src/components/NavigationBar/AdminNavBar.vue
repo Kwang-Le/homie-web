@@ -1,5 +1,5 @@
 <template>
-    <nav class="rounded navbar navbar-expand-lg bg-body-tertiary p-1 my-2">
+    <nav class="rounded navbar navbar-expand-lg bg-body-tertiary p-1 my-2" style ="border-radius: 15px;">
         <div class="container-fluid">
             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -7,17 +7,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="px-5 collapse navbar-collapse justify-content-between" id="navbarNav">
-              <router-link class="nav-link" :class="{ active: activeLink === 'dashboard' }" to="/admin-dashboard" @click="setActiveLink('general')">Trang chủ </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'account' }" to="/admin-account" @click="setActiveLink('general')">Tài khoản </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'apartment' }" to="/admin-apartment" @click="setActiveLink('general')">Căn hộ </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'resident' }" to="/admin-resident" @click="setActiveLink('general')">Cư dân </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'revenue' }" to="/admin-revenue" @click="setActiveLink('general')">Khoản thu </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'statistical' }" to="/admin-statistical" @click="setActiveLink('general')">Thống kê </router-link>
-              <router-link class="nav-link" :class="{ active: activeLink === 'notification' }" to="/admin-notification" @click="setActiveLink('general')">Thông báo</router-link>
-              <router-link class="nav-link" to="/admin-setting">Cài đặt</router-link>
-
-
-            </div>
+    <router-link class="nav-link" to="/admin-dashboard" active-class="active">Trang chủ </router-link>
+    <router-link class="nav-link" to="/admin-account" active-class="active">Tài khoản </router-link>
+    <router-link class="nav-link" to="/admin-apartment" active-class="active">Căn hộ </router-link>
+    <router-link class="nav-link" to="/admin-resident" active-class="active">Cư dân </router-link>
+    <router-link class="nav-link" to="/admin-revenue" active-class="active">Khoản thu </router-link>
+    <router-link class="nav-link" to="/admin-statistic" active-class="active">Thống kê </router-link>
+    <router-link class="nav-link" to="/admin-notification" active-class="active">Thông báo</router-link>
+    <router-link class="nav-link" to="/admin-setting" active-class="active">Cài đặt</router-link>
+  </div>
         </div>
     </nav>
 </template>
@@ -38,11 +36,13 @@ export default {
 </script>
 <style scoped>
 .navbar {
-    background: #F1FAEE;
-    border-radius: 15px;
+    background: #F1FAEE !important;
+    border-radius: 15px !important;
 }
 .nav-link {
   display: flex;
+    justify-content: center;
+    align-items: center;
   padding: 10px;
   color: #1D3557;
   text-decoration: none;
@@ -54,6 +54,7 @@ export default {
 .nav-link.active {
   background-color: #457B9D;
   color: #F1FAEE;
+  width: 125px;
 }
 .nav-link:active, .nav-link:focus {
   background-color: #457B9D;

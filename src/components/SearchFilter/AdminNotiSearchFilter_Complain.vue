@@ -3,15 +3,15 @@
       <input type="text" @keyup.enter="emitSearchTerm" class= "search-term" v-model="searchTerm" placeholder=" Nhập tiêu đề..."/>
       <button class="btn btn-primary" @click="emitSearchTerm" type="submit" style="margin-left: 10px; background-color: #457B9D; color: #F1FAEE;">Tìm kiếm</button>
       <select v-model="status" class = "status" @change="emitStatus">
-        <option default value="">Trạng thái</option>
-        <option value="read">Đã đọc</option>
-        <option value="unread">Chưa đọc</option>
+        <option default value="">Tất cả</option>
+        <option value="read">Đã giải quyết</option>
+        <option value="unread">Chưa giải quyết</option>
       </select>
   
-      <select v-model="date" class = "date">
+      <select v-model="date" class = "date" @change="emitDate">
         <option default value="">Ngày</option>
-        <option>Cũ nhất</option>
-        <option>Mới nhất</option>
+        <option value="oldest">Cũ nhất</option>
+        <option value="newest">Mới nhất</option>
       </select>
     </div>
   </template>
@@ -20,7 +20,7 @@
   export default {
     data() {
       return {
-        searchTerm: '',
+        searchTerm: '', 
         status: '',
         date: '',
        
@@ -32,6 +32,9 @@
     },
     emitStatus() {
       this.$emit('filterStatus', this.status);
+    },
+    emitDate() {
+      this.$emit('filterDate', this.date);
     },
   },
   };
@@ -45,7 +48,7 @@
     background: var(--Primary-Base-White, #FFF);
   }
   .status {
-    
+    width: 100px;
     margin-left: 50px;
     height: 40px;
     border-radius: 4px;

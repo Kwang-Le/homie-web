@@ -4,7 +4,7 @@
     <div class="t-o-t-i-kho-n-m-i">Tạo tài khoản mới</div>
     <div class="group-n-btn">
       <div class="rectangle-23"></div>
-      <div class="t-o-m-i">Tạo mới</div>
+      <button class="rectangle-23">Tạo mới</button>
     </div>
     <div class="t-n-t-i-kho-n">Tên tài khoản</div>
     <div class="text-field">
@@ -12,7 +12,7 @@
         <div class="frame">
           <div class="frame2"></div>
           <div class="frame3">
-            <div class="theanhnguyen-gmail-com">theanhnguyen@gmail.com</div>
+            <input class="theanhnguyen-gmail-com" placeholder="theanhnguyen@gmail.com">
           </div>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="frame">
           <div class="frame2"></div>
           <div class="frame3">
-            <div class="xxxxxxxxx">xxxxxxxxx</div>
+            <input type="password" class="xxxxxxxxx">
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="frame">
           <div class="frame2"></div>
           <div class="frame3">
-            <div class="nguy-n-th-anh">Nguyễn Thế Anh</div>
+            <input class="nguy-n-th-anh" placeholder="Nguyễn Thế Anh">
           </div>
         </div>
       </div>
@@ -41,94 +41,34 @@
     <div class="ch">Chế độ</div>
     <div class="m-t-kh-u">Mật khẩu</div>
     <div class="ch-c-n-ng">Chức năng</div>
-    <svg
-      class="icon-x-letter"
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_d_975_7640)">
-        <path
-          d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
-          fill="black"
-        />
-      </g>
-      <defs>
-        <filter
-          id="filter0_d_975_7640"
-          x="0"
-          y="0"
-          width="40"
-          height="40"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
-        >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="4" />
-          <feGaussianBlur stdDeviation="2" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_975_7640"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_975_7640"
-            result="shape"
-          />
-        </filter>
-      </defs>
-    </svg>
-
-    <div class="filter-radio-type">
-      <div class="radio-button-select">
-        <div class="rectangle-3-1"></div>
-        <div class="rectangle-3-2"></div>
-        <div class="k-ch-ho-t">Kích hoạt</div>
-      </div>
-      <div class="radio-button-not-select">
-        <div class="rectangle-3-12"></div>
-        <div class="t-t">Tắt</div>
-      </div>
-    </div>
     <div class="filter-dropdown-type">
       <div class="dropdown">
-        <div class="frame4">
-          <div class="frame2"></div>
-          <div class="frame5">
-            <div class="t-nguy-n">Cư dân</div>
-            <svg
-              class="arrow-drop-down"
-              width="27"
-              height="27"
-              viewBox="0 0 27 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.82349 10.8594L13.3712 16.407L18.9188 10.8594H7.82349Z"
-                fill="#666666"
-              />
-            </svg>
+        <div class="frame">
+          <div class="frame8">
+            <select class="t-nguy-n">
+              <option>
+                Thông báo riêng
+              </option>
+              <option>
+                Thông báo riêng
+              </option>
+              <option>
+                Thông báo riêng
+              </option>
+            </select>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="radio-button-group">
+    <div class="k-ch-ho-t">Kích hoạt</div>
+    <div class="t-t">Tắt</div>
+    <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked/>
+    <input type="radio" id="radio-2" name="radio" class="rectangle-3-12"/>
+  </div>
+
+
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
@@ -148,11 +88,13 @@ export default {
 .admin-t-o-t-i-kho-n-m-i * {
   box-sizing: border-box;
 }
+
 .admin-t-o-t-i-kho-n-m-i {
   width: 1120px;
   height: 645px;
   position: relative;
 }
+
 .rectangle-30 {
   background: #a8dadc;
   border-radius: 10px;
@@ -166,6 +108,7 @@ export default {
   top: 0px;
   box-shadow: 4px 4px 3px 1px rgba(0, 0, 0, 0.25);
 }
+
 .t-o-t-i-kho-n-m-i {
   color: #1d3557;
   text-align: center;
@@ -182,10 +125,12 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .group-n-btn {
   position: absolute;
   inset: 0;
 }
+
 .rectangle-23 {
   background: #457b9d;
   border-radius: 10px;
@@ -195,7 +140,11 @@ export default {
   left: 295px;
   top: 524px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 24px;
 }
+
 .t-o-m-i {
   color: #ffffff;
   text-align: center;
@@ -212,6 +161,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .t-n-t-i-kho-n {
   color: #1d3557;
   text-align: left;
@@ -223,6 +173,7 @@ export default {
   left: 94px;
   top: 183px;
 }
+
 .text-field {
   border-radius: 10px;
   display: flex;
@@ -236,6 +187,7 @@ export default {
   width: 26.08%;
   top: calc(50% - 150.5px);
 }
+
 .text-field2 {
   border-radius: 10px;
   display: flex;
@@ -247,6 +199,7 @@ export default {
   width: 292.07px;
   position: relative;
 }
+
 .frame {
   background: var(--white, #ffffff);
   border-radius: 4.43px;
@@ -261,7 +214,9 @@ export default {
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
+  border:none;
 }
+
 .frame2 {
   background: var(--white, #ffffff);
   align-self: stretch;
@@ -269,6 +224,7 @@ export default {
   height: 0px;
   position: relative;
 }
+
 .frame3 {
   padding: 13.28px 17.71px 13.28px 17.71px;
   display: flex;
@@ -280,6 +236,7 @@ export default {
   flex-shrink: 0;
   position: relative;
 }
+
 .theanhnguyen-gmail-com {
   color: var(--gray-100, #666666);
   text-align: left;
@@ -289,7 +246,10 @@ export default {
   font-weight: 400;
   position: relative;
   flex: 1;
+  z-index: 1;
+  border:none;
 }
+
 .text-field3 {
   border-radius: 10px;
   display: flex;
@@ -302,7 +262,9 @@ export default {
   left: 65.45%;
   width: 26.08%;
   top: calc(50% - 150.5px);
+  z-index: 1;
 }
+
 .xxxxxxxxx {
   color: var(--gray-100, #666666);
   text-align: left;
@@ -312,7 +274,9 @@ export default {
   font-weight: 400;
   position: relative;
   flex: 1;
+  border:none;
 }
+
 .text-field4 {
   border-radius: 10px;
   display: flex;
@@ -326,6 +290,7 @@ export default {
   width: 26.08%;
   top: calc(50% - 57.5px);
 }
+
 .nguy-n-th-anh {
   color: var(--gray-100, #666666);
   text-align: left;
@@ -335,7 +300,10 @@ export default {
   font-weight: 400;
   position: relative;
   flex: 1;
+  z-index: 1;
+  border: none;
 }
+
 .ng-i-d-ng {
   color: #1d3557;
   text-align: left;
@@ -347,6 +315,7 @@ export default {
   left: 94px;
   top: 284px;
 }
+
 .ch {
   color: #1d3557;
   text-align: left;
@@ -358,6 +327,7 @@ export default {
   left: 94px;
   top: 380px;
 }
+
 .m-t-kh-u {
   color: #1d3557;
   text-align: left;
@@ -369,6 +339,7 @@ export default {
   left: 608px;
   top: 183px;
 }
+
 .ch-c-n-ng {
   color: #1d3557;
   text-align: left;
@@ -380,6 +351,7 @@ export default {
   left: 610px;
   top: 283px;
 }
+
 .icon-x-letter {
   height: auto;
   position: absolute;
@@ -391,15 +363,7 @@ export default {
   height: 4.96%;
   overflow: visible;
 }
-.filter-radio-type {
-  position: absolute;
-  inset: 0;
-}
-.radio-button-select {
-  width: 137.24px;
-  height: 29.25px;
-  position: static;
-}
+
 .rectangle-3-1 {
   border-radius: 14px;
   border-style: solid;
@@ -409,17 +373,9 @@ export default {
   height: 29.25px;
   position: absolute;
   left: 265px;
-  top: calc(50% - -60.54px);
+  top: 453.04px;
 }
-.rectangle-3-2 {
-  background: var(--primary, #457b9d);
-  border-radius: 14px;
-  width: 18.72px;
-  height: 18.8px;
-  position: absolute;
-  left: 270.2px;
-  top: calc(50% - -65.77px);
-}
+
 .k-ch-ho-t {
   color: var(--primary-base-black, #000000);
   text-align: left;
@@ -429,15 +385,11 @@ export default {
   font-weight: 500;
   position: absolute;
   left: 298.27px;
-  top: 383.04px;
+  top: 453.04px;
   width: 103.97px;
   height: 29.25px;
 }
-.radio-button-not-select {
-  width: 140.36px;
-  height: 29.25px;
-  position: static;
-}
+
 .rectangle-3-12 {
   background: #ffffff;
   border-radius: 14px;
@@ -448,8 +400,9 @@ export default {
   height: 29.25px;
   position: absolute;
   left: 429.28px;
-  top: calc(50% - -59.5px);
+  top: 452px;
 }
+
 .t-t {
   color: var(--primary-base-black, #000000);
   text-align: left;
@@ -459,14 +412,29 @@ export default {
   font-weight: 500;
   position: absolute;
   left: 465.67px;
-  top: 382px;
+  top: 453.04px;
   width: 103.97px;
   height: 29.25px;
 }
+
 .filter-dropdown-type {
   position: absolute;
   inset: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4.43px;
+  align-items: center;
+  justify-content: center;
+  right: 95px;
+  left: 719px;
+  width: 103.97px;
+  height: 29.25px;
+  top: 280px;
+  bot: 312px;
+  border: none;
 }
+
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -474,58 +442,53 @@ export default {
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  right: 8.48%;
-  left: 68.66%;
-  width: 22.86%;
-  bottom: 48.37%;
-  top: 43.41%;
-  height: 8.22%;
+  right: 55.62%;
+  left: 23.3%;
+  width: 21.07%;
+  bottom: 66.33%;
+  top: 27.31%;
+  height: 6.36%;
+  border:none;
 }
-.frame4 {
-  background: var(--white, #ffffff);
-  border-radius: 4.44px;
-  border-style: solid;
-  border-color: var(--gray-200, #b3b3b3);
-  border-width: 1.11px;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
-.frame5 {
-  padding: 13.31px 13.31px 13.31px 17.75px;
-  display: flex;
-  flex-direction: row;
-  gap: 13.31px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
+
 .t-nguy-n {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(
-    --android-subtitle-1-font-family,
-    "BalsamiqSans-Regular",
-    sans-serif
+      --android-subtitle-1-font-family,
+      "BalsamiqSans-Regular",
+      sans-serif
   );
   font-size: var(--android-subtitle-1-font-size, 16px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
   flex: 1;
+  border:none;
 }
-.arrow-drop-down {
+.nguy-n-th-anh,
+.theanhnguyen-gmail-com,
+.xxxxxxxxx,
+.t-nguy-n:focus {
+  outline: none;
+}
+
+.admin-t-o-t-i-kho-n-m-i,
+.admin-t-o-t-i-kho-n-m-i * {
+  box-sizing: border-box;
+}
+
+.frame8 {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 26.63px;
-  height: 26.63px;
   position: relative;
-  overflow: visible;
+  background-color: #ffffff;
+  border:none;
 }
+
 </style>

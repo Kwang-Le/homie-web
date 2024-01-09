@@ -6,6 +6,12 @@ import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import DashboardCardTableItem from '@/components/Dashboard/DashboardCardTableItem.vue';
 import LineChart from '@/components/charts/LineChart.vue';
+
+import { useResidentStore } from '@/stores/resident'
+import { computed } from "vue";
+import fetchDataAndStore from '@/services/api'
+
+
 </script>
 
 <template>
@@ -13,12 +19,12 @@ import LineChart from '@/components/charts/LineChart.vue';
     <div class="row">
       <div class="col">
         <Card>
-          <DashboardCardChartItem title="Dân cư" content="Tổng số 200" :chart="PieChart" />
+          <DashboardCardChartItem title="Dân cư" :content="`Tổng số ` + totalResident" :chart="PieChart" />
         </Card>
       </div>
       <div class="col">
         <Card>
-          <DashboardCardChartItem title="Căn hộ" content="Tổng số 50" :chart="DoughChart" />
+          <DashboardCardChartItem title="Căn hộ" :content="`Tổng số ` + totalApartment" :chart="DoughChart" />
         </Card>
       </div>
       <div class="col">
@@ -30,7 +36,7 @@ import LineChart from '@/components/charts/LineChart.vue';
     <div class="row ">
       <div class="col-8 ">
         <Card>
-          <h5 class="card-title font-weight-bold">Biến động dân cư</h5>
+          <h5 class="card-title font-weight-bold">Biến động dân cư {{ store.getCount }}</h5>
           <LineChart></LineChart>
         </Card>
       </div>
@@ -51,6 +57,9 @@ import LineChart from '@/components/charts/LineChart.vue';
 export default {
   data() {
     return {
+      store: useResidentStore(),
+      totalResident: 0,
+      totalApartment: 0,
       tableDataFee: [
         { title: "Tiền điện hộ 304", amount: 1000000 },
         { title: "Tiền nước hộ 101", amount: 1000000 },
@@ -64,14 +73,15 @@ export default {
     }
   },
   methods: {
-     async getData() {
-      const response = await fetch("http://example.com/movies.json");
-      const movies = await response.json();
-      console.log(movies);
+    setData() {
+      this.$data.totalResident = this.$data.store.getCount
     }
   },
-  onMounted(){
-    // getData()
+  beforeMount() {
+    this.setData()
+    console.log("mounted")
+    console.log(this.$data.store.residents)
+
   }
 }
 </script>
