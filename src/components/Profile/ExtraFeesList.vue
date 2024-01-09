@@ -59,21 +59,6 @@ export default {
     }
 }
 
-.avt-container {
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.img {
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    overflow: hidden;
-    max-width: 100%;
-}
-
 .extra-info {
     align-self: center;
     display: flex;
