@@ -2,17 +2,19 @@
 import Card from '@/components/Card.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+// import EditResidentView from '@/views/admin/form/EditResidentView.vue';
+import EditResidentModal from '@/components/modals/EditResidentModal.vue';
 </script>
 
 <template>
     <main>
         <Card>
             <div class="back-button justify-content-start" @click="$router.go(-1)">
-                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back"/>
+                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back" />
             </div>
             <div class="row main-content">
                 <div class="col-4 avatar">
-                    <div class="row avt-container">    
+                    <div class="row avt-container">
                         <img src="../../assets/img/AccountProfileAvatar.jpg" class="avatar" alt="avatar" />
                     </div>
                     <div class="main-avt-name">Lê Thanh Quang</div>
@@ -80,7 +82,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
             </div>
 
             <div class="row-button">
-                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editResidentModal">Chỉnh
+                    sửa</button>
+                <EditResidentModal />
                 <button type="button" class="btn btn-delete">Xóa</button>
             </div>
         </Card>
@@ -109,7 +113,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
     /* justify-content: flex-start; */
 }
 
-.btn-close:hover {
+.btn-back:hover {
     color: #555;
 }
 
