@@ -3,7 +3,7 @@
 // import ApartmentProfile from '@/components/Profile/ApartmentProfile.vue';
 // import ApartmentResidentItem from '@/components/Profile/ApartmentResidentItem.vue';
 import ExtraProfileCardItem from '@/components/Profile/ExtraProfileCardItem.vue';
-import AccountProfile from '@/components/Profile/AccountProfile.vue';
+import MainResidentProfile from '@/components/Profile/MainResidentProfile.vue';
 // import ResidentItemList from '@/components/Profile/ResidentItemList.vue';
 </script>
 
@@ -11,7 +11,7 @@ import AccountProfile from '@/components/Profile/AccountProfile.vue';
     <main>
         <div class="row">
             <div class="col-8">
-                <AccountProfile></AccountProfile>
+                <MainResidentProfile></MainResidentProfile>
             </div>
             <div class="col-4">
                 <h4 class="card-title">Nguời sống cùng</h4>
