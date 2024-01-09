@@ -2,7 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useResidentStore = defineStore('resident', {
-    state: async () => ({ residents: null}),
+    state: () => ({ residents: null}),
     getters: {
       getCount: (state) => state.residents.length,
     },

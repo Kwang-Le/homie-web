@@ -111,7 +111,7 @@ h1 {
     margin-bottom: 20px;
     color: var(--Primary-Base-Black, var(--Primary-Base-Black, #000));
     font-family: Raleway;
-    font-size: 36px;
+    font-size: 200%;
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
