@@ -1,121 +1,119 @@
 <template>
-      <div v-if="isVisible">
-        <form> 
-    <div class="th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n">
-      <div class="rectangle-30"></div>
-      <div class="th-ng-b-o-m-i">Thông báo mới</div>
-      <div class="group-n-btn">
-        <div class="rectangle-23"></div>
-        <button name="Tạo" class="t-o" @click="this.$emit('close-notification')">Tạo</button>
-      </div>
-      <div class="tieu-de">Tiêu đề</div>
-            <div class="n-i-dung-th-ng-b-o">
-        Nội dung thông
-        <br/>
-        báo
-      </div>
-      <div class="nh-minh-h-a">Ảnh minh họa</div>
-      <div class="text-field">
-        <div class="frame">
-          <div class="frame2">
-            <input type="text" placeholder="Nhập tiêu đề thông báo" class="title"/>
-          </div>
+  <div v-if="isVisible">
+    <form>
+      <div class="th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n">
+        <div class="rectangle-30"></div>
+        <div class="th-ng-b-o-m-i">Thông báo mới</div>
+        <div class="group-n-btn">
+          <div class="rectangle-23"></div>
+          <button name="Tạo" class="t-o" @click="this.$emit('close-notification')">Tạo</button>
         </div>
-      </div>
-      
-      <div class="text-field3">
-        <div class="text-field4">
-          <div class="frame4">
-            <div class="frame5">
-                            <textarea name="textarea" placeholder="Nhập nội dung thông báo mới"
-                                      class="text"></textarea>
+        <div class="tieu-de">Tiêu đề</div>
+        <div class="n-i-dung-th-ng-b-o">
+          Nội dung thông
+          <br />
+          báo
+        </div>
+        <div class="nh-minh-h-a">Ảnh minh họa</div>
+        <div class="text-field">
+          <div class="frame">
+            <div class="frame2">
+              <input type="text" placeholder="Nhập tiêu đề thông báo" class="title" />
             </div>
           </div>
         </div>
-      </div>
-      <div class="th-i-gian-ng">Thời gian đăng</div>
-      <div class="lo-i-th-ng-b-o">Loại thông báo</div>
-      <div class="tr-ng-th-i">Trạng thái</div>
-      <button class="close-button" style="z-index: 1000;">
-        <font-awesome-icon icon="x" size="2xl" />
-  </button>
+
+        <div class="text-field3">
+          <div class="text-field4">
+            <div class="frame4">
+              <div class="frame5">
+                <textarea name="textarea" placeholder="Nhập nội dung thông báo mới" class="text"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="th-i-gian-ng">Thời gian đăng</div>
+        <div class="lo-i-th-ng-b-o">Loại thông báo</div>
+        <div class="tr-ng-th-i">Trạng thái</div>
+        <button class="close-button" style="z-index: 1000;">
+          <font-awesome-icon icon="x" size="2xl" />
+        </button>
         <g filter="url(#filter0_d_1102_7547)">
           <path
-              d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
-              fill="black"/>
+            d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
+            fill="black" />
         </g>
         <defs>
           <filter id="filter0_d_1102_7547" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
             <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                           result="hardAlpha"/>
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1102_7547"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1102_7547" result="shape"/>
+              result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1102_7547" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1102_7547" result="shape" />
           </filter>
         </defs>
-    
 
-      <div class="dropdown">
-        <div class="frame6">
-          <div class="frame8">
-            <select class="t-nguy-n">
-              <option>
-                Thông báo chung
-              </option>
-              <option>
-                Thông báo cư dân
-              </option>
-            </select>
-            <svg class="arrow-drop-down" width="27" height="27" viewBox="0 0 27 27" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.82227 10.8574L13.3699 16.4051L18.9176 10.8574H7.82227Z" fill="#666666"/>
-            </svg>
+
+        <div class="dropdown">
+          <div class="frame6">
+            <div class="frame8">
+              <select class="t-nguy-n">
+                <option>
+                  Thông báo chung
+                </option>
+                <option>
+                  Thông báo cư dân
+                </option>
+              </select>
+              <svg class="arrow-drop-down" width="27" height="27" viewBox="0 0 27 27" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.82227 10.8574L13.3699 16.4051L18.9176 10.8574H7.82227Z" fill="#666666" />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="dropdown2">
-        <div class="frame6">
-          <div class="frame8">
-            <input type="date" class="date">
+        <div class="dropdown2">
+          <div class="frame6">
+            <div class="frame8">
+              <input type="date" class="date">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="radio-button-group">
-        <div class="hi-n">Hiện</div>
-        <div class="n">Ẩn</div>
-        <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked/>
-        <input type="radio" id="radio-2" name="radio" class="rectangle-3-12"/>
-      </div>
-      <div type="file" class="action-button-1">
-        <input type="file" id="upload-file" class="rectangle-232">
-      </div>
-      <label for="upload-file">
-        <svg class="upload" width="40" height="40" viewBox="0 0 40 40" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_1102_7559)">
-            <path
+        <div class="radio-button-group">
+          <div class="hi-n">Hiện</div>
+          <div class="n">Ẩn</div>
+          <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked />
+          <input type="radio" id="radio-2" name="radio" class="rectangle-3-12" />
+        </div>
+        <div type="file" class="action-button-1">
+          <input type="file" id="upload-file" class="rectangle-232">
+        </div>
+        <label for="upload-file">
+          <svg class="upload" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1102_7559)">
+              <path
                 d="M6.66602 28.334V31.6673C6.66602 32.5514 7.0172 33.3992 7.64233 34.0243C8.26745 34.6495 9.11529 35.0007 9.99935 35.0007H29.9993C30.8834 35.0007 31.7312 34.6495 32.3564 34.0243C32.9815 33.3992 33.3327 32.5514 33.3327 31.6673V28.334"
-                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M11.666 14.9993L19.9993 6.66602L28.3327 14.9993" stroke="black" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M20 6.66602V26.666" stroke="black" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_1102_7559">
-              <rect width="40" height="40" fill="white"/>
-            </clipPath>
-          </defs>
-        </svg>
-      </label>
-    </div>
-  </form>
-</div>
+                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M11.666 14.9993L19.9993 6.66602L28.3327 14.9993" stroke="black" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M20 6.66602V26.666" stroke="black" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1102_7559">
+                <rect width="40" height="40" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </label>
+      </div>
+    </form>
+  </div>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
@@ -132,7 +130,7 @@ export default {
       isVisible: true,
       title: '',
       text: '',
-      
+
     };
   },
   methods: {
@@ -140,12 +138,12 @@ export default {
       this.isVisible = false;
     },
     createCard() {
-    this.$emit('new-card', {
-      title: this.title,
-      text: this.text,
-      date: this.date
-    });
-  },
+      this.$emit('new-card', {
+        title: this.title,
+        text: this.text,
+        date: this.date
+      });
+    },
   },
 };
 </script>
@@ -154,8 +152,9 @@ export default {
 .th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n * {
   box-sizing: border-box;
 }
+
 .close-button {
-  
+
   background: transparent;
   border: none;
   cursor: pointer;
@@ -171,6 +170,7 @@ export default {
   overflow: visible;
 
 }
+
 .th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n {
   width: 1120px;
   height: 802px;
@@ -575,8 +575,8 @@ export default {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(--android-subtitle-1-font-family,
-  "BalsamiqSans-Regular",
-  sans-serif);
+      "BalsamiqSans-Regular",
+      sans-serif);
   font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
@@ -587,7 +587,8 @@ export default {
   height: 100%;
   width: 100%;
   padding-left: 20px;
-  border: none;}
+  border: none;
+}
 
 :focus {
   outline: none;
@@ -598,8 +599,8 @@ export default {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(--android-subtitle-1-font-family,
-  "BalsamiqSans-Regular",
-  sans-serif);
+      "BalsamiqSans-Regular",
+      sans-serif);
   font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
@@ -610,7 +611,8 @@ export default {
   height: 100%;
   width: 100%;
   padding: 0 20px;
-  border: none;}
+  border: none;
+}
 
 :focus {
   outline: none;
