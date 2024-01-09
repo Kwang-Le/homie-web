@@ -32,6 +32,7 @@ import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
 import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
+import EditResidentViewVue from '@/views/admin/form/EditResidentView.vue'
 
 import LoginViewVue from '@/views/LoginView.vue'
 
@@ -207,6 +208,11 @@ const router = createRouter({
         name: 'admin-record-form',
         component: AdminRecordFormView
     },
+    {
+      path: '/admin-edit-resident-form',
+      name: 'admin-edit-resident-form',
+      component: EditResidentViewVue
+  },
     {
         path: '/admin-record-list',
         name: 'admin-record-list',
