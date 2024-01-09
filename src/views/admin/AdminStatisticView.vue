@@ -556,7 +556,7 @@ export default {
                     >Tên khoản thu</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="searchNameKhoanThu"
                     placeholder="nhập tên khoản thu"
@@ -747,7 +747,7 @@ export default {
                     >Tên căn hộ</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="searchNameKhoanThu"
                     placeholder="nhập tên khoản thu"
@@ -918,7 +918,7 @@ export default {
                     >Tên cư dân</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="searchNameCuDan"
                     placeholder="nhập tên cư dân"
@@ -988,7 +988,7 @@ export default {
               <!-- Handle bằng việc truyền param vào loadData(), nhấn xóa -> loadAllData() -->
               <div class="row filter-btn-group justify-content-evenly">
                   <div class="col-2">
-                    <button type="button" class="btn btn-md btn-danger" @click="loadAllData" :disabled="!isKhoanThuFiltered">
+                    <button type="button" class="btn btn-md btn-danger" @click="loadAllData" :disabled="!isCuDanFiltered">
                       Xóa
                     </button>
                   </div>
@@ -1062,5 +1062,7 @@ export default {
 .page-link{
   color: black;
 }
-
+#tableSelection {
+  padding-top: 20px;
+}
 </style>
