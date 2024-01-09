@@ -12,10 +12,10 @@ import FootNote from './components/FootNote.vue';
 <template>
   <div class="container-fluid" v-if="isGetData">
     <header>
-      <div class="wrapper" v-if="currentPage !== 'login'">
+      <div class="wrapper" v-if="currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'">
         <LogoAcount />
         <NavBar />
-        <AdminInfomation v-show="(isVisible && currentPage !== 'login')" class="noti" />
+        <AdminInfomation v-show="(isVisible && (currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'))" class="noti" />
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
 
@@ -23,7 +23,7 @@ import FootNote from './components/FootNote.vue';
     </header>
 
     <RouterView />
-    <FootNote class="footer" v-if="currentPage !== 'login'" />
+    <FootNote class="footer" v-if="currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'" />
   </div>
 </template>
 
@@ -70,11 +70,12 @@ export default {
       setTimeout(() => {
         this.isVisible = false;
       }, 2000);
-    }, 6000);
+    }, 120000);
   },
   computed: {
     currentPage() {
       // Assuming you have a route object provided by Vue Router
+      console.log(this.$route)
       return this.$route.name || ''; // Update this based on your route naming
     },
   },

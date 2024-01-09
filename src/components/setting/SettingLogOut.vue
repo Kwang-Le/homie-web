@@ -5,14 +5,15 @@
         <form>
             <div class="option-group">
                 <label for="log-out-label">Xác nhận đăng xuất</label>
-                <button type="button" class="btn-confirm">Xác nhận</button>
+                <!-- <button type="button" class="btn-confirm">Xác nhận</button> -->
+                <router-link type="button" class="btn-confirm" to="/">Xác nhận</router-link>
             </div>
         </form>
         </div>
 </template>
 <style scoped>
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
     color: var(--Primary-Base-Black, var(--Primary-Base-Black, #000));
     font-family: Raleway;
     font-size: 36px;

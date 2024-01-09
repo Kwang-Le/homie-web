@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import AdminNotificationView from '@/views/admin/AdminNotificationView.vue'
+import ResNotificationView from '@/views/resident/ResNotificationView.vue'
 import AdminDashboardView from '@/views/admin/AdminDashboardView.vue'
 import AdminSettingView from '@/views/admin/AdminSettingView.vue'
 import AdminAccountView from '@/views/admin/AdminAccountView.vue'
@@ -32,10 +32,17 @@ import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
 import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
+
 import EditResidentView from '@/views/admin/form/EditResidentView.vue'
 import EditApartmentView from '@/views/admin/form/EditApartmentView.vue'
 import EditFeeView from '@/views/admin/form/EditFeeView.vue'
+import AdminNotificationView from "@/views/admin/AdminNotificationView.vue";
+
 import LoginViewVue from '@/views/LoginView.vue'
+import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
+import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
+import ResetPasswordView from '@/views/ResetPasswordView.vue'
+import ResidentDashboardView from '@/views/ResidentDashboardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,7 +54,22 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: LoginViewVue
+      component: LoginViewVue,
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      component: ForgotPasswordView
+    },
+    {
+      path: '/confirm-code',
+      name: 'confirm-code',
+      component: ConfirmCodeView
+    },
+    {
+      path: '/reset-password',
+      name: 'reset-password',
+      component: ResetPasswordView
     },
     {
       path: '/admin-dashboard',
@@ -104,6 +126,11 @@ const router = createRouter({
       path: '/admin-notification',
       name: 'admin-notification',
       component: AdminNotificationView
+    },
+    {
+      path: '/res-notification',
+      name: 'res-notification',
+      component: ResNotificationView
     },
     {
       path: '/admin-setting',
@@ -229,6 +256,82 @@ const router = createRouter({
       path: '/admin-record-list',
       name: 'admin-record-list',
       component: AdminRecordListView
+
+    },
+    {
+      path: '/admin-double-check-form',
+      name: 'admin-double-check-form',
+      component: AdminDoubleCheckFormView
+    },
+    {
+      path: '/admin-edit-account-form',
+      name: 'admin-edit-account-form',
+      component: AdminEditAccountFormView
+    },
+    {
+      path: '/admin-edit-apartment-form',
+      name: 'admin-edit-apartment-form',
+      component: AdminEditApartmentFormView
+    },
+    {
+      path: '/admin-edit-fee-form',
+      name: 'admin-edit-fee-form',
+      component: AdminEditFeeFormView
+    },
+    {
+      path: '/admin-edit-user-form',
+      name: 'admin-edit-user-form',
+      component: AdminEditUserFormView
+    },
+    {
+      path: '/admin-new-fee-form1',
+      name: 'admin-new-fee-form1',
+      component: AdminNewFeeFormView1
+    },
+    {
+      path: '/admin-new-fee-form2',
+      name: 'admin-new-fee-form2',
+      component: AdminNewFeeFormView2
+    },
+    {
+      path: '/admin-new-fee-form3',
+      name: 'admin-new-fee-form3',
+      component: AdminNewFeeFormView3
+    },
+    {
+      path: '/admin-new-fee-pop-up-form',
+      name: 'admin-new-fee-pop-up-form',
+      component: AdminNewFeePopUpFormView
+    },
+    {
+      path: '/admin-new-noti-form',
+      name: 'admin-new-noti-form',
+      component: AdminNewNotiFormView
+    },
+    {
+      path: '/admin-new-user-form',
+      name: 'admin-new-user-form',
+      component: AdminNewUserFormView
+    },
+    {
+      path: '/admin-response-form',
+      name: 'admin-response-form',
+      component: AdminResponseFormView
+    },
+    {
+      path: '/admin-record-form',
+      name: 'admin-record-form',
+      component: AdminRecordFormView
+    },
+    {
+      path: '/admin-record-list',
+      name: 'admin-record-list',
+      component: AdminRecordListView
+    },
+    {
+      path: '/resident-dashboard',
+      name: 'resident-dashboard',
+      component: ResidentDashboardView
     },
 
   ]
