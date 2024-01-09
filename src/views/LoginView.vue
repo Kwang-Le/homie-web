@@ -21,7 +21,7 @@ import { useUserStore } from '@/stores/user';
                 </div>
                 <div class="input-field">
                     <div for="password">Password:</div>
-                    <input type="password" class="form-control" id="password" v-model="password" required>
+                    <input @keyup.enter="login" type="password" class="form-control" id="password" v-model="password" required>
                 </div>
                 <button class="new-button" @click="login">Đăng nhập</button>
                 <router-link to="">Quên mật khẩu</router-link>
