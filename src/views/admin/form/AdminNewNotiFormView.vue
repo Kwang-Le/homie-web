@@ -1,15 +1,15 @@
 <template>
-  <form>
+      <div v-if="isVisible">
+        <form> 
     <div class="th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n">
       <div class="rectangle-30"></div>
       <div class="th-ng-b-o-m-i">Thông báo mới</div>
       <div class="group-n-btn">
         <div class="rectangle-23"></div>
-        <button name="Tạo" class="t-o">Tạo</button>
+        <button name="Tạo" class="t-o" @click="this.$emit('close-notification')">Tạo</button>
       </div>
-      <div class="ti-u">Tiêu đề</div>
-      <div class="ti-u2">Tiêu đề</div>
-      <div class="n-i-dung-th-ng-b-o">
+      <div class="tieu-de">Tiêu đề</div>
+            <div class="n-i-dung-th-ng-b-o">
         Nội dung thông
         <br/>
         báo
@@ -18,23 +18,17 @@
       <div class="text-field">
         <div class="frame">
           <div class="frame2">
-            <input type="text" placeholder="Nhập tiêu đề thông báo" class="nh-p-ti-u-th-ng-b-o"/>
+            <input type="text" placeholder="Nhập tiêu đề thông báo" class="title"/>
           </div>
         </div>
       </div>
-      <div class="text-field2">
-        <div class="frame3">
-          <div class="frame2">
-            <input type="text" placeholder="Nhập danh sách định danh" class="nh-p-danh-s-ch-nh-danh"/>
-          </div>
-        </div>
-      </div>
+      
       <div class="text-field3">
         <div class="text-field4">
           <div class="frame4">
             <div class="frame5">
                             <textarea name="textarea" placeholder="Nhập nội dung thông báo mới"
-                                      class="nh-p-n-i-dung-th-ng-b-o-m-i"></textarea>
+                                      class="text"></textarea>
             </div>
           </div>
         </div>
@@ -42,8 +36,9 @@
       <div class="th-i-gian-ng">Thời gian đăng</div>
       <div class="lo-i-th-ng-b-o">Loại thông báo</div>
       <div class="tr-ng-th-i">Trạng thái</div>
-      <svg class="icon-x-letter" width="40" height="40" viewBox="0 0 40 40" fill="none"
-           xmlns="http://www.w3.org/2000/svg">
+      <button class="close-button" style="z-index: 1000;">
+        <font-awesome-icon icon="x" size="2xl" />
+  </button>
         <g filter="url(#filter0_d_1102_7547)">
           <path
               d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
@@ -63,20 +58,17 @@
             <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1102_7547" result="shape"/>
           </filter>
         </defs>
-      </svg>
+    
 
       <div class="dropdown">
         <div class="frame6">
           <div class="frame8">
             <select class="t-nguy-n">
               <option>
-                Thông báo riêng
+                Thông báo chung
               </option>
               <option>
-                Thông báo riêng
-              </option>
-              <option>
-                Thông báo riêng
+                Thông báo cư dân
               </option>
             </select>
             <svg class="arrow-drop-down" width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -89,7 +81,7 @@
       <div class="dropdown2">
         <div class="frame6">
           <div class="frame8">
-            <input type="date" class="t-nguy-n-2">
+            <input type="date" class="date">
           </div>
         </div>
       </div>
@@ -123,17 +115,37 @@
       </label>
     </div>
   </form>
+</div>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
-
+import { faX } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(faX);
 export default {
   name: "ThNgBOTOThNgBOMICDN",
   components: {},
   props: {},
   data() {
     // quickfix to have components available to pass as props
-    return {};
+    return {
+      isVisible: true,
+      title: '',
+      text: '',
+      
+    };
+  },
+  methods: {
+    closePopup() {
+      this.isVisible = false;
+    },
+    createCard() {
+    this.$emit('new-card', {
+      title: this.title,
+      text: this.text,
+      date: this.date
+    });
+  },
   },
 };
 </script>
@@ -142,7 +154,23 @@ export default {
 .th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n * {
   box-sizing: border-box;
 }
+.close-button {
+  
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: auto;
+  position: absolute;
+  right: 3.04%;
+  left: 94.11%;
+  width: 2.86%;
+  bottom: 91.77%;
+  top: 4.24%;
+  height: 3.99%;
+  overflow: visible;
 
+}
 .th-ng-b-o-t-o-th-ng-b-o-m-i-c-d-n {
   width: 1120px;
   height: 802px;
@@ -223,7 +251,7 @@ export default {
   z-index: 1;
 }
 
-.ti-u {
+.tieu-de {
   color: #1d3557;
   text-align: left;
   font-family: "Raleway-SemiBold", sans-serif;
@@ -312,11 +340,11 @@ export default {
   position: relative;
 }
 
-.nh-p-ti-u-th-ng-b-o {
+.title {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: "Raleway-Regular", sans-serif;
-  font-size: 17.707317352294922px;
+  font-size: 20px;
   line-height: 26.56px;
   font-weight: 400;
   position: relative;
@@ -433,11 +461,11 @@ export default {
   position: relative;
 }
 
-.nh-p-n-i-dung-th-ng-b-o-m-i {
+.text {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: "Raleway-Regular", sans-serif;
-  font-size: 17.707317352294922px;
+  font-size: 20px;
   line-height: 26.56px;
   font-weight: 400;
   position: relative;
@@ -490,17 +518,7 @@ export default {
   top: 331px;
 }
 
-.icon-x-letter {
-  height: auto;
-  position: absolute;
-  right: 3.04%;
-  left: 94.11%;
-  width: 2.86%;
-  bottom: 91.77%;
-  top: 4.24%;
-  height: 3.99%;
-  overflow: visible;
-}
+
 
 .dropdown {
   display: flex;
@@ -559,7 +577,7 @@ export default {
   font-family: var(--android-subtitle-1-font-family,
   "BalsamiqSans-Regular",
   sans-serif);
-  font-size: var(--android-subtitle-1-font-size, 16px);
+  font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
@@ -576,13 +594,13 @@ export default {
 }
 
 
-.t-nguy-n-2 {
+.date {
   color: var(--gray-100, #666666);
   text-align: left;
   font-family: var(--android-subtitle-1-font-family,
   "BalsamiqSans-Regular",
   sans-serif);
-  font-size: var(--android-subtitle-1-font-size, 16px);
+  font-size: var(--android-subtitle-1-font-size, 20px);
   line-height: var(--android-subtitle-1-line-height, 24px);
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;

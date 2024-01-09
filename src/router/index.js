@@ -1,13 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashboardView from '@/views/admin/AdminDashboardView.vue'
+
 import AdminNotificationView from '@/views/admin/AdminNotificationView.vue'
 import AdminDashboardView from '@/views/admin/AdminDashboardView.vue'
 import AdminSettingView from '@/views/admin/AdminSettingView.vue'
 import AdminAccountView from '@/views/admin/AdminAccountView.vue'
+import AdminStatisticView from '@/views/admin/AdminStatisticView.vue'
 import AdminApartmentView from '@/views/admin/AdminApartmentView.vue'
 import AdminResidentView from '@/views/admin/AdminResidentView.vue'
 import AdminRevenueView from '@/views/admin/AdminRevenueView.vue'
-import AdminStatisticalView from '@/views/admin/AdminStatisticalView.vue'
+import AdminApartmentDetailsView from '@/views/admin/AdminApartmentDetailsView.vue'
+import AdminResidentDetailsView from '@/views/admin/AdminResidentDetailsView.vue'
+import AdminFeeDetailsView from '@/views/admin/AdminFeeDetailsView.vue'
 import AdminLoginFormView from '@/views/admin/form/AdminLoginFormView.vue'
 import AdminResetPasswordFormView from '@/views/admin/form/AdminResetPasswordFormView.vue'
 import AdminCodeConfirmFormView from '@/views/admin/form/AdminCodeConfirmFormView.vue'
@@ -29,9 +32,15 @@ import AdminNewUserFormView from "@/views/admin/form/AdminNewUserFormView.vue";
 import AdminResponseFormView from "@/views/admin/form/AdminResponseFormView.vue";
 import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/login',
+      name: 'login',
+      component: AdminLoginFormView
+    },
     {
       path: '/admin-dashboard',
       name: 'admin-dashboard',
@@ -58,9 +67,30 @@ const router = createRouter({
       component: AdminRevenueView
     },
     {
-      path: '/admin-statistical',
-      name: 'admin-statistical',
-      component: AdminStatisticalView
+      path: '/admin-statistic',
+      name: 'admin-statistic',
+      component: AdminStatisticView
+    },
+    // {
+    //   path: '/admin-statistical/apartment/:id',
+    //   name: 'admin-statistical-apartment',
+    //   component: AdminStatisticView
+    // },
+    {
+      path: '/admin-statistic/apartment/:id',
+      name: 'admin-statistic-apartment',
+      component: AdminApartmentDetailsView,
+      // props: true
+    },
+    {
+      path: '/admin-statistic/resident/:id',
+      name: 'admin-statistic-resident',
+      component: AdminResidentDetailsView,
+    },
+    {
+      path: '/admin-statistic/fee/:id',
+      name: 'admin-statistic-fee',
+      component: AdminFeeDetailsView,
     },
     {
       path: '/admin-notification',
