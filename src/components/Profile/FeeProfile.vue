@@ -1,4 +1,5 @@
 <script setup>
+import EditFeeModal from '@/components/modals/EditFeeModal.vue';
 import Card from '@/components/Card.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -113,7 +114,9 @@ onMounted(async () => {
             </div>
 
             <div class="row-button">
-                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editFeeModal">Chỉnh
+                    sửa</button>
+                <EditFeeModal />
                 <button type="button" class="btn btn-delete">Xóa</button>
             </div>
         </Card>

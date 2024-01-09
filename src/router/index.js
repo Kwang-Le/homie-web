@@ -34,7 +34,7 @@ import AdminRecordFormView from "@/views/admin/form/AdminRecordFormView.vue";
 import AdminRecordListView from "@/views/admin/form/AdminRecordListView.vue";
 import EditResidentView from '@/views/admin/form/EditResidentView.vue'
 import EditApartmentView from '@/views/admin/form/EditApartmentView.vue'
-
+import EditFeeView from '@/views/admin/form/EditFeeView.vue'
 import LoginViewVue from '@/views/LoginView.vue'
 
 const router = createRouter({
@@ -219,6 +219,11 @@ const router = createRouter({
       path: '/admin-edit-apartment-form',
       name: 'admin-edit-apartment-form',
       component: EditApartmentView
+    },
+    {
+      path: '/admin-edit-fee-form',
+      name: 'admin-edit-fee-form',
+      component: EditFeeView
     },
     {
       path: '/admin-record-list',

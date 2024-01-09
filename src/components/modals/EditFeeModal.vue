@@ -1,14 +1,14 @@
 <template>
-    <div class="modal fade" id="editApartmentModal" tabindex="-1" aria-labelledby="editApartmentModalLabel"
+    <div class="modal fade" id="editFeeModal" tabindex="-1" aria-labelledby="editFeeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h5 class="modal-title w-100" id="editApartmentModalLabel">Thay đổi thông tin căn hộ</h5>
+                    <h5 class="modal-title w-100" id="editFeeModalLabel">Thay đổi thông tin căn hộ</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <EditApartmentView />
+                    <EditFeeView />
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button> -->
@@ -56,5 +56,5 @@
 </style>
   
 <script setup>
-import EditApartmentView from '@/views/admin/form/EditApartmentView.vue';
+import EditFeeView from '@/views/admin/form/EditFeeView.vue';
 </script>
