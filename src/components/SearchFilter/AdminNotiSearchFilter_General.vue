@@ -4,8 +4,8 @@
       <button class="btn btn-primary" @click="emitSearchTerm" type="submit" style="margin-left: 10px; background-color: #457B9D; color: #F1FAEE;">Tìm kiếm</button>
       <select v-model="status" class = "status" @change="emitStatus">
         <option default value="">Tất cả</option>
-        <option value="read">Đã đọc</option>
-        <option value="unread">Chưa đọc</option>
+        <option value="read">Hiện</option>
+        <option value="unread">Ẩn</option>
       </select>
   
       <select v-model="date" class = "date" @change="emitDate">

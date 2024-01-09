@@ -18,7 +18,7 @@
   </script>
   
   
-  <style>
+  <style scoped>
   .box {
     height: 52px;
     width: 236px
