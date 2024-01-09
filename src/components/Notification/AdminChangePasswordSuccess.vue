@@ -12,9 +12,8 @@
   
   
   <style scoped>
-  .div {
-    display: inline-block;
-    
+  .div {    
+    margin: auto;
     max-width: 500px;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +23,7 @@
     background-color: var(--Success, #007b40);
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     padding: 12px 24px;
     opacity: 0.75;
