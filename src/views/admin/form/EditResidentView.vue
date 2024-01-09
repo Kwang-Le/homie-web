@@ -5,7 +5,9 @@ let resident = ref({
     birthdate: '',
     address: '',
     apartment: '',
-    status: ''
+    status: '',
+    idNum: '',
+    email: '',
 });
 
 const editResident = () => {

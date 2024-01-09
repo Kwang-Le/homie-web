@@ -12,7 +12,7 @@
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button> -->
-                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Cập nhật</button>
                 </div>
             </div>
         </div>
