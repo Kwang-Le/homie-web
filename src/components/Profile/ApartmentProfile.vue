@@ -169,7 +169,7 @@ onMounted(async () => {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font: 30px/150% Raleway, sans-serif;
+    font: 1000 30px/150% Inter, sans-serif;
     text-align: center;
 }
 
@@ -177,29 +177,27 @@ onMounted(async () => {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font-family: "Raleway", sans-serif;
-    font-weight: 300;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
     font-size: 24px;
     line-height: 150%;
 }
 
 .info-label {
-    /* font: 18px/150% Raleway, sans-serif; */
+    /* font: 18px/150% Inter, sans-serif; */
     margin-bottom: 36px;
 }
 
 .info-title {
-    font: bold 24px/150% Raleway, sans-serif;
+    font: bold 24px/150% Inter, sans-serif;
 }
 
 .info-content {
     font-family: "Inter", sans-serif;
     /* font-size: 18px; */
-    /* font-weight: normal; */
+    font-weight: normal;
     color: var(--main-secondary);
     margin-top: 8px;
-
-    font-weight: 200;
     font-size: 18px;
     line-height: 150%;
 }
@@ -217,9 +215,9 @@ onMounted(async () => {
     border-radius: 10;
     width: 280px;
     color: var(--text-alternative);
-    font-family: "Raleway-SemiBold", sans-serif;
-    /* font: 600 18px/150%, sans-serif; */
-    font-weight: 500;
+    /* font: "Inter", sans-serif; */
+    font: 600 18px/150% Inter, sans-serif;
+    /* font-weight: 800; */
     font-size: 18px;
     line-height: 150%;
     /* margin-top: 64px; */

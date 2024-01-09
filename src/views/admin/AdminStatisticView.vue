@@ -527,6 +527,7 @@ export default {
                     type="button"
                     class="btn btn-action btn-info"
                     :disabled="selectedKhoanThuRow === null"
+                    @click="$router.push('/admin-statistic/fee/' + selectedKhoanThuRow)"
                   >
                     Chi tiết khoản thu
                   </button>
@@ -718,6 +719,7 @@ export default {
                     type="button"
                     class="btn btn-action btn-info"
                     :disabled="selectedCanHoRow === null"
+                    @click="$router.push('/admin-statistic/apartment/' + selectedCanHoRow)"
                   >
                     Chi tiết căn hộ
                   </button>
@@ -886,6 +888,7 @@ export default {
                     type="button"
                     class="btn btn-action btn-info"
                     :disabled="selectedCuDanRow === null"
+                    @click="$router.push('/admin-statistic/resident/' + selectedCuDanRow)"
                   >
                     Chi tiết cư dân
                   </button>

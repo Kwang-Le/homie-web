@@ -7,15 +7,13 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 <template>
     <main>
         <Card>
-            <div class="row back-button" @click="$router.go(-1)">
+            <div class="back-button justify-content-start" @click="$router.go(-1)">
                 <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back"/>
             </div>
             <div class="row main-content">
                 <div class="col-4 avatar">
-                    <div class="row avt-container">
-                        <div class="img">
-                            <img src="../../assets/img/AccountProfileAvatar.jpg" class="img" alt="avatar" />
-                        </div>
+                    <div class="row avt-container">    
+                        <img src="../../assets/img/AccountProfileAvatar.jpg" class="avatar" alt="avatar" />
                     </div>
                     <div class="main-avt-name">Lê Thanh Quang</div>
                 </div>
@@ -90,7 +88,6 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 </template>
 
 <style scoped>
-
 .col-4.avatar {
     display: flex;
     justify-content: center;
@@ -98,59 +95,72 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
     flex-direction: column;
 }
 
-.row.back-button {
-    display: flex;
-    justify-content: flex-start;
-    /* color: black;
+.back-button {
+    /* display: flex; */
+    /* justify-content: start; */
+    color: black;
     margin-top: 4px;
-    margin-left: 4px; */
+    margin-right: 4px;
 }
 
 .btn-back {
-    align-self: flex-start;
     cursor: pointer;
-    color: black;
-    margin-top: 4px;
-    margin-left: 4px;
+    /* display: flex; */
+    /* justify-content: flex-start; */
 }
 
-.btn-back:hover {
+.btn-close:hover {
     color: #555;
+}
+
+.row.main-content {
+    margin-top: 16px;
 }
 
 .avt-container {
     width: 160px;
     height: 160px;
-    border-radius: 50%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
 }
 
-.img {
+.avatar {
     aspect-ratio: 1;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     overflow: hidden;
-    max-width: 100%;
+    max-width: inherit;
+    padding: 0;
 }
 
 .main-avt-name {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font: 30px/150% Raleway, sans-serif;
+    font: 1000 30px/150% Inter, sans-serif;
     text-align: center;
 }
 
+.main-avt-id {
+    color: var(--main-secondary);
+    letter-spacing: -0.48px;
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 150%;
+}
+
 .info-label {
-    /* font: 18px/150% Raleway, sans-serif; */
+    /* font: 18px/150% Inter, sans-serif; */
     margin-bottom: 36px;
 }
 
 .info-title {
-    font: bold 24px/150% Raleway, sans-serif;
+    font: 1000 24px/150% Inter, sans-serif;
 }
 
 .info-content {
@@ -178,7 +188,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
     border-radius: 10;
     width: 280px;
     color: var(--text-alternative);
-    font-family: "Raleway-SemiBold", sans-serif;
+    font-family: "Inter-SemiBold", sans-serif;
     /* font: 600 18px/150%, sans-serif; */
     font-weight: 500;
     font-size: 18px;

@@ -39,7 +39,7 @@
   --fields-field-title: #777777;
   --fields-placeholders: #adaaaa;
   --fields-fields-error: #E51A3C;
-  --fields-field-focus : #0088FF;
+  --fields-field-focus: #0088FF;
   --selections-disabled1: #E1E1E1;
   --selections-disabled2: #B5B5B5;
   --notifications-success: #007B40;
@@ -95,7 +95,7 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
-    'Raleway',
+    'Inter',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
