@@ -26,7 +26,7 @@ const editResident = () => {
             </div>
             <div class="col-7">
                 <label>
-                    Địa chỉ thường chú:
+                    Địa chỉ thường trú:
                     <input v-model="resident.address" type="text" style="width: 200px;">
                 </label>
             </div>
