@@ -5,12 +5,12 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 library.add(faCheck); library.add(faTrash); library.add(faEye)
-import AdminNotiSearchFilter from '@/components/SearchFilter/AdminNotiSearchFilter_General.vue'
+import ResNotiSearchFilter from '@/components/SearchFilter/ResNotiSearchFilter.vue'
 export default {
   name: "CardBox",
   components: {
     'font-awesome-icon': FontAwesomeIcon,
-    AdminNotiSearchFilter,
+    ResNotiSearchFilter,
   },
   data() {
     return {
@@ -24,7 +24,6 @@ export default {
         { image: 'https://th.bing.com/th/id/R.fc4c5fcf5443dda48524cda7a7921b81?rik=tYkI92mK6C1nhA&pid=ImgRaw&r=0', title: 'Thông báo Về việc nâng cấp hệ thống nước', text: 'Chúng tôi thông báo về dự án nâng cấp hệ thống cung cấp nước trong khu vực chung cư. Mong rằng mọi người sẽ thông cảm và hỗ trợ trong quá trình triển khai.', date: new Date('2023-06-05'), isChecked: false },
         { image: 'https://th.bing.com/th/id/OIP.opu5VtYfexVPX4k0onsk0AHaDu?rs=1&pid=ImgDetMain', title: 'Thông báo Sự kiện Hội nghị cư dân', text: 'Chúng tôi hân hạnh thông báo về sự kiện hội nghị cư dân sắp tới. Mọi người được mời tham gia để chia sẻ ý kiến, đề xuất và cùng nhau xây dựng một cộng đồng mạnh mẽ hơn.', date: new Date('2023-05-12'), isChecked: true },
         { image: 'https://th.bing.com/th/id/OIP.p1t1Bl7ZS1enB9kP466S-QHaDM?w=1328&h=573&rs=1&pid=ImgDetMain', title: 'Thông báo Hướng dẫn sử dụng khu vực tiện ích', text: 'Ban quản trị cung cấp hướng dẫn chi tiết về cách sử dụng các khu vực tiện ích chung. Hãy đọc kỹ để tận hưởng tốt nhất các tiện ích dành cho cư dân.', date: new Date('2023-04-01'), isChecked: false },
-        { image: 'https://th.bing.com/th/id/R.704298032a5ce1cc168b44cff04a589b?rik=l%2fQy%2b20uTo7kVg&riu=http%3a%2f%2f3.bp.blogspot.com%2f-K607KtCs5Tg%2fUjJ7xkh45eI%2fAAAAAAAAACA%2fiG6rBrSam_U%2fs1600%2fnoi-quy-an-toan-s-23.jpg&ehk=JHM5H55eEoqozlz4AbRbLdYM7C0Z2BQZGlage3cIhj4%3d&risl=&pid=ImgRaw&r=0 ', title: 'Thông báo về Cuộc kiểm tra An toàn Cảnh báo', text: 'Chúng tôi thông báo về cuộc kiểm tra an toàn cảnh báo toàn diện trong khu chung cư. Mong mọi người hợp tác và chú ý đến các biện pháp an toàn. Cảm ơn!', date: new Date('2023-11-10'), isChecked: true },
         { image: 'https://th.bing.com/th/id/R.d1d84b9559fb7883cb086a842e4b730e?rik=p8f1jllFULeqWA&pid=ImgRaw&r=0 ', title: 'Thông báo về Chương trình Tập huấn Sơ cứu', text: 'Chúng tôi tổ chức chương trình tập huấn sơ cứu cho cư dân trong khu chung cư. Xin mời mọi người tham gia để nâng cao kiến thức và kỹ năng cần thiết. Thông tin chi tiết sẽ được thông báo sau. Cảm ơn!', date: new Date('2023-11-15'), isChecked: false },
         { image: ' https://th.bing.com/th/id/R.47550656770991d998bcf8b5b4f5fa4d?rik=b0apa6XVrIsdKA&pid=ImgRaw&r=0', title: 'Thông báo về Lịch sử dụng Sân thể thao', text: 'Chúng tôi thông báo về lịch sử dụng sân thể thao chung của khu chung cư. Mọi người vui lòng tuân thủ lịch và giữ gìn sân để mọi người cùng sử dụng được thoải mái. Xin cảm ơn sự hợp tác của mọi người!', date: new Date('2023-10-20'), isChecked: true },
         { image: ' https://cdn.slidesharecdn.com/ss_thumbnails/tp3activ1-161017192347-thumbnail-4.jpg?cb=1476732323', title: 'Thông báo về Cuộc thi Nghệ thuật Graffiti', text: 'Chúng tôi tổ chức cuộc thi nghệ thuật graffiti để trang trí khu chung cư. Mọi người có tài năng và đam mê vui lòng đăng ký để tạo nên không khí mới mẻ và sáng tạo. Thông tin chi tiết tại phòng quản lý. Cảm ơn!', date: new Date('2023-12-01'), isChecked: false },
@@ -120,7 +119,7 @@ export default {
 </script>
 
 <template>
-  <AdminNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
+  <ResNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
   <div class="card-list" style="overflow-y: auto; height: 90%;width: 100%">
     <div class="card" v-for="(card, index) in filteredCards" :key="index">
       <div class="overlap-group">
