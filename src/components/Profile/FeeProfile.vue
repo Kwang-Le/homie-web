@@ -90,7 +90,7 @@ onMounted(async () => {
                                 <div class="info-label">
                                     <h5 class="info-title font-weight-bold">Loại phí</h5>
                                     <div class="info-content d-flex flex-column card-text">
-                                        <p>Tự nguyện</p>
+                                        <p>Đóng góp</p>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +168,7 @@ onMounted(async () => {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font: 30px/150% Raleway, sans-serif;
+    font: 1000 30px/150% Inter, sans-serif;
     text-align: center;
 }
 
@@ -176,19 +176,19 @@ onMounted(async () => {
     color: var(--main-secondary);
     letter-spacing: -0.48px;
     white-space: nowrap;
-    font-family: "Raleway", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: 24px;
     line-height: 150%;
 }
 
 .info-label {
-    /* font: 18px/150% Raleway, sans-serif; */
+    /* font: 18px/150% Inter, sans-serif; */
     margin-bottom: 36px;
 }
 
 .info-title {
-    font: bold 24px/150% Raleway, sans-serif;
+    font: 1000 24px/150% Inter, sans-serif;
 }
 
 .info-content {
@@ -216,7 +216,7 @@ onMounted(async () => {
     border-radius: 10;
     width: 280px;
     color: var(--text-alternative);
-    font-family: "Raleway-SemiBold", sans-serif;
+    font-family: "Inter-SemiBold", sans-serif;
     /* font: 600 18px/150%, sans-serif; */
     font-weight: 500;
     font-size: 18px;

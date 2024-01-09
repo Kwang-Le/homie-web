@@ -1,18 +1,14 @@
 <template>
-  <div class="kho-n-thu-form-t-o-kho-n-thu-th-c-ng-upload-file">
+  <div class="kho-n-thu-form-t-o-kho-n-thu-th-c-ng">
     <div class="rectangle-30"></div>
     <div class="t-o-kho-n-ph-m-i">Tạo khoản phí mới</div>
-    <div class="group-n-btn">
-      <div class="rectangle-23"></div>
-      <div class="t-o-m-i">Tạo mới</div>
-    </div>
     <div class="m-kho-n-ph">Mã khoản phí</div>
     <div class="t-n-kho-n-ph">Tên khoản phí</div>
     <div class="th-i-gian-m-ng">Thời gian mở - đóng</div>
     <div class="tr-ng-th-i">Trạng thái</div>
     <div class="ki-u-thu-ph">Kiểu thu phí</div>
     <div class="danh-s-ch-thu">Danh sách thu</div>
-    <div class="file-danh-sach-xlsx">File-danh-sach.xlsx</div>
+    <div class="t-i-m-u-danh-s-ch">(Tải mẫu danh sách)</div>
     <div class="dropdown">
       <div class="frame">
         <div class="frame2"></div>
@@ -27,7 +23,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M7.82349 10.8574L13.3712 16.4051L18.9188 10.8574H7.82349Z"
+              d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
               fill="#666666"
             />
           </svg>
@@ -48,7 +44,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M7.82349 10.8574L13.3712 16.4051L18.9188 10.8574H7.82349Z"
+              d="M7.82373 10.8574L13.3714 16.4051L18.9191 10.8574H7.82373Z"
               fill="#666666"
             />
           </svg>
@@ -59,7 +55,7 @@
       <div class="frame4">
         <div class="frame2"></div>
         <div class="frame5">
-          <div class="label">Tiền nước tháng 12 2023</div>
+          <input class="label" placeholder="Tiền nước tháng 12 2023">
         </div>
       </div>
     </div>
@@ -67,7 +63,7 @@
       <div class="frame4">
         <div class="frame2"></div>
         <div class="frame5">
-          <div class="label">TN122023</div>
+          <input class="label" placeholder="TN122023">
         </div>
       </div>
     </div>
@@ -79,7 +75,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_d_1032_5205)">
+      <g filter="url(#filter0_d_1032_5130)">
         <path
           d="M36 2.11317L33.8866 0L20 13.8866L6.11336 0L4 2.11317L17.8867 15.9999L4 29.8866L6.11336 31.9998L20 18.1132L33.8866 31.9998L36 29.8866L22.1133 15.9999L36 2.11317Z"
           fill="black"
@@ -87,7 +83,7 @@
       </g>
       <defs>
         <filter
-          id="filter0_d_1032_5205"
+          id="filter0_d_1032_5130"
           x="0"
           y="0"
           width="40"
@@ -112,12 +108,12 @@
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_1032_5205"
+            result="effect1_dropShadow_1032_5130"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_1032_5205"
+            in2="effect1_dropShadow_1032_5130"
             result="shape"
           />
         </filter>
@@ -132,52 +128,45 @@
       </div>
       <div class="sheet-1">
         <div class="rectangle-322"></div>
-        <div class="sheet-name-1">Tự động</div>
+        <button class="sheet-name-1" onclick="window.location.href='admin-new-fee-form2'">Tự động</button>
       </div>
       <div class="divider"></div>
     </div>
     <div class="filter-radio-type">
       <div class="radio-button-select">
-        <div class="rectangle-3-1"></div>
-        <div class="rectangle-3-2"></div>
+        <input type="radio" id="radio-1" name="radio" class="rectangle-3-1" checked/>
         <div class="m">Mở</div>
       </div>
       <div class="radio-button-not-select">
-        <div class="rectangle-3-12"></div>
+        <input type="radio" id="radio-2" name="radio" class="rectangle-3-12"/>
         <div class="ng">Đóng</div>
       </div>
     </div>
     <div class="filter-radio-type">
       <div class="radio-button-select">
-        <div class="rectangle-3-13"></div>
-        <div class="rectangle-3-22"></div>
+        <input type="radio" id="radio-1" name="radio1" class="rectangle-3-13" checked/>
         <div class="c-nh-n">Cá nhân</div>
       </div>
       <div class="radio-button-not-select">
-        <div class="rectangle-3-14"></div>
+        <input type="radio" id="radio-2" name="radio1" class="rectangle-3-14"/>
         <div class="c-n-h">Căn hộ</div>
       </div>
     </div>
-    <svg
-      class="icon-file"
-      width="43"
-      height="48"
-      viewBox="0 0 43 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M28.6175 0H0V47.9244H42.3332V13.7157L28.6175 0ZM39.1382 15.039V15.176H27.1571V3.19496H27.2942L39.1382 15.039ZM3.19496 44.7294V3.19496H23.9622V18.371H39.1382V44.7294H3.19496Z"
-        fill="#1D3557"
-      />
-    </svg>
+    <div class="group-n-btn">
+      <div class="rectangle-23"></div>
+      <button class="t-o-m-i">Tạo mới</button>
+    </div>
+    <div class="upload-btn">
+      <div class="rectangle-232"></div>
+      <button type="file" class="upload-file">Upload file</button>
+    </div>
   </div>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
 
 export default {
-  name: "KhoNThuFormTOKhoNThuThCNgUploadFile",
+  name: "KhoNThuFormTOKhoNThuThCNg",
   components: {},
   props: {},
   data() {
@@ -187,11 +176,11 @@ export default {
 };
 </script>
 <style scoped>
-.kho-n-thu-form-t-o-kho-n-thu-th-c-ng-upload-file,
-.kho-n-thu-form-t-o-kho-n-thu-th-c-ng-upload-file * {
+.kho-n-thu-form-t-o-kho-n-thu-th-c-ng,
+.kho-n-thu-form-t-o-kho-n-thu-th-c-ng * {
   box-sizing: border-box;
 }
-.kho-n-thu-form-t-o-kho-n-thu-th-c-ng-upload-file {
+.kho-n-thu-form-t-o-kho-n-thu-th-c-ng {
   width: 1120px;
   height: 800px;
   position: relative;
@@ -221,36 +210,6 @@ export default {
   top: 45px;
   width: 544px;
   height: 60.47px;
-}
-.group-n-btn {
-  position: absolute;
-  inset: 0;
-}
-.rectangle-23 {
-  background: #457b9d;
-  border-radius: 10px;
-  width: 544px;
-  height: 76px;
-  position: absolute;
-  left: 288px;
-  top: 657px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.t-o-m-i {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Raleway-SemiBold", sans-serif;
-  font-size: 28px;
-  line-height: 150%;
-  font-weight: 600;
-  position: absolute;
-  left: calc(50% - 60.39px);
-  top: calc(50% - -277px);
-  width: 119.78px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .m-kho-n-ph {
   color: #1d3557;
@@ -318,7 +277,7 @@ export default {
   left: 150px;
   top: 468px;
 }
-.file-danh-sach-xlsx {
+.t-i-m-u-danh-s-ch {
   color: #1d3557;
   text-align: left;
   font-family: "Raleway-SemiBoldItalic", sans-serif;
@@ -327,7 +286,7 @@ export default {
   font-weight: 600;
   font-style: italic;
   position: absolute;
-  left: 475px;
+  left: 428px;
   top: 468px;
 }
 .dropdown {
@@ -388,6 +347,11 @@ export default {
   font-weight: var(--android-subtitle-1-font-weight, 400);
   position: relative;
   flex: 1;
+  border: none;
+  z-index: 1;
+}
+.label :focus {
+  outline: none;
 }
 .arrow-drop-down {
   flex-shrink: 0;
@@ -552,13 +516,23 @@ export default {
   line-height: 64px;
   font-weight: 700;
   position: absolute;
-  left: calc(50% - 530px);
-  top: calc(50% - 295px);
+  /*left: calc(50% - 527px);*/
+  /*top: calc(50% - 295px);*/
   width: 180px;
   height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 15px;
+  position: absolute;
+  right: 80.98%;
+  left: 2.95%;
+  width: 16.07%;
+  bottom: 79.95%;
+  top: 13.12%;
+  height: 6.92%;
+  z-index: 1;
 }
 .divider {
   border-style: solid;
@@ -591,6 +565,7 @@ export default {
   position: absolute;
   left: 423px;
   top: calc(50% - -211.04px);
+  z-index: 1;
 }
 .rectangle-3-2 {
   background: var(--primary, #457b9d);
@@ -630,6 +605,7 @@ export default {
   position: absolute;
   left: 587.28px;
   top: calc(50% - -210px);
+  z-index: 1;
 }
 .ng {
   color: var(--primary-base-black, #000000);
@@ -654,6 +630,7 @@ export default {
   position: absolute;
   left: 423px;
   top: calc(50% - -8.04px);
+  z-index:1;
 }
 .rectangle-3-22 {
   background: var(--primary, #457b9d);
@@ -688,6 +665,7 @@ export default {
   position: absolute;
   left: 587.28px;
   top: calc(50% - -7px);
+  z-index: 1;
 }
 .c-n-h {
   color: var(--primary-base-black, #000000);
@@ -702,15 +680,80 @@ export default {
   width: 103.97px;
   height: 29.25px;
 }
-.icon-file {
-  height: auto;
+.group-n-btn {
   position: absolute;
-  right: 58.45%;
-  left: 37.77%;
-  width: 3.78%;
-  bottom: 36.51%;
-  top: 57.5%;
-  height: 5.99%;
-  overflow: visible;
+  inset: 0;
+}
+.rectangle-23 {
+  background: #457b9d;
+  border-radius: 10px;
+  width: 544px;
+  height: 76px;
+  position: absolute;
+  left: 288px;
+  top: 657px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.t-o-m-i {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 28px;
+  line-height: 150%;
+  font-weight: 600;
+  position: absolute;
+  left: calc(50% - 60.39px);
+  top: calc(50% - -277px);
+  width: 119.78px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #457b9d;
+  border-radius: 10px;
+  width: 544px;
+  height: 76px;
+  position: absolute;
+  left: 288px;
+  top: 657px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+.upload-btn {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-232 {
+  background: var(--cream, #f1faee);
+  border-radius: 10px;
+  width: 170px;
+  height: 50px;
+  position: absolute;
+  left: 728px;
+  top: 459px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.upload-file {
+  color: #1d3557;
+  text-align: left;
+  font-family: "Raleway-SemiBold", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  position: absolute;
+  left: calc(50% - -201px);
+  top: calc(50% - -68px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  background: var(--cream, #f1faee);
+  border-radius: 10px;
+  width: 170px;
+  height: 50px;
+  position: absolute;
+  left: 728px;
+  top: 459px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 </style>

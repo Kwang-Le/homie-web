@@ -57,6 +57,11 @@ export default {
   },
 
   methods: {
+    created() {
+  this.$on('new-card', function(card) {
+    this.cards.push(card);
+  });
+},
     toggleButton() {
       this.isSelected = !this.isSelected;
     },
@@ -104,7 +109,7 @@ export default {
 
 <template>
   <AdminNotiSearchFilter @search="onSearch" @filterStatus="setStatus" @filterDate="setDate" style="margin-left: 1%;" />
-  <div class="card-list" style="overflow-y: auto; height: 100%;width: 100%">
+  <div class="card-list" style="overflow-y: auto; height: 90%;width: 100%">
     <div class="card" v-for="(card, index) in filteredCards" :key="index">
       <div class="overlap-group">
         <img class="image" alt="Image" v-bind:src="card.image" />
@@ -140,7 +145,7 @@ export default {
 
 .card-list {
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow-y: auto;
   margin-top: 10px;
   /* Cho phép cuộn theo chiều dọc */
@@ -175,7 +180,7 @@ export default {
 
 .card {
   width: 98%;
-  height: 150px;
+  height: fit-content;
   background-color: #fff;
   border-radius: 15px;
   margin: 10px;
@@ -208,7 +213,7 @@ export default {
 .card-title {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 200%;
   color: #1D3557;
 }
 
@@ -219,9 +224,8 @@ export default {
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 50px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: regular;
-  font-size: 16px;
+  font-family: 'Raleway:wght300', sans-serif;
+  font-size: 110%;
   color: #1D3557;
 }
 

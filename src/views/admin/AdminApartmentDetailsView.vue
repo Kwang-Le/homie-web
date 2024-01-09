@@ -24,7 +24,7 @@ import ResidentItemList from '@/components/Profile/ResidentItemList.vue';
 <style scoped>
 .card-title {
     text-align: center;
-    font: 30px/150% Raleway, sans-serif;
+    font: 700 30px/150% Inter, sans-serif;
     color: var(--main-secondary);
 }
 </style>

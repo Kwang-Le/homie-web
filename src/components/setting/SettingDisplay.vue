@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const dropbox1 = ref('off');
+const dropbox1 = ref('on');
 const dropbox2 = ref('default');
 </script>
 <template>
@@ -9,16 +9,16 @@ const dropbox2 = ref('default');
         <h1 class="title">Cài đặt giao diện</h1>
         <form>
             <div class="option-group">
-                <label for="dark-mode">Chế độ tối</label>
+                <label for="info-dev" style="width: 30%;">Thông tin nhà phát triển</label>
                 <select v-model="dropbox1" id="dropbox1">
-                    <option value="off">Tắt</option>
-                    <option value="on">Bật</option>
+                    <option value="on">Hiện</option>
+                    <option value="off">Ẩn</option>
                 </select>
             </div>
         </form>
         <form>
             <div class="option-group">
-                <label for="font-size">Cỡ chữ</label>
+                <label for="font-size" style="width: 30%;">Kích cỡ phông chữ</label>
                 <select v-model="dropbox2" id="dropbox2">
                     <option default value="default">Mặc định</option>
                     <option value="big">Lớn</option>
