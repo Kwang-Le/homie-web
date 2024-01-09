@@ -142,7 +142,7 @@ onMounted(async () => {
     /* justify-content: flex-start; */
 }
 
-.btn-close:hover {
+.btn-back:hover {
     color: #555;
 }
 

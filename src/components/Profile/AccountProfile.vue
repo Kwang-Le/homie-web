@@ -109,7 +109,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
     /* justify-content: flex-start; */
 }
 
-.btn-close:hover {
+.btn-back:hover {
     color: #555;
 }
 
