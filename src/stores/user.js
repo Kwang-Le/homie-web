@@ -2,7 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
-    state: () => ({ users: null, currentUser: null}),
+    state: () => ({ users: null, currentUser: null, currenRole: null}),
     getters: {
       isAuthenticated: (state) => state.currentUser != null,
     },

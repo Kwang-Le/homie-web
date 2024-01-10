@@ -1,7 +1,9 @@
 <script setup>
 import { useUserStore } from '@/stores/user';
+import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePasswordSuccess.vue'
 </script>
 <template>
+    <AdminChangePasswordSuccess v-if="this.$router.options.history.state.back == '/reset-password'"></AdminChangePasswordSuccess>
     <div class="login-view d-flex align-items-center justify-content-around">
         <!-- <div class="image" style="background-image: ;"></div> -->
         <img src="../assets/img/logo.png" alt="" style="height: 250px;margin-right: 20px;border-radius: 50%;">
@@ -10,9 +12,12 @@ import { useUserStore } from '@/stores/user';
             <div>
                 <div class="d-flex align-items-center role-selector input-field">
                     <label for="role" style="width: 100%;">Đăng nhập với vai trò:</label>
-                    <select @change="getSelectedRole($event)" id="role" class="form-select" aria-label="Default select example">
+                    <select @change="getSelectedRole($event)" id="role" class="form-select"
+                        aria-label="Default select example">
                         <option value="resident">Cư dân</option>
-                        <option value="admin">Admin</option>
+                        <option value="admin">quản trị</option>
+                        <option value="manager">quản lý</option>
+                        <option value="police">công an</option>
                     </select>
                 </div>
                 <div class="input-field">
@@ -24,7 +29,7 @@ import { useUserStore } from '@/stores/user';
                     <input @keyup.enter="login" type="password" class="form-control" id="password" v-model="password" required>
                 </div>
                 <button class="new-button" @click="login">Đăng nhập</button>
-                <router-link to="">Quên mật khẩu</router-link>
+                <router-link to="/forgot-password">Quên mật khẩu</router-link>
             </div>
         </div>
 
@@ -37,8 +42,15 @@ export default {
         return {
             role: 'resident',
             username: '',
-            password: ''
+            password: '',
+            prevRoute: ''
         };
+    },
+    beforeRouteEnter(to, from, next) {
+        next(vm => {
+            
+            vm.prevRoute = from.name
+        })
     },
     methods: {
         login() {
@@ -47,17 +59,29 @@ export default {
             const userStore = useUserStore();
             userStore.authenticate(this.role, this.username, this.password)
             console.log(userStore.users)
-            if(userStore.isAuthenticated) {
-                this.$router.push('/admin-dashboard')
+            if (userStore.isAuthenticated) {
+                userStore.currentRole = this.role
+                if (userStore.currentRole == 'admin'){
+                    this.$router.push('/admin-dashboard')
+                } else if (userStore.currentRole == 'resident'){
+                    this.$router.push('/resident-dashboard')
+                }
             } else {
                 alert("false user information")
             }
         },
         getSelectedRole(event) {
+            console.log(this.$router)
             this.role = event.target.options[event.target.options.selectedIndex].getAttribute('value');
             console.log(this.role)
         }
     },
+    computed: {
+        prevRoutePatch() {
+            return this.prevRoute ? this.prevRoute : '/'
+        }
+    },
+    
 };
 </script>
 

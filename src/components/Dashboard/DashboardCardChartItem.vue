@@ -1,7 +1,7 @@
 <template>
         <div class="d-flex justify-content-between">
             <div>
-                <h5 class="card-title font-weight-bold">{{ title }}</h5>
+                <h5 class="card-title">{{ title }}</h5>
                 <div class="d-flex flex-column card-text">
                     <p>{{ content }}</p>
                     <a href="">chi tiết</a>
@@ -22,4 +22,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-title {
+    color: var(--main-secondary);
+    font-weight: 900;
+}
+</style>

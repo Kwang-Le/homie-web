@@ -1,60 +1,28 @@
 <template>
   <form>
     <div class="admin-ph-n-h-i-khi-u-n-i">
-      <svg
-          class="rectangle-30"
-          width="902"
-          height="840"
-          viewBox="0 0 902 840"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg class="rectangle-30" width="902" height="840" viewBox="0 0 902 840" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_1105_8252)">
           <path
-              d="M0 9.99999C0 4.47714 4.47715 0 10 0H885C890.523 0 895 4.47715 895 10V823C895 828.523 890.523 833 885 833H10C4.47716 833 0 828.523 0 823V9.99999Z"
-              fill="#A8DADC"
-          />
+            d="M0 9.99999C0 4.47714 4.47715 0 10 0H885C890.523 0 895 4.47715 895 10V823C895 828.523 890.523 833 885 833H10C4.47716 833 0 828.523 0 823V9.99999Z"
+            fill="#A8DADC" />
           <path
-              d="M10 1H885C889.971 1 894 5.02944 894 10V823C894 827.971 889.971 832 885 832H10C5.02944 832 1 827.971 1 823V9.99999C1 5.02943 5.02944 1 10 1Z"
-              stroke="black"
-              stroke-width="2"
-          />
+            d="M10 1H885C889.971 1 894 5.02944 894 10V823C894 827.971 889.971 832 885 832H10C5.02944 832 1 827.971 1 823V9.99999C1 5.02943 5.02944 1 10 1Z"
+            stroke="black" stroke-width="2" />
         </g>
         <defs>
-          <filter
-              id="filter0_d_1105_8252"
-              x="0"
-              y="0"
-              width="902"
-              height="840"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-            />
-            <feOffset dx="4" dy="4"/>
-            <feGaussianBlur stdDeviation="1.5"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-            />
-            <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_1105_8252"
-            />
-            <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_1105_8252"
-                result="shape"
-            />
+          <filter id="filter0_d_1105_8252" x="0" y="0" width="902" height="840" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset dx="4" dy="4" />
+            <feGaussianBlur stdDeviation="1.5" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1105_8252" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1105_8252" result="shape" />
           </filter>
         </defs>
       </svg>
@@ -67,102 +35,45 @@
         <div class="text-field2">
           <div class="frame">
             <div class="frame2">
-              <div
-                  class="ban-qu-n-l-ti-p-nh-n-ki-n-c-a-c-d-n-v-s-ph-i-h-p-v-i-ban-qu-n-tr-t-ch-c-trong-th-i-gian-s-m-nh-t"
-              >
-                Ban quản lý đã tiếp nhận ý kiến của cư dân và sẽ phối hợp với ban
-                quản trị để tổ chức trong
-                <br/>
-                thời gian sớm nhất.
-              </div>
+              <textarea
+                class="ban-qu-n-l-ti-p-nh-n-ki-n-c-a-c-d-n-v-s-ph-i-h-p-v-i-ban-qu-n-tr-t-ch-c-trong-th-i-gian-s-m-nh-t"
+                v-model="message" style="height: 100%; width: 100%;">
+</textarea>
             </div>
           </div>
         </div>
-      </div>
-      <div class="frame3">
+      </div><button class="close-button" style="z-index: 1000;">
+        <font-awesome-icon icon="x" size="2xl" />
+  </button>
+      <div class="frame3" style="height: fit-content;">
         <div class="frame2">
-          <div
-              class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023"
-          >
-                <span>
-                  <span
-                      class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023-span"
-                  >
-                    Kiến nghị từ cư dân Lê Thanh Quang
-                    <br/>
-                  </span>
-                  <span
-                      class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023-span2"
-                  >
-                    Về việc quản lý tiêm phòng chó dại
-                    <br/>
-                    28/12/2023
-                  </span>
-                </span>
+          <div class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023">
+            <span>
+              <span class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023-span">
+                Phàn nàn từ cư dân Lê Thanh Quang
+                <br />
+              </span>
+              <span class="ki-n-ngh-t-c-d-n-l-thanh-quang-v-vi-c-qu-n-l-ti-m-ph-ng-ch-d-i-28-12-2023-span2">
+                Rất mong ban quản lý sớm giải quyết tình trạng vệ sinh để tạo môi trường sống tốt hơn cho cả cộng đồng.
+                <br />
+                28/12/2023
+              </span>
+            </span>
           </div>
         </div>
       </div>
       <div class="ph-n-h-i-ki-n-ngh-t-c-d-n-l-thanh-quang">
-        Phản hồi “Kiến nghị từ cư dân Lê Thanh Quang”
+        Phản hồi “Phàn nàn từ cư dân Lê Thanh Quang”
       </div>
-      <svg
-          class="icon-x-letter"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-      >
-        <g filter="url(#filter0_d_1105_8254)">
-          <path
-              d="M24 3.55275L22.6792 0.373047L14 21.2684L5.32085 0.373047L4 3.55275L12.6792 24.4482L4 45.3436L5.32085 48.5233L14 27.628L22.6792 48.5233L24 45.3436L15.3208 24.4482L24 3.55275Z"
-              fill="black"
-          />
-        </g>
-        <defs>
-          <filter
-              id="filter0_d_1105_8254"
-              x="0"
-              y="0.373047"
-              width="28"
-              height="56.1504"
-              filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix
-                in="SourceAlpha"
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                result="hardAlpha"
-            />
-            <feOffset dy="4"/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix
-                type="matrix"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-            />
-            <feBlend
-                mode="normal"
-                in2="BackgroundImageFix"
-                result="effect1_dropShadow_1105_8254"
-            />
-            <feBlend
-                mode="normal"
-                in="SourceGraphic"
-                in2="effect1_dropShadow_1105_8254"
-                result="shape"
-            />
-          </filter>
-        </defs>
-      </svg>
+      
     </div>
   </form>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */
-
+import { faX } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add(faX);
 export default {
   name: "AdminPhNHIKhiUNI",
   components: {},
@@ -178,7 +89,23 @@ export default {
 .admin-ph-n-h-i-khi-u-n-i * {
   box-sizing: border-box;
 }
+.close-button {
+  
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  height: auto;
+  position: absolute;
+  right: 3.04%;
+  left: 94.11%;
+  width: 2.86%;
+  bottom: 91.77%;
+  top: 4.24%;
+  height: 3.99%;
+  overflow: visible;
 
+}
 .admin-ph-n-h-i-khi-u-n-i {
   width: 895px;
   height: 833px;

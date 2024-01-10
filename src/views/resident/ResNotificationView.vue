@@ -1,16 +1,16 @@
 <script>
-import AdminNotiNavBar from '@/components/NavigationBar/AdminNotiNavBar.vue'
-import AdminCardListNoti_General from '@/components/List/AdminCardListNoti_General.vue'
-import AdminCardListNoti_Resident from '@/components/List/AdminCardListNoti_Resident.vue'
-import AdminCardListNoti_Complain from '@/components/List/AdminCardListNoti_Complain.vue'
-import AdminNewNotiFormView from '@/views/admin/form/AdminNewNotiFormView.vue'
+import ResNotiNavBar from '@/components/NavigationBar/ResNotiNavBar.vue'
+import ResCardListNoti_General from '@/components/List/ResCardListNoti_General.vue'
+import ResCardListNoti_Resident from '@/components/List/ResCardListNoti_Resident.vue'
+import ResCardListNoti_Complain from '@/components/List/ResCardListNoti_Complain.vue'
+import ResSendRequire from '@/views/resident/form/ResSendRequire.vue'
 export default {
   components: {
-    AdminNotiNavBar,
-    AdminCardListNoti_General,
-    AdminCardListNoti_Resident,
-    AdminCardListNoti_Complain,
-    AdminNewNotiFormView
+    ResNotiNavBar,
+    ResCardListNoti_General,
+    ResCardListNoti_Resident,
+    ResCardListNoti_Complain,
+    ResSendRequire
   },
   data() {
     return {
@@ -34,14 +34,14 @@ export default {
   <main>
     <div class="d-flex">
       <div class="noti-nav-bar-container">
-        <AdminNotiNavBar @set-active-link="setActiveLink" @new-notification="handleNewNotification" />
+        <ResNotiNavBar @set-active-link="setActiveLink" @new-notification="handleNewNotification" />
       </div>
       <div class="container-fluid">
-        <AdminNewNotiFormView v-if="showNewNotificationForm" class="overlay"/>
+        <ResSendRequire v-if="showNewNotificationForm" class="overlay"/>
           <div class="list-card-container">
-            <AdminCardListNoti_General v-if="activeLink === 'general'" />
-            <AdminCardListNoti_Resident v-if="activeLink === 'resident'" />
-            <AdminCardListNoti_Complain v-if="activeLink === 'complaint'" />
+            <ResCardListNoti_General v-if="activeLink === 'general'" />
+            <ResCardListNoti_Resident v-if="activeLink === 'resident'" />
+            <ResCardListNoti_Complain v-if="activeLink === 'complaint'" />
         </div>
       </div>
     </div>
@@ -55,8 +55,7 @@ export default {
   margin-top: 2%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  
   z-index: 1000;
   background: rgba(0, 0, 0, 0);
 }

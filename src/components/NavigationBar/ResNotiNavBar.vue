@@ -5,12 +5,12 @@
         <a class="nav-link" :class="{ active: activeLink === 'complaint' }" href="#" @click="setActiveLink('complaint')">Yêu cầu/kiến nghị</a>
         
     </div>
-    <button v-if="activeLink === 'general' || activeLink === 'resident'" class="new-button" @click="emitNewNotificationEvent">Tạo mới</button>
+    <button v-if="activeLink === 'complaint'" class="new-button" @click="emitNewNotificationEvent">Tạo mới</button>
     </template>
 
 <script>
 export default {
-    name: 'AdminNotiNavBar',
+    name: 'ResNotiNavBar',
     data() {
         return {
             activeLink: 'general' // Mặc định nav-link "Thông báo chung" sẽ được chọn

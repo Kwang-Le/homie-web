@@ -1,9 +1,13 @@
 <script setup>
 import Card from '@/components/Card.vue';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { ref, onMounted } from 'vue';
+
+import EditApartmentModal from '@/components/modals/EditApartmentModal.vue';
+
 // import { useRoute } from 'vue-router';
 
 library.add(fas);
@@ -23,8 +27,8 @@ onMounted(async () => {
 <template>
     <main>
         <Card>
-            <div class="row close-button" @click="$router.go(-1)">
-                <font-awesome-icon :icon="['fas', 'xmark']" size="2x" class="btn-close" />
+            <div class="back-button justify-content-start" @click="$router.go(-1)">
+                <font-awesome-icon :icon="faArrowLeft" size="2x" class="btn-back" />
             </div>
             <div class="row main-content">
                 <div class="col-4 avatar">
@@ -34,7 +38,7 @@ onMounted(async () => {
                         </div>
                     </div>
                     <div class="main-avt-name">Căn hộ</div>
-                    <div class="main-avt-id">{{  mainAvtId }}</div>
+                    <div class="main-avt-id">{{ mainAvtId }}</div>
                 </div>
                 <div class="col-8">
                     <div class="row">
@@ -113,7 +117,9 @@ onMounted(async () => {
             </div>
 
             <div class="row-button">
-                <button type="button" class="btn btn-edit">Chỉnh sửa</button>
+                <button type="button" class="btn btn-edit" data-bs-toggle="modal" data-bs-target="#editApartmentModal">Chỉnh
+                    sửa</button>
+                <EditApartmentModal />
                 <button type="button" class="btn btn-delete">Xóa</button>
             </div>
         </Card>
@@ -128,19 +134,21 @@ onMounted(async () => {
     flex-direction: column;
 }
 
-.row.close-button {
-    display: flex;
-    justify-content: flex-end;
+.back-button {
+    /* display: flex; */
+    /* justify-content: start; */
     color: black;
     margin-top: 4px;
     margin-right: 4px;
 }
 
-.btn-close {
+.btn-back {
     cursor: pointer;
+    /* display: flex; */
+    /* justify-content: flex-start; */
 }
 
-.btn-close:hover {
+.btn-back:hover {
     color: #555;
 }
 
