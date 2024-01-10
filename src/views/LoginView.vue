@@ -70,7 +70,7 @@ export default {
                 } else if (userStore.currentRole == 'manager') {
                     this.$router.push('/admin-dashboard')
                 } else if (userStore.currentRole == 'police') {
-                    this.$router.push('/admin-dashboard')
+                    this.$router.push('/admin-statistic')
                 }
             } else {
                 alert("false user information")
