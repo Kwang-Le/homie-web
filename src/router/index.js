@@ -42,7 +42,7 @@ import LoginViewVue from '@/views/LoginView.vue'
 import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
 import ResetPasswordView from '@/views/ResetPasswordView.vue'
-import ResidentDashboardView from '@/views/ResidentDashboardView.vue'
+import ResidentDashboardView from '@/views/resident/ResidentDashboardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

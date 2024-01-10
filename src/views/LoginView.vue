@@ -15,7 +15,9 @@ import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePas
                     <select @change="getSelectedRole($event)" id="role" class="form-select"
                         aria-label="Default select example">
                         <option value="resident">Cư dân</option>
-                        <option value="admin">Admin</option>
+                        <option value="admin">quản trị</option>
+                        <option value="manager">quản lý</option>
+                        <option value="police">công an</option>
                     </select>
                 </div>
                 <div class="input-field">
