@@ -3,7 +3,8 @@ import { useUserStore } from '@/stores/user';
 import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePasswordSuccess.vue'
 </script>
 <template>
-    <AdminChangePasswordSuccess v-if="this.$router.options.history.state.back == '/reset-password'"></AdminChangePasswordSuccess>
+    <AdminChangePasswordSuccess v-if="this.$router.options.history.state.back == '/reset-password'">
+    </AdminChangePasswordSuccess>
     <div class="login-view d-flex align-items-center justify-content-around">
         <!-- <div class="image" style="background-image: ;"></div> -->
         <img src="../assets/img/logo.png" alt="" style="height: 250px;margin-right: 20px;border-radius: 50%;">
@@ -26,7 +27,8 @@ import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePas
                 </div>
                 <div class="input-field">
                     <div for="password">Password:</div>
-                    <input @keyup.enter="login" type="password" class="form-control" id="password" v-model="password" required>
+                    <input @keyup.enter="login" type="password" class="form-control" id="password" v-model="password"
+                        required>
                 </div>
                 <button class="new-button" @click="login">Đăng nhập</button>
                 <router-link to="/forgot-password">Quên mật khẩu</router-link>
@@ -48,7 +50,7 @@ export default {
     },
     beforeRouteEnter(to, from, next) {
         next(vm => {
-            
+
             vm.prevRoute = from.name
         })
     },
@@ -61,10 +63,14 @@ export default {
             console.log(userStore.users)
             if (userStore.isAuthenticated) {
                 userStore.currentRole = this.role
-                if (userStore.currentRole == 'admin'){
+                if (userStore.currentRole == 'admin') {
                     this.$router.push('/admin-dashboard')
-                } else if (userStore.currentRole == 'resident'){
+                } else if (userStore.currentRole == 'resident') {
                     this.$router.push('/resident-dashboard')
+                } else if (userStore.currentRole == 'manager') {
+                    this.$router.push('/admin-dashboard')
+                } else if (userStore.currentRole == 'police') {
+                    this.$router.push('/admin-dashboard')
                 }
             } else {
                 alert("false user information")
@@ -81,7 +87,7 @@ export default {
             return this.prevRoute ? this.prevRoute : '/'
         }
     },
-    
+
 };
 </script>
 
