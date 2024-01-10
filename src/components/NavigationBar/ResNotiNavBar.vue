@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: 'AdminNotiNavBar',
+    name: 'ResNotiNavBar',
     data() {
         return {
             activeLink: 'general' // Mặc định nav-link "Thông báo chung" sẽ được chọn

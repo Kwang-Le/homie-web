@@ -4,8 +4,10 @@ import NavBar from './components/NavigationBar/AdminNavBar.vue';
 import LogoAcount from './components/LogoAccount.vue';
 import AdminInfomation from './components/Notification/AdminInfomation.vue';
 import { useResidentStore } from '@/stores/resident'
+import { useUserStore } from '@/stores/user'
 import fetchDataAndStore from '@/services/api'
 import FootNote from './components/FootNote.vue';
+import ResNavBar from './components/NavigationBar/ResNavBar.vue'
 </script>
 
 
@@ -13,8 +15,12 @@ import FootNote from './components/FootNote.vue';
   <div class="container-fluid" v-if="isGetData">
     <header>
       <div class="wrapper" v-if="currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'">
-        <LogoAcount />
-        <NavBar />
+        <LogoAcount v-if="userStore.currentRole == 'admin'" name ="L.N.Đ.Khoa"/>
+        <LogoAcount v-if="userStore.currentRole == 'resident'" name ="T.V.Khánh"/>
+        <LogoAcount v-if="userStore.currentRole == 'police'" name ="N.N.Ánh"/>
+        <LogoAcount v-if="userStore.currentRole == 'manager'" name ="N.Đ.Minh"/>
+        <NavBar  v-if="userStore.currentRole == 'admin'"/>
+        <ResNavBar  v-if="userStore.currentRole == 'resident'"/>
         <AdminInfomation v-show="(isVisible && (currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'))" class="noti" />
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
@@ -34,10 +40,12 @@ export default {
   },
   data() {
     return {
+      userStore: useUserStore(),
       isGetData: false,
       isLogIn: null,
       currentRoute: null,
-      isVisible: false
+      isVisible: false,
+      currentName: null,
     }
   },
   methods: {

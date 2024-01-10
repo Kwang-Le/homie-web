@@ -8,14 +8,16 @@ import AdminChangePasswordSuccess from '@/components/Notification/AdminChangePas
         <!-- <div class="image" style="background-image: ;"></div> -->
         <img src="../assets/img/logo.png" alt="" style="height: 250px;margin-right: 20px;border-radius: 50%;">
         <div class="input-container flex-fill">
-            <h1 class="login-title my-4">Đăng nhập {{ prevRoutePatch }}</h1>
+            <h1 class="login-title my-4">Đăng nhập</h1>
             <div>
                 <div class="d-flex align-items-center role-selector input-field">
                     <label for="role" style="width: 100%;">Đăng nhập với vai trò:</label>
                     <select @change="getSelectedRole($event)" id="role" class="form-select"
                         aria-label="Default select example">
                         <option value="resident">Cư dân</option>
-                        <option value="admin">Admin</option>
+                        <option value="admin">quản trị</option>
+                        <option value="manager">quản lý</option>
+                        <option value="police">công an</option>
                     </select>
                 </div>
                 <div class="input-field">
