@@ -5,14 +5,13 @@
     <div class="d-flex flex-column card-text">
         <div class="table-row d-flex justify-content-between px-4 py-1" v-for="data in tableData">
             <div class="row-title p-1">{{ data.title }}</div>
-            <div class="row-amount p-1">{{ data.amount }}</div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "DashboardCardTableItem",
+    name: "DashboardCardNotiItem",
     props: {
         title: String,
         tableData: Array
