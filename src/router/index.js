@@ -43,6 +43,9 @@ import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
 import ResetPasswordView from '@/views/ResetPasswordView.vue'
 import ResidentDashboardView from '@/views/ResidentDashboardView.vue'
+import ResDeclarationViewVue from '@/views/resident/ResDeclarationView.vue'
+import ResPayFeesViewVue from '@/views/resident/ResPayFeesView.vue'
+import OthersStatisticViewVue from '@/views/others/OthersStatisticView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -126,11 +129,6 @@ const router = createRouter({
       path: '/admin-notification',
       name: 'admin-notification',
       component: AdminNotificationView
-    },
-    {
-      path: '/res-notification',
-      name: 'res-notification',
-      component: ResNotificationView
     },
     {
       path: '/admin-setting',
@@ -333,7 +331,34 @@ const router = createRouter({
       name: 'resident-dashboard',
       component: ResidentDashboardView
     },
-
+    // router cho cu dan
+    {
+      path: '/res-notification',
+      name: 'res-notification',
+      component: ResNotificationView
+    },
+    {
+      path: '/res-declaration',
+      name: 'res-declaration',
+      component: ResDeclarationViewVue
+    },
+    {
+      path: '/res-dashboard',
+      name: 'res-dashboard',
+      component: ResidentDashboardView
+    },
+    {
+      path: '/res-pay-fees',
+      name: 'res-pay-fees',
+      component: ResPayFeesViewVue
+    },
+    // TODO: can them router ca nhan
+    // TODO: can them router cai dat
+    {
+      path: '/others-statistic',
+      name: 'others-statistic',
+      component: OthersStatisticViewVue
+    }
   ]
 })
 
