@@ -43,9 +43,11 @@ import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
 import ResetPasswordView from '@/views/ResetPasswordView.vue'
 
-import ResProfileView from '@/views/resident/ResProfileView.vue'
-
 import ResidentDashboardView from '@/views/resident/ResidentDashboardView.vue'
+import ResDeclarationViewVue from '@/views/resident/ResDeclarationView.vue'
+import ResPayFeesViewVue from '@/views/resident/ResPayFeesView.vue'
+import OthersStatisticViewVue from '@/views/others/OthersStatisticView.vue'
+import ResProfileView from '@/views/resident/ResProfileView.vue'
 
 
 const router = createRouter({
@@ -130,11 +132,6 @@ const router = createRouter({
       path: '/admin-notification',
       name: 'admin-notification',
       component: AdminNotificationView
-    },
-    {
-      path: '/res-notification',
-      name: 'res-notification',
-      component: ResNotificationView
     },
     {
       path: '/admin-setting',
@@ -337,11 +334,40 @@ const router = createRouter({
       name: 'resident-dashboard',
       component: ResidentDashboardView
     },
+    // router cho cu dan
+    {
+      path: '/res-notification',
+      name: 'res-notification',
+      component: ResNotificationView
+    },
+    {
+      path: '/res-declaration',
+      name: 'res-declaration',
+      component: ResDeclarationViewVue
+    },
+    {
+      path: '/res-dashboard',
+      name: 'res-dashboard',
+      component: ResidentDashboardView
+    },
+    {
+      path: '/res-pay-fees',
+      name: 'res-pay-fees',
+      component: ResPayFeesViewVue
+    },
+    // TODO: can them router ca nhan
+    // TODO: can them router cai dat
+    {
+      path: '/others-statistic',
+      name: 'others-statistic',
+      component: OthersStatisticViewVue
+    },
     {
       path: '/resident-profile',
       name: 'resident-profile',
       component: ResProfileView
     },
+
   ]
 })
 
