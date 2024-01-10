@@ -42,7 +42,11 @@ import LoginViewVue from '@/views/LoginView.vue'
 import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
 import ResetPasswordView from '@/views/ResetPasswordView.vue'
+
+import ResProfileView from '@/views/resident/ResProfileView.vue'
+
 import ResidentDashboardView from '@/views/resident/ResidentDashboardView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -333,7 +337,11 @@ const router = createRouter({
       name: 'resident-dashboard',
       component: ResidentDashboardView
     },
-
+    {
+      path: '/resident-profile',
+      name: 'resident-profile',
+      component: ResProfileView
+    },
   ]
 })
 
