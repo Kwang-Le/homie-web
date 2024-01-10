@@ -1,7 +1,7 @@
 <template>
   <div class="vertical-nav">
     <a class="nav-link" :class="{ active: activeLink === 'general' }" href="#" @click="setActiveLink('general')">Tài khoản</a>
-    <a class="nav-link" :class="{ active: activeLink === 'resident' }" href="#" @click="setActiveLink('resident')">Hiển thị</a>
+    <!-- <a class="nav-link" :class="{ active: activeLink === 'resident' }" href="#" @click="setActiveLink('resident')">Hiển thị</a> -->
     <a class="nav-link" :class="{ active: activeLink === 'complaint' }" href="#" @click="setActiveLink('complaint')">Đăng xuất</a>
   </div>
 </template>

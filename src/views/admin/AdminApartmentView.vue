@@ -6,6 +6,7 @@ import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import LineChart from '@/components/charts/LineChart.vue';
 import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStatisticItem.vue'
+import AdminNewApartmentFormView from './form/AdminNewApartmentFormView.vue';
 </script>
 
 <template>
@@ -28,28 +29,33 @@ import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStat
           <h5 class="card-title font-weight-bold">Phân bổ căn hộ</h5>
           <div class="row">
             <div class="col-8">
-              <LineChart ></LineChart>
+              <LineChart></LineChart>
             </div>
             <div class="btn-group d-flex flex-column col-4 justify-content-end">
-              <button class="new-button mb-2">
-                Ghi nhận sử dụng mới
+              <button @click="isNewApartmentFormVisible = true" class="new-button mb-2">
+                Ghi nhận căn hộ mới
               </button>
-              <button class="new-button detail">
+              <router-link class="nav-link" to="/admin-statistic" active-class="active">
+              <button to="/admin-statistic" class="new-button detail">
                 Thống kê chi tiết
               </button>
+              </router-link>
             </div>
           </div>
         </Card>
-      </div>
+        <AdminNewApartmentFormView v-show="isNewApartmentFormVisible" class="overlay"/>
+        </div>
     </div>
   </main>
 </template>
 
 
 <script>
+
 export default {
   data() {
     return {
+      isNewApartmentFormVisible: false,
     }
   },
   methods: {
@@ -65,6 +71,18 @@ export default {
 }
 </script>
 <style scoped>
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 12%;
+  
+} 
+button {
+  width: 100%;
+  height: 35px;
+  font-size: 150%;
+}
+
 .detail {
   background-color: var(--btn-navigation);
 }

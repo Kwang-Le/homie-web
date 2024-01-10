@@ -1,8 +1,8 @@
-<template>
+<template><form>
   <div class="c-d-n-form-ghi-nh-n-c-d-n-m-i">
     <div class="rectangle-30"></div>
     <div class="text-field">
-      <div class="text-field2">
+      <div class="text-field2"> 
         <div class="frame">
           <div class="frame2"></div>
           <div class="frame3">
@@ -13,7 +13,7 @@
     </div>
     <div class="ghi-nh-n-c-d-n-m-i">Ghi nhận cư dân mới</div>
     <div class="group-n-btn">
-      <div class="rectangle-23"></div>
+      <button class="rectangle-23"></button>
       <div class="t-o-m-i">Tạo mới</div>
     </div>
     <div class="ng-y-sinh">Ngày sinh</div>
@@ -191,7 +191,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div></form>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */

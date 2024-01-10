@@ -6,6 +6,8 @@ import BarChart from '@/components/charts/BarChart.vue';
 import DashboardCardChartItem from "@/components/Dashboard/DashboardCardChartItem.vue"
 import LineChart from '@/components/charts/LineChart.vue';
 import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStatisticItem.vue'
+import AdminNewFeeFormView1 from './form/AdminNewFeeFormView1.vue';
+import AdminNewFeeFormView2 from './form/AdminNewFeeFormView2.vue';
 </script>
 
 <template>
@@ -31,21 +33,23 @@ import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStat
               <LineChart ></LineChart>
             </div>
             <div class="btn-group d-flex flex-column col-4 justify-content-end">
-              <button class="new-button mb-2">
+              <button @click="isNewApartmentFormVisible2 = true" class="new-button mb-2">
                 Tạo khoản phí
               </button>
-              <button class="new-button mb-2">
+              <button @click="isNewApartmentFormVisible1 = true" class="new-button mb-2">
                 Tạo khoản đóng góp
               </button>
-              <button class="new-button mb-2 confirm">
-                Ghi nhận
-              </button>
-              <button class="new-button detail">
+              
+              <router-link class="nav-link" to="/admin-statistic" active-class="active">
+              <button to="/admin-statistic" class="new-button detail">
                 Thống kê chi tiết
               </button>
+              </router-link>
             </div>
           </div>
         </Card>
+        <AdminNewFeeFormView1 v-show="isNewApartmentFormVisible1" class="overlay1"/>
+        <AdminNewFeeFormView2 v-show="isNewApartmentFormVisible2" class="overlay2"/>
       </div>
     </div>
   </main>
@@ -56,6 +60,8 @@ import DashboardCardStatisticItem from '@/components/Dashboard/DashboardCardStat
 export default {
   data() {
     return {
+      isNewApartmentFormVisible1: false,
+      isNewApartmentFormVisible2: false,
     }
   },
   methods: {
@@ -71,6 +77,23 @@ export default {
 }
 </script>
 <style scoped>
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 12%;
+  
+} 
+.overlay1 {
+  position: fixed;
+  top: 0;
+  left: 12%;
+  
+} 
+button {
+  width: 100%;
+  height: 35px;
+  font-size: 150%;
+}
 .detail {
   background-color: var(--btn-navigation);
 }
