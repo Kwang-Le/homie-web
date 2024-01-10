@@ -42,10 +42,13 @@ import LoginViewVue from '@/views/LoginView.vue'
 import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
 import ConfirmCodeView from '@/views/ConfirmCodeView.vue'
 import ResetPasswordView from '@/views/ResetPasswordView.vue'
-import ResidentDashboardView from '@/views/ResidentDashboardView.vue'
+
+import ResidentDashboardView from '@/views/resident/ResidentDashboardView.vue'
 import ResDeclarationViewVue from '@/views/resident/ResDeclarationView.vue'
 import ResPayFeesViewVue from '@/views/resident/ResPayFeesView.vue'
 import OthersStatisticViewVue from '@/views/others/OthersStatisticView.vue'
+import ResProfileView from '@/views/resident/ResProfileView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -358,7 +361,13 @@ const router = createRouter({
       path: '/others-statistic',
       name: 'others-statistic',
       component: OthersStatisticViewVue
-    }
+    },
+    {
+      path: '/resident-profile',
+      name: 'resident-profile',
+      component: ResProfileView
+    },
+
   ]
 })
 

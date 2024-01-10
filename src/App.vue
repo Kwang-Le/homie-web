@@ -7,6 +7,7 @@ import { useResidentStore } from '@/stores/resident'
 import { useUserStore } from '@/stores/user'
 import fetchDataAndStore from '@/services/api'
 import FootNote from './components/FootNote.vue';
+import ResNavBar from './components/NavigationBar/ResNavBar.vue'
 </script>
 
 
@@ -18,7 +19,8 @@ import FootNote from './components/FootNote.vue';
         <LogoAcount v-if="userStore.currentRole == 'resident'" name ="T.V.Khánh"/>
         <LogoAcount v-if="userStore.currentRole == 'police'" name ="N.N.Ánh"/>
         <LogoAcount v-if="userStore.currentRole == 'manager'" name ="N.Đ.Minh"/>
-        <NavBar />
+        <NavBar  v-if="userStore.currentRole == 'admin'"/>
+        <ResNavBar  v-if="userStore.currentRole == 'resident'"/>
         <AdminInfomation v-show="(isVisible && (currentPage !== 'login' && currentPage !== 'forgot-password' && currentPage !== 'confirm-code'&& currentPage !== 'reset-password'))" class="noti" />
         <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->

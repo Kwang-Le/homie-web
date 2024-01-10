@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <h5 class="card-title font-weight-bold">{{title}}</h5>
+    <h5 class="card-title">{{title}}</h5>
     <div class="d-flex flex-column card-text">
         <div class="table-row d-flex justify-content-between px-4 py-1" v-for="data in tableData">
             <div class="row-title p-1">{{ data.title }}</div>
@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style scoped>
+.card-title {
+    color: var(--main-secondary);
+    font-weight: 900;
+}
 .table-row {
     background-color: var(--btn-alternative);
     /* height: 20px; */

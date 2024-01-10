@@ -19,7 +19,7 @@
 </template>
 <script>
 export default {
-  name: 'AdminNavBar',
+  name: 'ResNavBar',
   data() {
     return {
       activeLink: 'dashboard' // Mặc định nav-link "Trang chủ" sẽ được chọn

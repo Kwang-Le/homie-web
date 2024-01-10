@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column">
-        <h5 class="card-title font-weight-bold">{{ title }}</h5>
+        <h5 class="card-title">{{ title }}</h5>
         <div class="d-flex flex-column card-text">
             <p>{{ content }}</p>
         </div>
@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style scoped>
+.card-title {
+    color: var(--main-secondary);
+    font-weight: 900;
+}
 .card-text p {
     color: #457B9D;
     font-size: 30px;

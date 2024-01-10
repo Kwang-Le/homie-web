@@ -30,30 +30,30 @@ import fetchDataAndStore from '@/services/api'
                         </div>
                         <div class="col-4 avatar-col">
                             <div class="row avt-container">
-                                <img src="../assets/img/AccountProfileAvatar.jpg" class="avatar" alt="avatar" />
+                                <img src="../../assets/img/AccountProfileAvatar.jpg" class="avatar" alt="avatar" />
                             </div>
                         </div>
                     </div>
                 </Card>
             </div>
             <div class="col">
-                <Card>
-			<div class="col">
-                            <h5 class="resident-name title">Sự kiện</h5>
-                            <p>30/11:</p>
-                            <p>DNT's ballet showcase</p>
-                            <a href="">chi tiết</a>
-                        </div>
-                        <div class="col">
-                            <b-calendar block locale="en-US"></b-calendar>
+                <Card style="height: 191px;">
+                    <div class="col">
+                        <h5 class="resident-name title">Sự kiện</h5>
+                        <p>30/11:</p>
+                        <p>DNT's ballet showcase</p>
+                        <a href="">chi tiết</a>
+                    </div>
+                    <div class="col">
+                        <b-calendar block locale="en-US"></b-calendar>
 
-                        </div>
-                    
+                    </div>
+
                 </Card>
             </div>
             <div class="col">
                 <Card>
-		<DashboardCardNotiItem title="Thông báo" :tableData="tableDataNoti">
+                    <DashboardCardNotiItem title="Thông báo" :tableData="tableDataNoti">
                     </DashboardCardNotiItem>
                 </Card>
             </div>
@@ -61,7 +61,7 @@ import fetchDataAndStore from '@/services/api'
         <div class="row ">
             <div class="col-8 ">
                 <Card>
-                    <h5 class="card-title font-weight-bold">Biến động dân cư</h5>
+                    <h5 class="title">Thống kê chi tiêu</h5>
                     <LineChart></LineChart>
                 </Card>
             </div>
@@ -122,10 +122,12 @@ export default {
 p {
     margin-bottom: 0;
 }
+
 .title {
     color: var(--main-secondary);
     font-weight: 900;
 }
+
 .avatar-col {
     display: flex;
     justify-content: center;
