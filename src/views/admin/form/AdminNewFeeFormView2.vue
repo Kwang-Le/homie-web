@@ -1,4 +1,4 @@
-<template>
+<template><form>
   <div class="kho-n-thu-form-t-o-kho-n-thu-t-ng">
     <div class="rectangle-30"></div>
     <div class="t-o-kho-n-ph-m-i">Tạo khoản phí mới</div>
@@ -8,7 +8,7 @@
     </div>
     <div class="m-kho-n-ph">Mã khoản phí</div>
     <div class="t-n-kho-n-ph">Tên khoản phí</div>
-    <div class="th-i-gian-m-ng">Thời gian mở - đóng</div>
+    <div class="th-i-gian-m-ng">Thời gian mở - đóng</div> 
     <div class="tr-ng-th-i">Trạng thái</div>
     <div class="lo-i-ph-t-ng">Loại phí tự động</div>
     <div class="dropdown">
@@ -162,7 +162,7 @@
         <div class="ng">Đóng</div>
       </div>
     </div>
-  </div>
+  </div></form>
 </template>
 <script>
 /* Code generated with AutoHTML Plugin for Figma */

@@ -7,13 +7,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="px-5 collapse navbar-collapse justify-content-between" id="navbarNav">
-    <router-link class="nav-link" to="/admin-dashboard" active-class="active">Trang chủ </router-link>
+    <router-link class="nav-link disabled" to="/admin-dashboard" active-class="active">Trang chủ </router-link>
     <!-- <router-link class="nav-link" to="/admin-account" active-class="active">Tài khoản </router-link> -->
-    <router-link class="nav-link" to="/admin-apartment" active-class="active">Căn hộ </router-link>
-    <router-link class="nav-link" to="/admin-resident" active-class="active">Cư dân </router-link>
+    <router-link class="nav-link disabled" to="/admin-apartment" active-class="active">Căn hộ </router-link>
+    <router-link class="nav-link disabled" to="/admin-resident" active-class="active">Cư dân </router-link>
     <router-link class="nav-link disabled" to="/admin-revenue" active-class="active">Khoản thu </router-link>
     <router-link class="nav-link" to="/admin-statistic" active-class="active">Thống kê </router-link>
-    <router-link class="nav-link" to="/admin-notification" active-class="active">Thông báo</router-link>
+    <router-link class="nav-link disabled" to="/admin-notification" active-class="active">Thông báo</router-link>
     <router-link class="nav-link" to="/admin-setting" active-class="active">Cài đặt</router-link>
   </div>
         </div>

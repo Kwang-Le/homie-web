@@ -10,7 +10,7 @@
     <router-link class="nav-link" to="/res-dashboard" active-class="active">Trang chủ </router-link>
     <router-link class="nav-link" to="/res-pay-fees" active-class="active">Đóng phí </router-link>
     <router-link class="nav-link" to="/res-account" active-class="active">Cá nhân </router-link>
-    <router-link class="nav-link" to="/res-declare" active-class="active">Khai báo </router-link>
+    <router-link class="nav-link" to="/res-declaration" active-class="active">Khai báo </router-link>
     <router-link class="nav-link" to="/res-notification" active-class="active">Thông báo</router-link>
     <router-link class="nav-link" to="/admin-setting" active-class="active">Cài đặt</router-link>
   </div>

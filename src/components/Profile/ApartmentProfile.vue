@@ -38,7 +38,7 @@ onMounted(async () => {
                         </div>
                     </div>
                     <div class="main-avt-name">Căn hộ</div>
-                    <div class="main-avt-id">{{ mainAvtId }}</div>
+                    <div class="main-avt-id">P101</div>
                 </div>
                 <div class="col-8">
                     <div class="row">
