@@ -4,7 +4,7 @@
         <div class="overlap-group">
           <div class="rectangle"></div>
           <div class="ellipse"></div>
-          <div class="homie">N.M.Tú</div>
+          <div class="homie"> {{ name }}</div>
           <img class="image" alt="Image" src="../assets/img/logo.png" />
         </div>
       </div>
@@ -14,6 +14,9 @@
   <script>
   export default {
     name: "LogoAccount",
+    props: {
+      name: String
+    }
   };
   </script>
   
